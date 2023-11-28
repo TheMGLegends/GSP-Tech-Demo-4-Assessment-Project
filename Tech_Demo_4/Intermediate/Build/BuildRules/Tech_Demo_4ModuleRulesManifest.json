@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"B:\\University Projects\\GSP-Tech-Demo-4-Assessment-Project\\Tech_Demo_4\\Source\\Tech_Demo_4\\Tech_Demo_4.Build.cs",
+		"B:\\University Projects\\GSP-Tech-Demo-4-Assessment-Project\\Tech_Demo_4\\Source\\Tech_Demo_4.Target.cs",
+		"B:\\University Projects\\GSP-Tech-Demo-4-Assessment-Project\\Tech_Demo_4\\Source\\Tech_Demo_4Editor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
