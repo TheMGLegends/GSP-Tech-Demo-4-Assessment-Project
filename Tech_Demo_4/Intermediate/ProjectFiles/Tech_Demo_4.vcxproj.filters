@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tech_Demo_4.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{2BB4D03D-FD5B-42B8-BA0F-94244DA7E78B}</UniqueIdentifier>
+      <UniqueIdentifier>{5036500D-45B0-422E-8A53-33BA94A00D30}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tech_Demo_4.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{BC6F42FD-A3F2-40DC-9DBC-300B089A5779}</UniqueIdentifier>
+      <UniqueIdentifier>{90114ADD-ED3D-4165-88FB-A32A0645EA84}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,9 +23,18 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Tech_Demo_4">
-      <UniqueIdentifier>{DA3BFC46-5058-4E76-A78C-A0941B4BC821}</UniqueIdentifier>
+      <UniqueIdentifier>{C2FA10F5-C919-45CC-88FE-38DD700E0833}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Tech_Demo_4\ACharacterController.cpp">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tech_Demo_4\ACharacterController.h">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Tech_Demo_4\Tech_Demo_4.Build.cs">
       <Filter>Source\Tech_Demo_4</Filter>
     </None>
