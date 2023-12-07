@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "CharacterController.generated.h"
 
 UCLASS()
@@ -27,6 +29,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+	// Variable:
+	bool bIsViewingRight;
+	
 	// Axis Functions:
 	void MoveForward(float Value);
 	void MoveRight(float Value);
@@ -34,9 +39,19 @@ private:
 	void LookUp(float Value);
 	void LookRight(float Value);
 
-	void LookUpRate(float Value);
-	void LookRightRate(float Value);
-
 	// Action Functions:
 	void Jump();
+	void Shoot();
+	void Aim();
+
+	void SwitchView(float YChange);
+	void LeftView();
+	void RightView();
+	void ChangeView();
+
+	// Components:
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	UCameraComponent* Camera;
+	UPROPERTY(EditAnywhere, Category = "Spring Arm")
+	USpringArmComponent* SpringArm;
 };

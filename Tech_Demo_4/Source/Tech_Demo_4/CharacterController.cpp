@@ -9,6 +9,19 @@ ACharacterController::ACharacterController()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bUseControllerRotationYaw = false;
+
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	Camera->SetRelativeLocation(FVector(0, 80, 60));
+
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+	SpringArm->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	SpringArm->TargetArmLength = 250.0f;
+	SpringArm->SetRelativeLocation(FVector(0, 0, 20));
+	SpringArm->SetRelativeRotation((FRotator(-15.0f, 0.0f, 0.0f)));
+
+	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
+	bIsViewingRight = true;
 }
 
 // Called when the game starts or when spawned
@@ -39,6 +52,12 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 	// Action Bindings:
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacterController::Jump);
+	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ACharacterController::Shoot);
+	PlayerInputComponent->BindAction("Aim", IE_Repeat, this, &ACharacterController::Aim);
+
+	PlayerInputComponent->BindAction("LeftShoulder", IE_Pressed, this, &ACharacterController::LeftView);
+	PlayerInputComponent->BindAction("RightShoulder", IE_Pressed, this, &ACharacterController::RightView);
+	PlayerInputComponent->BindAction("SwitchShoulder", IE_Pressed, this, &ACharacterController::ChangeView);
 }
 
 void ACharacterController::MoveForward(float Value)
@@ -61,7 +80,12 @@ void ACharacterController::LookUp(float Value)
 {
 	if (Value)
 	{
-		
+		float Temp = SpringArm->GetRelativeRotation().Pitch + Value;
+
+		if (Temp < 25 && Temp > -25)
+		{
+			SpringArm->AddLocalRotation(FRotator(Value, 0, 0));
+		}
 	}
 }
 
@@ -73,16 +97,51 @@ void ACharacterController::LookRight(float Value)
 	}
 }
 
-void ACharacterController::LookUpRate(float Value)
-{
-}
-
-void ACharacterController::LookRightRate(float Value)
-{
-}
-
 void ACharacterController::Jump()
 {
 	Super::Jump();
+}
+
+void ACharacterController::Shoot()
+{
+}
+
+void ACharacterController::Aim()
+{
+}
+
+void ACharacterController::SwitchView(float YChange)
+{
+	Camera->SetRelativeLocation(FVector(Camera->GetRelativeLocation().X, YChange, Camera->GetRelativeLocation().Z));
+}
+
+void ACharacterController::LeftView()
+{
+	if (bIsViewingRight)
+	{
+		SwitchView(-80);
+		bIsViewingRight = false;
+	}
+}
+
+void ACharacterController::RightView()
+{
+	if (!bIsViewingRight)
+	{
+		SwitchView(80);
+		bIsViewingRight = true;
+	}
+}
+
+void ACharacterController::ChangeView()
+{
+	if (bIsViewingRight)
+	{
+		LeftView();
+	}
+	else
+	{
+		RightView();
+	}
 }
 
