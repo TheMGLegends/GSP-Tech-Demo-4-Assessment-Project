@@ -30,7 +30,9 @@ public:
 
 private:
 	// Variable:
+	UCharacterMovementComponent* CharMove;
 	bool bIsViewingRight;
+	bool bIsAimedIn;
 	
 	// Axis Functions:
 	void MoveForward(float Value);
@@ -40,7 +42,7 @@ private:
 	void LookRight(float Value);
 
 	// Action Functions:
-	void Jump();
+	virtual void Jump() override;
 	void Shoot();
 	void Aim();
 

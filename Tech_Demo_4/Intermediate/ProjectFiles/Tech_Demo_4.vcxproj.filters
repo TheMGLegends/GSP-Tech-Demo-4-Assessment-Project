@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tech_Demo_4.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B7D77BFC-CD5F-4C46-AFA5-E2A332D411D0}</UniqueIdentifier>
+      <UniqueIdentifier>{798FD2A0-DB56-4B2C-8246-4206D9FE3F9A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tech_Demo_4.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{BDA2B63B-20F5-4D61-B6A4-D2D368D4B72B}</UniqueIdentifier>
+      <UniqueIdentifier>{D9AEA95F-6D3E-46D0-B9A2-E917766B8334}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,18 +27,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tech_Demo_4">
-      <UniqueIdentifier>{AA43BE05-E041-4B79-B7B9-9D5152365AC6}</UniqueIdentifier>
+      <UniqueIdentifier>{B184DD7C-A9EF-4043-8B67-93932A29079D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Tech_Demo_4\CharacterAnimationController.cpp">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tech_Demo_4\CharacterAnimationController.h">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Tech_Demo_4\CharacterController.cpp">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Tech_Demo_4\CharacterController.h">
-      <Filter>Source\Tech_Demo_4</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Tech_Demo_4\InputReceiver.cpp">
-      <Filter>Source\Tech_Demo_4</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Tech_Demo_4\InputReceiver.h">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClInclude>
     <None Include="..\..\Source\Tech_Demo_4\Tech_Demo_4.Build.cs">

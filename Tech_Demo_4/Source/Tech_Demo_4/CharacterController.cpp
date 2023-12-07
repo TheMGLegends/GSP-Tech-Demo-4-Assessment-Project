@@ -3,6 +3,8 @@
 
 #include "CharacterController.h"
 
+#include "GameFramework/CharacterMovementComponent.h"
+
 // Sets default values
 ACharacterController::ACharacterController()
 {
@@ -12,16 +14,18 @@ ACharacterController::ACharacterController()
 	bUseControllerRotationYaw = false;
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	Camera->SetRelativeLocation(FVector(0, 80, 60));
+	Camera->SetRelativeLocation(FVector(0, 20, 0));
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
-	SpringArm->TargetArmLength = 250.0f;
-	SpringArm->SetRelativeLocation(FVector(0, 0, 20));
+	SpringArm->TargetArmLength = 150.0f;
+	SpringArm->SetRelativeLocation(FVector(0, 0, 90));
 	SpringArm->SetRelativeRotation((FRotator(-15.0f, 0.0f, 0.0f)));
 
 	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
+	CharMove = GetCharacterMovement();
 	bIsViewingRight = true;
+	bIsAimedIn = false;
 }
 
 // Called when the game starts or when spawned
@@ -36,6 +40,10 @@ void ACharacterController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (bIsViewingRight)
+	{
+		
+	}
 }
 
 // Called to bind functionality to input
@@ -53,7 +61,8 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	// Action Bindings:
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacterController::Jump);
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ACharacterController::Shoot);
-	PlayerInputComponent->BindAction("Aim", IE_Repeat, this, &ACharacterController::Aim);
+	
+	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::Aim);
 
 	PlayerInputComponent->BindAction("LeftShoulder", IE_Pressed, this, &ACharacterController::LeftView);
 	PlayerInputComponent->BindAction("RightShoulder", IE_Pressed, this, &ACharacterController::RightView);
@@ -108,6 +117,24 @@ void ACharacterController::Shoot()
 
 void ACharacterController::Aim()
 {
+	if (!bIsAimedIn)
+	{
+		if (CharMove != nullptr)
+		{
+			CharMove->MaxWalkSpeed = 300.0f;
+		}
+		SpringArm->TargetArmLength = 50.0f;
+		bIsAimedIn = true;
+	}
+	else
+	{
+		if (CharMove != nullptr)
+		{
+			CharMove->MaxWalkSpeed = 600.0f;
+		}
+		SpringArm->TargetArmLength = 150.0f;
+		bIsAimedIn = false;
+	}
 }
 
 void ACharacterController::SwitchView(float YChange)
@@ -119,7 +146,7 @@ void ACharacterController::LeftView()
 {
 	if (bIsViewingRight)
 	{
-		SwitchView(-80);
+		SwitchView(-20);
 		bIsViewingRight = false;
 	}
 }
@@ -128,7 +155,7 @@ void ACharacterController::RightView()
 {
 	if (!bIsViewingRight)
 	{
-		SwitchView(80);
+		SwitchView(20);
 		bIsViewingRight = true;
 	}
 }
