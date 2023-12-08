@@ -26,6 +26,7 @@ ACharacterController::ACharacterController()
 	CharMove = GetCharacterMovement();
 	bIsViewingRight = true;
 	bIsAimedIn = false;
+	Health = 200;
 }
 
 // Called when the game starts or when spawned
@@ -39,11 +40,6 @@ void ACharacterController::BeginPlay()
 void ACharacterController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (bIsViewingRight)
-	{
-		
-	}
 }
 
 // Called to bind functionality to input
@@ -67,6 +63,11 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("LeftShoulder", IE_Pressed, this, &ACharacterController::LeftView);
 	PlayerInputComponent->BindAction("RightShoulder", IE_Pressed, this, &ACharacterController::RightView);
 	PlayerInputComponent->BindAction("SwitchShoulder", IE_Pressed, this, &ACharacterController::ChangeView);
+}
+
+void ACharacterController::TakeDamage(int Damage)
+{
+	Health -= Damage;
 }
 
 void ACharacterController::MoveForward(float Value)

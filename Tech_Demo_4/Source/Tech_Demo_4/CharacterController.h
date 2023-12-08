@@ -28,11 +28,18 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void TakeDamage(int Damage);
+
 private:
 	// Variable:
+	UPROPERTY()
 	UCharacterMovementComponent* CharMove;
+	
 	bool bIsViewingRight;
 	bool bIsAimedIn;
+
+	UPROPERTY(VisibleAnywhere, Category = "Health")
+	int Health;
 	
 	// Axis Functions:
 	void MoveForward(float Value);

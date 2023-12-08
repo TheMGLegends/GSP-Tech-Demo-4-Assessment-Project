@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	TECH_DEMO_4_API UClass* Z_Construct_UClass_ATech_Demo_4GameModeBase();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Tech_Demo_4();
+	TECH_DEMO_4_API UClass* Z_Construct_UClass_ACharacterController_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceConstant_NoRegister();
 // End Cross Module References
 	void ATech_Demo_4GameModeBase::StaticRegisterNativesATech_Demo_4GameModeBase()
 	{
@@ -31,6 +33,17 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Players_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Players_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Players;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Materials_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Materials_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Materials;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -47,6 +60,27 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_Inner = { "Players", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_ACharacterController_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_MetaData[] = {
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players = { "Players", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, Players), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials_Inner = { "Materials", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UMaterialInstanceConstant_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials_MetaData[] = {
+		{ "Category", "Materials" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials = { "Materials", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, Materials), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Materials,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATech_Demo_4GameModeBase>::IsAbstract,
 	};
@@ -56,11 +90,11 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers),
 		0,
 		0x009002ACu,
 		METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::Class_MetaDataParams))
@@ -74,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 2974377025);
+	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 639917673);
 	template<> TECH_DEMO_4_API UClass* StaticClass<ATech_Demo_4GameModeBase>()
 	{
 		return ATech_Demo_4GameModeBase::StaticClass();
