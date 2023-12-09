@@ -1,4 +1,4 @@
-// PCH for B:\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\SlateSharedPCH.h
+// PCH for C:\UE_4.27\Engine\Source\Runtime\Slate\Public\SlateSharedPCH.h
 #define IS_PROGRAM 0
 #define UE_EDITOR 1
 #define ENABLE_PGO_PROFILE 0
@@ -64,4 +64,4 @@
 #define WITH_LIBJPEGTURBO 1
 #define WITH_UNREALEXR 1
 #define IMAGEWRAPPER_API DLLIMPORT
-#include "B:/Epic Games/UE_4.27/Engine/Source/Runtime/Slate/Public/SlateSharedPCH.h"
+#include "C:/UE_4.27/Engine/Source/Runtime/Slate/Public/SlateSharedPCH.h"

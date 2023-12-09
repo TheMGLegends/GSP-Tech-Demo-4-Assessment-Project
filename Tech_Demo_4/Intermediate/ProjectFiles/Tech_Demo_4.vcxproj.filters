@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tech_Demo_4.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{798FD2A0-DB56-4B2C-8246-4206D9FE3F9A}</UniqueIdentifier>
+      <UniqueIdentifier>{BA4DC3CB-DBC6-4818-955B-5CDC5B797A47}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tech_Demo_4.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{D9AEA95F-6D3E-46D0-B9A2-E917766B8334}</UniqueIdentifier>
+      <UniqueIdentifier>{E077B056-D2D9-43E5-815A-EACCE501F259}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tech_Demo_4">
-      <UniqueIdentifier>{B184DD7C-A9EF-4043-8B67-93932A29079D}</UniqueIdentifier>
+      <UniqueIdentifier>{420065EB-13BC-45D1-AE41-5845608D5328}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tech_Demo_4\CharacterAnimationController.cpp">
       <Filter>Source\Tech_Demo_4</Filter>

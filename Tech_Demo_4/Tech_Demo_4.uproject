@@ -15,15 +15,6 @@
 	],
 	"Plugins": [
 		{
-			"Name": "OculusVR",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Win32",
-				"Win64",
-				"Android"
-			]
-		},
-		{
 			"Name": "OpenXREyeTracker",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
@@ -42,6 +33,15 @@
 				"Win64",
 				"Linux",
 				"HoloLens",
+				"Android"
+			]
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win32",
+				"Win64",
 				"Android"
 			]
 		},
