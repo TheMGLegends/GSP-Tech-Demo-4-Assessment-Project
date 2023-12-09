@@ -29,6 +29,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void TakeDamage(int Damage);
+	bool GetIsAimedIn() const { return bIsAimedIn; }
 
 private:
 	// Variable:

@@ -30,6 +30,12 @@ public:
 	float Direction;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
+	bool bIsAimedIn;
+
+	UPROPERTY(EditAnywhere, Category = "Action Animations")
+	UAnimMontage* AimMontage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
 	class APawn* Pawn;
 
 };
