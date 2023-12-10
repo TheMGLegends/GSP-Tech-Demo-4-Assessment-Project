@@ -62,7 +62,9 @@ public: \
 	FORCEINLINE static uint32 __PPO__CharMove() { return STRUCT_OFFSET(ACharacterController, CharMove); } \
 	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ACharacterController, Health); } \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACharacterController, Camera); } \
-	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ACharacterController, SpringArm); }
+	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ACharacterController, SpringArm); } \
+	FORCEINLINE static uint32 __PPO__AimMontage() { return STRUCT_OFFSET(ACharacterController, AimMontage); } \
+	FORCEINLINE static uint32 __PPO__ReloadMontage() { return STRUCT_OFFSET(ACharacterController, ReloadMontage); }
 
 
 #define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_11_PROLOG

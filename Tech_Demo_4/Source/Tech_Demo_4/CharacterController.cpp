@@ -59,10 +59,7 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ACharacterController::Shoot);
 	
 	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::Aim);
-
-	PlayerInputComponent->BindAction("LeftShoulder", IE_Pressed, this, &ACharacterController::LeftView);
-	PlayerInputComponent->BindAction("RightShoulder", IE_Pressed, this, &ACharacterController::RightView);
-	PlayerInputComponent->BindAction("SwitchShoulder", IE_Pressed, this, &ACharacterController::ChangeView);
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ACharacterController::Reload);
 }
 
 void ACharacterController::TakeDamage(int Damage)
@@ -91,8 +88,8 @@ void ACharacterController::LookUp(float Value)
 	if (Value)
 	{
 		float Temp = SpringArm->GetRelativeRotation().Pitch + Value;
-
-		if (Temp < 25 && Temp > -25)
+		
+		if (Temp < 25 && Temp > -50)
 		{
 			SpringArm->AddLocalRotation(FRotator(Value, 0, 0));
 		}
@@ -120,56 +117,39 @@ void ACharacterController::Aim()
 {
 	if (!bIsAimedIn)
 	{
-		if (CharMove != nullptr)
-		{
-			CharMove->MaxWalkSpeed = 300.0f;
-		}
-		SpringArm->TargetArmLength = 50.0f;
-		bIsAimedIn = true;
+		AimIn();
 	}
 	else
 	{
-		if (CharMove != nullptr)
-		{
-			CharMove->MaxWalkSpeed = 600.0f;
-		}
-		SpringArm->TargetArmLength = 150.0f;
-		bIsAimedIn = false;
+		AimOut();
 	}
 }
 
-void ACharacterController::SwitchView(float YChange)
+void ACharacterController::Reload()
 {
-	Camera->SetRelativeLocation(FVector(Camera->GetRelativeLocation().X, YChange, Camera->GetRelativeLocation().Z));
+	AimOut();
+	PlayAnimMontage(ReloadMontage);
 }
 
-void ACharacterController::LeftView()
+void ACharacterController::AimIn()
 {
-	if (bIsViewingRight)
+	if (CharMove != nullptr)
 	{
-		SwitchView(-20);
-		bIsViewingRight = false;
+		CharMove->MaxWalkSpeed = 300.0f;
 	}
+	SpringArm->TargetArmLength = 50.0f;
+	bIsAimedIn = true;
+	PlayAnimMontage(AimMontage);
 }
 
-void ACharacterController::RightView()
+void ACharacterController::AimOut()
 {
-	if (!bIsViewingRight)
+	if (CharMove != nullptr)
 	{
-		SwitchView(20);
-		bIsViewingRight = true;
+		CharMove->MaxWalkSpeed = 600.0f;
 	}
-}
-
-void ACharacterController::ChangeView()
-{
-	if (bIsViewingRight)
-	{
-		LeftView();
-	}
-	else
-	{
-		RightView();
-	}
+	SpringArm->TargetArmLength = 150.0f;
+	bIsAimedIn = false;
+	StopAnimMontage(AimMontage);
 }
 

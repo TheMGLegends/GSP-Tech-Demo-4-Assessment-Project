@@ -22,6 +22,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
 	bool bIsInAir;
+	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
+	bool bIsAiming;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
 	float MoveSpeed;
@@ -30,10 +33,7 @@ public:
 	float Direction;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
-	bool bIsAimedIn;
-
-	UPROPERTY(EditAnywhere, Category = "Action Animations")
-	UAnimMontage* AimMontage;
+	float Pitch;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
 	class APawn* Pawn;

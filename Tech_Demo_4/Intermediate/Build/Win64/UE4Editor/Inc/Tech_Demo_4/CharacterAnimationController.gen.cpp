@@ -18,7 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 	TECH_DEMO_4_API UClass* Z_Construct_UClass_UCharacterAnimationController();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimInstance();
 	UPackage* Z_Construct_UPackage__Script_Tech_Demo_4();
-	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UCharacterAnimationController::execCustomUpdateAnimation)
@@ -76,6 +75,11 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 		static void NewProp_bIsInAir_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsInAir;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsAiming_MetaData[];
+#endif
+		static void NewProp_bIsAiming_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsAiming;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
@@ -84,14 +88,9 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Direction;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsAimedIn_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Pitch_MetaData[];
 #endif
-		static void NewProp_bIsAimedIn_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsAimedIn;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimMontage_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AimMontage;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Pitch;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Pawn_MetaData[];
 #endif
@@ -127,6 +126,17 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsInAir = { "bIsInAir", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UCharacterAnimationController), &Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsInAir_SetBit, METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsInAir_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsInAir_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming_MetaData[] = {
+		{ "Category", "CustomAnim" },
+		{ "ModuleRelativePath", "CharacterAnimationController.h" },
+	};
+#endif
+	void Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming_SetBit(void* Obj)
+	{
+		((UCharacterAnimationController*)Obj)->bIsAiming = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming = { "bIsAiming", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UCharacterAnimationController), &Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming_SetBit, METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "CustomAnim" },
 		{ "ModuleRelativePath", "CharacterAnimationController.h" },
@@ -141,23 +151,12 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterAnimationController, Direction), METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Direction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Direction_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pitch_MetaData[] = {
 		{ "Category", "CustomAnim" },
 		{ "ModuleRelativePath", "CharacterAnimationController.h" },
 	};
 #endif
-	void Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn_SetBit(void* Obj)
-	{
-		((UCharacterAnimationController*)Obj)->bIsAimedIn = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn = { "bIsAimedIn", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UCharacterAnimationController), &Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn_SetBit, METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_AimMontage_MetaData[] = {
-		{ "Category", "Action Animations" },
-		{ "ModuleRelativePath", "CharacterAnimationController.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_AimMontage = { "AimMontage", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterAnimationController, AimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_AimMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_AimMontage_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pitch = { "Pitch", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterAnimationController, Pitch), METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pitch_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pitch_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pawn_MetaData[] = {
 		{ "Category", "CustomAnim" },
@@ -167,10 +166,10 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pawn = { "Pawn", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterAnimationController, Pawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pawn_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCharacterAnimationController_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsInAir,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAiming,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Direction,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_bIsAimedIn,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_AimMontage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pitch,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterAnimationController_Statics::NewProp_Pawn,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCharacterAnimationController_Statics::StaticCppClassTypeInfo = {
@@ -200,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterAnimationController, 3817054993);
+	IMPLEMENT_CLASS(UCharacterAnimationController, 844625725);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UCharacterAnimationController>()
 	{
 		return UCharacterAnimationController::StaticClass();

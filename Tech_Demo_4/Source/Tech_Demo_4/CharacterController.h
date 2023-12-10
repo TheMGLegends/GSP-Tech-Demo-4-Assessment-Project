@@ -29,7 +29,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void TakeDamage(int Damage);
-	bool GetIsAimedIn() const { return bIsAimedIn; }
+	UAnimMontage* GetAimMontage() const { return AimMontage; }
 
 private:
 	// Variable:
@@ -53,15 +53,20 @@ private:
 	virtual void Jump() override;
 	void Shoot();
 	void Aim();
+	void Reload();
 
-	void SwitchView(float YChange);
-	void LeftView();
-	void RightView();
-	void ChangeView();
+	// Helper Functions:
+	void AimIn();
+	void AimOut();
 
 	// Components:
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	UCameraComponent* Camera;
 	UPROPERTY(EditAnywhere, Category = "Spring Arm")
 	USpringArmComponent* SpringArm;
+
+	UPROPERTY(EditAnywhere, Category = "Montages")
+	UAnimMontage* AimMontage;
+	UPROPERTY(EditAnywhere, Category = "Montages")
+	UAnimMontage* ReloadMontage;
 };

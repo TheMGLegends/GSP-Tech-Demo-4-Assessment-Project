@@ -8,8 +8,6 @@
 
 void UCharacterAnimationController::NativeInitializeAnimation()
 {
-	bIsAimedIn = false;
-	
 	if (Pawn == nullptr)
 	{
 		Pawn = TryGetPawnOwner();
@@ -29,14 +27,15 @@ void UCharacterAnimationController::CustomUpdateAnimation()
 		MoveSpeed = LateralSpeed.Size();
 		Direction = UCharacterAnimationController::CalculateDirection(Pawn->GetVelocity(), Pawn->GetActorRotation());
 		bIsInAir = Pawn->GetMovementComponent()->IsFalling();
-		bIsAimedIn = Cast<ACharacterController>(Pawn)->GetIsAimedIn();
-		if (bIsAimedIn)
+		Pitch = Pawn->GetBaseAimRotation().Pitch;
+
+		if (Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetAimMontage()))
 		{
-			Montage_Play(AimMontage);
+			bIsAiming = true;
 		}
 		else
 		{
-			Montage_Stop(0.25f, AimMontage);
+			bIsAiming = false;
 		}
 	}
 
