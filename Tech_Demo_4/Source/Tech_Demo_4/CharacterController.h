@@ -30,6 +30,7 @@ public:
 
 	void TakeDamage(int Damage);
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
+	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
 private:
 	// Variable:
@@ -69,4 +70,6 @@ private:
 	UAnimMontage* AimMontage;
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ReloadMontage;
+	UPROPERTY(EditAnywhere, Category = "Montages")
+	UAnimMontage* ShootMontage;
 };

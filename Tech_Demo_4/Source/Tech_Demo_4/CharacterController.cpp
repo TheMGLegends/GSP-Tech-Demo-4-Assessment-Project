@@ -20,7 +20,7 @@ ACharacterController::ACharacterController()
 	SpringArm->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 	SpringArm->TargetArmLength = 150.0f;
 	SpringArm->SetRelativeLocation(FVector(0, 0, 90));
-	SpringArm->SetRelativeRotation((FRotator(-15.0f, 0.0f, 0.0f)));
+	SpringArm->SetRelativeRotation((FRotator(0.0f, 0.0f, 0.0f)));
 
 	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
 	CharMove = GetCharacterMovement();
@@ -111,6 +111,10 @@ void ACharacterController::Jump()
 
 void ACharacterController::Shoot()
 {
+	if (bIsAimedIn)
+	{
+		PlayAnimMontage(ShootMontage);
+	}
 }
 
 void ACharacterController::Aim()
@@ -150,6 +154,7 @@ void ACharacterController::AimOut()
 	}
 	SpringArm->TargetArmLength = 150.0f;
 	bIsAimedIn = false;
+	StopAnimMontage(ShootMontage);
 	StopAnimMontage(AimMontage);
 }
 

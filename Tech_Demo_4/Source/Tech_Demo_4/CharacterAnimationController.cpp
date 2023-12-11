@@ -29,7 +29,7 @@ void UCharacterAnimationController::CustomUpdateAnimation()
 		bIsInAir = Pawn->GetMovementComponent()->IsFalling();
 		Pitch = Pawn->GetBaseAimRotation().Pitch;
 
-		if (Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetAimMontage()))
+		if (Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetAimMontage()) || Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetShootMontage()))
 		{
 			bIsAiming = true;
 		}
