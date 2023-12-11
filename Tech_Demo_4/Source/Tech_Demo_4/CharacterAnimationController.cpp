@@ -12,6 +12,9 @@ void UCharacterAnimationController::NativeInitializeAnimation()
 	{
 		Pawn = TryGetPawnOwner();
 	}
+
+	bIsDead = false;
+	bIsAiming = false;
 }
 
 void UCharacterAnimationController::CustomUpdateAnimation()
@@ -22,6 +25,12 @@ void UCharacterAnimationController::CustomUpdateAnimation()
 	}
 	if (Pawn)
 	{
+		if (Cast<ACharacterController>(Pawn)->GetIsDead())
+		{
+			bIsDead = true;
+			bIsAiming = false;
+		}
+		
 		FVector Speed = Pawn->GetVelocity();
 		FVector LateralSpeed = FVector(Speed.X, Speed.Y, 0);
 		MoveSpeed = LateralSpeed.Size();
@@ -29,7 +38,7 @@ void UCharacterAnimationController::CustomUpdateAnimation()
 		bIsInAir = Pawn->GetMovementComponent()->IsFalling();
 		Pitch = Pawn->GetBaseAimRotation().Pitch;
 
-		if (Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetAimMontage()) || Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetShootMontage()))
+		if (Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetAimMontage()) || Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetShootMontage()) && !bIsDead)
 		{
 			bIsAiming = true;
 		}

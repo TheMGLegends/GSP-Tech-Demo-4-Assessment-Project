@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CharacterAnimationController.h"
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -29,6 +30,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void TakeDamage(int Damage);
+	bool GetIsDead() const { return bIsDead; }
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
@@ -37,8 +39,8 @@ private:
 	UPROPERTY()
 	UCharacterMovementComponent* CharMove;
 	
-	bool bIsViewingRight;
 	bool bIsAimedIn;
+	bool bIsDead;
 
 	UPROPERTY(VisibleAnywhere, Category = "Health")
 	int Health;

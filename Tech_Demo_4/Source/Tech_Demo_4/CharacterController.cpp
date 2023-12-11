@@ -24,8 +24,8 @@ ACharacterController::ACharacterController()
 
 	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
 	CharMove = GetCharacterMovement();
-	bIsViewingRight = true;
 	bIsAimedIn = false;
+	bIsDead = false;
 	Health = 200;
 }
 
@@ -33,7 +33,6 @@ ACharacterController::ACharacterController()
 void ACharacterController::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -65,11 +64,18 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 void ACharacterController::TakeDamage(int Damage)
 {
 	Health -= Damage;
+
+	if (Health <= 0)
+	{
+		bIsDead = true;
+		AimOut();
+		StopAnimMontage();
+	}
 }
 
 void ACharacterController::MoveForward(float Value)
 {
-	if (Value)
+	if (Value && !bIsDead)
 	{
 		AddMovementInput(GetActorForwardVector(), Value);
 	}
@@ -77,7 +83,7 @@ void ACharacterController::MoveForward(float Value)
 
 void ACharacterController::MoveRight(float Value)
 {
-	if (Value)
+	if (Value && !bIsDead)
 	{
 		AddMovementInput(GetActorRightVector(), Value);
 	}
@@ -85,7 +91,7 @@ void ACharacterController::MoveRight(float Value)
 
 void ACharacterController::LookUp(float Value)
 {
-	if (Value)
+	if (Value && !bIsDead)
 	{
 		float Temp = SpringArm->GetRelativeRotation().Pitch + Value;
 		
@@ -98,7 +104,7 @@ void ACharacterController::LookUp(float Value)
 
 void ACharacterController::LookRight(float Value)
 {
-	if (Value)
+	if (Value && !bIsDead)
 	{
 		AddActorLocalRotation(FRotator(0, Value, 0));
 	}
@@ -106,24 +112,32 @@ void ACharacterController::LookRight(float Value)
 
 void ACharacterController::Jump()
 {
-	Super::Jump();
+	if (!bIsDead)
+	{
+		Super::Jump();
+	}
 }
 
 void ACharacterController::Shoot()
 {
-	if (bIsAimedIn)
+	if (bIsAimedIn && !bIsDead)
 	{
+		// Testing Code:
+		TakeDamage(10);
+		GLog->Logf(TEXT("Current Health: %d"), Health);
+		// ------------------------------------------------
+		
 		PlayAnimMontage(ShootMontage);
 	}
 }
 
 void ACharacterController::Aim()
 {
-	if (!bIsAimedIn)
+	if (!bIsAimedIn && !bIsDead)
 	{
 		AimIn();
 	}
-	else
+	else if (bIsAimedIn && !bIsDead)
 	{
 		AimOut();
 	}
@@ -131,8 +145,11 @@ void ACharacterController::Aim()
 
 void ACharacterController::Reload()
 {
-	AimOut();
-	PlayAnimMontage(ReloadMontage);
+	if (!bIsDead)
+	{
+		AimOut();
+		PlayAnimMontage(ReloadMontage);
+	}
 }
 
 void ACharacterController::AimIn()
@@ -154,7 +171,6 @@ void ACharacterController::AimOut()
 	}
 	SpringArm->TargetArmLength = 150.0f;
 	bIsAimedIn = false;
-	StopAnimMontage(ShootMontage);
-	StopAnimMontage(AimMontage);
+	StopAnimMontage();
 }
 

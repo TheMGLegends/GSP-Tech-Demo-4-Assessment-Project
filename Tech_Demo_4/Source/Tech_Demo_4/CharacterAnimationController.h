@@ -22,6 +22,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
 	bool bIsInAir;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
+	bool bIsDead;
 	
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CustomAnim")
 	bool bIsAiming;
