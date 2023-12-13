@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TECH_DEMO_4_CharacterController_generated_h
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_SPARSE_DATA
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_RPC_WRAPPERS
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_INCLASS_NO_PURE_DECLS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_SPARSE_DATA
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_RPC_WRAPPERS
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACharacterController(); \
 	friend struct Z_Construct_UClass_ACharacterController_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ACharacterController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_INCLASS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesACharacterController(); \
 	friend struct Z_Construct_UClass_ACharacterController_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ACharacterController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_STANDARD_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACharacterController(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACharacterController) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_ENHANCED_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACharacterController(ACharacterController&&); \
@@ -58,9 +58,8 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACharacterController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_PRIVATE_PROPERTY_OFFSET \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CharMove() { return STRUCT_OFFSET(ACharacterController, CharMove); } \
-	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ACharacterController, Health); } \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACharacterController, Camera); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ACharacterController, SpringArm); } \
 	FORCEINLINE static uint32 __PPO__AimMontage() { return STRUCT_OFFSET(ACharacterController, AimMontage); } \
@@ -68,27 +67,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__ShootMontage() { return STRUCT_OFFSET(ACharacterController, ShootMontage); }
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_12_PROLOG
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_GENERATED_BODY_LEGACY \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_11_PROLOG
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_RPC_WRAPPERS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_INCLASS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_STANDARD_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_RPC_WRAPPERS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_INCLASS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_GENERATED_BODY \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_INCLASS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_15_ENHANCED_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_INCLASS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterController_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

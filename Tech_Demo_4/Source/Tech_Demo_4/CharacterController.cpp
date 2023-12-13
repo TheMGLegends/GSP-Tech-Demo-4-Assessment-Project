@@ -3,7 +3,9 @@
 
 #include "CharacterController.h"
 
+#include "Blueprint/UserWidget.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ACharacterController::ACharacterController()
@@ -33,6 +35,13 @@ ACharacterController::ACharacterController()
 void ACharacterController::BeginPlay()
 {
 	Super::BeginPlay();
+	if(HUDOverlayAsset)	{
+		HUDOverlay = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(),HUDOverlayAsset);
+	}
+
+	HUDOverlay->AddToViewport();
+	HUDOverlay->SetVisibility(ESlateVisibility::Visible);
+
 }
 
 // Called every frame

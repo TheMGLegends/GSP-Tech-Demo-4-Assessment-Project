@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CharacterAnimationController.h"
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -34,6 +33,9 @@ public:
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	int Health;
+
 private:
 	// Variable:
 	UPROPERTY()
@@ -41,9 +43,6 @@ private:
 	
 	bool bIsAimedIn;
 	bool bIsDead;
-
-	UPROPERTY(VisibleAnywhere, Category = "Health")
-	int Health;
 	
 	// Axis Functions:
 	void MoveForward(float Value);
@@ -74,4 +73,11 @@ private:
 	UAnimMontage* ReloadMontage;
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ShootMontage;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	TSubclassOf<class UUserWidget> HUDOverlayAsset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UUserWidget* HUDOverlay;
+
 };
