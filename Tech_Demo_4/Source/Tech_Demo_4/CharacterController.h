@@ -34,11 +34,6 @@ public:
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
-	TSubclassOf<class UUserWidget> HUDOverlayAsset;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
-	UUserWidget* HUDOverlay;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	int Health;
 

@@ -8,9 +8,6 @@
 #include "Materials/MaterialInstanceConstant.h"
 #include "Tech_Demo_4GameModeBase.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class TECH_DEMO_4_API ATech_Demo_4GameModeBase : public AGameModeBase
 {
@@ -25,4 +22,9 @@ protected:
 public:
 	UPROPERTY(EditAnywhere, Category = "Materials")
 	TArray<UMaterialInstanceConstant*> Materials;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	TSubclassOf<class UUserWidget> HUDOverlayAsset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UUserWidget* HUDOverlay;
 };

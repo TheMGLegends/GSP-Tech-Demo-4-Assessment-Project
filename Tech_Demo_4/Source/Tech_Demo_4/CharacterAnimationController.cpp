@@ -22,8 +22,8 @@ void UCharacterAnimationController::NativeUpdateAnimation()
 	}
 	if (Pawn)
 	{
-		FVector Speed = Pawn->GetVelocity();
-		FVector LateralSpeed = FVector(Speed.X, Speed.Y, 0);
+		const FVector Speed = Pawn->GetVelocity();
+		const FVector LateralSpeed = FVector(Speed.X, Speed.Y, 0);
 		MoveSpeed = LateralSpeed.Size();
 		Direction = CalculateDirection(Pawn->GetVelocity(), Pawn->GetActorRotation());
 		bIsInAir = Pawn->GetMovementComponent()->IsFalling();

@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CharacterController.h"
+#include "Blueprint/UserWidget.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
@@ -40,14 +41,6 @@ void ACharacterController::BeginPlay()
     		AnimationController = Cast<UCharacterAnimationController>(AnimInstance);
     	}
     }
-
-	//if(HUDOverlayAsset)	{
-	//	HUDOverlay = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(),HUDOverlayAsset);
-	//}
-
-	//HUDOverlay->AddToViewport();
-	//HUDOverlay->SetVisibility(ESlateVisibility::Visible);
-
 }
 
 // Called every frame
@@ -179,7 +172,7 @@ void ACharacterController::AimIn()
 	{
 		CharMove->MaxWalkSpeed = 300.0f;
 	}
-	SpringArm->TargetArmLength = 50.0f;
+	SpringArm->TargetArmLength = 75.0f;
 	bIsAimedIn = true;
 
 	if (AnimationController != nullptr)
