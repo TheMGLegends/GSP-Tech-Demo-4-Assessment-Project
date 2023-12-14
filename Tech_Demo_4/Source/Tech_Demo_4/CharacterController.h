@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CharacterAnimationController.h"
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -16,22 +17,27 @@ class TECH_DEMO_4_API ACharacterController : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ACharacterController();
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
 	void TakeDamage(int Damage);
 	bool GetIsDead() const { return bIsDead; }
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	TSubclassOf<class UUserWidget> HUDOverlayAsset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UUserWidget* HUDOverlay;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	int Health;
@@ -66,6 +72,8 @@ private:
 	UCameraComponent* Camera;
 	UPROPERTY(EditAnywhere, Category = "Spring Arm")
 	USpringArmComponent* SpringArm;
+	UPROPERTY(EditAnywhere, Category = "Animation Controller")
+	UCharacterAnimationController* AnimationController;
 
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* AimMontage;
@@ -73,11 +81,4 @@ private:
 	UAnimMontage* ReloadMontage;
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ShootMontage;
-
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
-	TSubclassOf<class UUserWidget> HUDOverlayAsset;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
-	UUserWidget* HUDOverlay;
-
 };

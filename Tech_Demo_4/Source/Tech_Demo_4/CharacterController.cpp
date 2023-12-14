@@ -1,11 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "CharacterController.h"
-
-#include "Blueprint/UserWidget.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ACharacterController::ACharacterController()
@@ -25,6 +21,7 @@ ACharacterController::ACharacterController()
 	SpringArm->SetRelativeRotation((FRotator(0.0f, 0.0f, 0.0f)));
 
 	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
+	
 	CharMove = GetCharacterMovement();
 	bIsAimedIn = false;
 	bIsDead = false;
@@ -35,17 +32,26 @@ ACharacterController::ACharacterController()
 void ACharacterController::BeginPlay()
 {
 	Super::BeginPlay();
-	if(HUDOverlayAsset)	{
-		HUDOverlay = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(),HUDOverlayAsset);
-	}
 
-	HUDOverlay->AddToViewport();
-	HUDOverlay->SetVisibility(ESlateVisibility::Visible);
+	if (const USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
+    {
+    	if (UAnimInstance* AnimInstance = MeshComponent->GetAnimInstance())
+    	{
+    		AnimationController = Cast<UCharacterAnimationController>(AnimInstance);
+    	}
+    }
+
+	//if(HUDOverlayAsset)	{
+	//	HUDOverlay = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(),HUDOverlayAsset);
+	//}
+
+	//HUDOverlay->AddToViewport();
+	//HUDOverlay->SetVisibility(ESlateVisibility::Visible);
 
 }
 
 // Called every frame
-void ACharacterController::Tick(float DeltaTime)
+void ACharacterController::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
@@ -70,7 +76,7 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ACharacterController::Reload);
 }
 
-void ACharacterController::TakeDamage(int Damage)
+void ACharacterController::TakeDamage(const int Damage)
 {
 	Health -= Damage;
 
@@ -78,11 +84,17 @@ void ACharacterController::TakeDamage(int Damage)
 	{
 		bIsDead = true;
 		AimOut();
+
+		if (AnimationController != nullptr)
+		{
+			AnimationController->bIsDead = true;
+		}
+		
 		StopAnimMontage();
 	}
 }
 
-void ACharacterController::MoveForward(float Value)
+void ACharacterController::MoveForward(const float Value)
 {
 	if (Value && !bIsDead)
 	{
@@ -90,7 +102,7 @@ void ACharacterController::MoveForward(float Value)
 	}
 }
 
-void ACharacterController::MoveRight(float Value)
+void ACharacterController::MoveRight(const float Value)
 {
 	if (Value && !bIsDead)
 	{
@@ -98,11 +110,11 @@ void ACharacterController::MoveRight(float Value)
 	}
 }
 
-void ACharacterController::LookUp(float Value)
+void ACharacterController::LookUp(const float Value)
 {
 	if (Value && !bIsDead)
 	{
-		float Temp = SpringArm->GetRelativeRotation().Pitch + Value;
+		const float Temp = SpringArm->GetRelativeRotation().Pitch + Value;
 		
 		if (Temp < 25 && Temp > -50)
 		{
@@ -111,7 +123,7 @@ void ACharacterController::LookUp(float Value)
 	}
 }
 
-void ACharacterController::LookRight(float Value)
+void ACharacterController::LookRight(const float Value)
 {
 	if (Value && !bIsDead)
 	{
@@ -169,6 +181,12 @@ void ACharacterController::AimIn()
 	}
 	SpringArm->TargetArmLength = 50.0f;
 	bIsAimedIn = true;
+
+	if (AnimationController != nullptr)
+	{
+		AnimationController->bIsAiming = bIsAimedIn;
+	}
+
 	PlayAnimMontage(AimMontage);
 }
 
@@ -180,6 +198,12 @@ void ACharacterController::AimOut()
 	}
 	SpringArm->TargetArmLength = 150.0f;
 	bIsAimedIn = false;
+
+	if (AnimationController != nullptr)
+	{
+		AnimationController->bIsAiming = bIsAimedIn;
+	}
+
 	StopAnimMontage();
 }
 

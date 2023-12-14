@@ -1,9 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "CharacterAnimationController.h"
-
-#include "CharacterController.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 void UCharacterAnimationController::NativeInitializeAnimation()
@@ -17,7 +14,7 @@ void UCharacterAnimationController::NativeInitializeAnimation()
 	bIsAiming = false;
 }
 
-void UCharacterAnimationController::CustomUpdateAnimation()
+void UCharacterAnimationController::NativeUpdateAnimation()
 {
 	if (Pawn == nullptr)
 	{
@@ -25,27 +22,12 @@ void UCharacterAnimationController::CustomUpdateAnimation()
 	}
 	if (Pawn)
 	{
-		if (Cast<ACharacterController>(Pawn)->GetIsDead())
-		{
-			bIsDead = true;
-			bIsAiming = false;
-		}
-		
 		FVector Speed = Pawn->GetVelocity();
 		FVector LateralSpeed = FVector(Speed.X, Speed.Y, 0);
 		MoveSpeed = LateralSpeed.Size();
-		Direction = UCharacterAnimationController::CalculateDirection(Pawn->GetVelocity(), Pawn->GetActorRotation());
+		Direction = CalculateDirection(Pawn->GetVelocity(), Pawn->GetActorRotation());
 		bIsInAir = Pawn->GetMovementComponent()->IsFalling();
 		Pitch = Pawn->GetBaseAimRotation().Pitch;
-
-		if (Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetAimMontage()) || Montage_IsPlaying(Cast<ACharacterController>(Pawn)->GetShootMontage()) && !bIsDead)
-		{
-			bIsAiming = true;
-		}
-		else
-		{
-			bIsAiming = false;
-		}
 	}
 
 }
