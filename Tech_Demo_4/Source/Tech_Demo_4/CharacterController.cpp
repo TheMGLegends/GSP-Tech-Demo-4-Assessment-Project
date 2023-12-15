@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CharacterController.h"
-#include "Blueprint/UserWidget.h"
+#include "CharacterWidget.h"
+#include "Components/SlateWrapperTypes.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
@@ -26,7 +27,16 @@ ACharacterController::ACharacterController()
 	CharMove = GetCharacterMovement();
 	bIsAimedIn = false;
 	bIsDead = false;
-	Health = 200;
+	bHasShot = false;
+	
+	ShotDuration = 1.2f;
+	CurrentShotInterval = 0.0f;
+	
+	MaxHealth = 200.0f;
+	Health = MaxHealth;
+	HealthPercentage = Health / MaxHealth;
+
+	CrosshairVisible = ESlateVisibility::Hidden;
 }
 
 // Called when the game starts or when spawned
@@ -47,6 +57,17 @@ void ACharacterController::BeginPlay()
 void ACharacterController::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (bHasShot)
+	{
+		CurrentShotInterval += DeltaTime;
+
+		if (CurrentShotInterval > ShotDuration)
+		{
+			CurrentShotInterval = 0.0f;
+			bHasShot = false;
+		}
+	}
 }
 
 // Called to bind functionality to input
@@ -71,19 +92,27 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 void ACharacterController::TakeDamage(const int Damage)
 {
-	Health -= Damage;
-
-	if (Health <= 0)
+	if (Health > 0)
 	{
-		bIsDead = true;
-		AimOut();
-
-		if (AnimationController != nullptr)
+		if (CharacterWidget != nullptr)
 		{
-			AnimationController->bIsDead = true;
+			CharacterWidget->Fade();
 		}
+		Health -= Damage;
+		HealthPercentage = Health / MaxHealth;
 		
-		StopAnimMontage();
+		if (Health <= 0)
+		{
+			bIsDead = true;
+			AimOut();
+
+			if (AnimationController != nullptr)
+			{
+				AnimationController->bIsDead = true;
+			}
+		
+			StopAnimMontage();
+		}
 	}
 }
 
@@ -134,13 +163,14 @@ void ACharacterController::Jump()
 
 void ACharacterController::Shoot()
 {
-	if (bIsAimedIn && !bIsDead)
+	if (bIsAimedIn && !bHasShot && !bIsDead)
 	{
 		// Testing Code:
 		TakeDamage(10);
 		GLog->Logf(TEXT("Current Health: %d"), Health);
 		// ------------------------------------------------
-		
+
+		bHasShot = true;
 		PlayAnimMontage(ShootMontage);
 	}
 }
@@ -180,6 +210,8 @@ void ACharacterController::AimIn()
 		AnimationController->bIsAiming = bIsAimedIn;
 	}
 
+	CrosshairVisible = ESlateVisibility::Visible;
+
 	PlayAnimMontage(AimMontage);
 }
 
@@ -196,6 +228,8 @@ void ACharacterController::AimOut()
 	{
 		AnimationController->bIsAiming = bIsAimedIn;
 	}
+
+	CrosshairVisible = ESlateVisibility::Hidden;
 
 	StopAnimMontage();
 }

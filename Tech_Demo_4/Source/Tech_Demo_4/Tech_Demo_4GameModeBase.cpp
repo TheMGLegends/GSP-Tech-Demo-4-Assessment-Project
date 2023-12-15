@@ -1,6 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "Tech_Demo_4GameModeBase.h"
+
+#include "CharacterWidget.h"
 #include "EngineUtils.h"
 #include "Blueprint/UserWidget.h"
 
@@ -27,6 +29,9 @@ void ATech_Demo_4GameModeBase::StartPlay()
 
 				if (HUDOverlay != nullptr)
 				{
+					Cast<UCharacterWidget>(HUDOverlay)->CharacterPawn = CharacterController->GetController()->GetPawn();
+					Cast<UCharacterWidget>(HUDOverlay)->CharacterController = CharacterController;
+					CharacterController->CharacterWidget = Cast<UCharacterWidget>(HUDOverlay);
 					HUDOverlay->AddToPlayerScreen();
 					HUDOverlay->SetVisibility(ESlateVisibility::Visible);
 				}

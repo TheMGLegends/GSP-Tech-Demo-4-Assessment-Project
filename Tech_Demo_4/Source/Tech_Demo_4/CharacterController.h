@@ -9,6 +9,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "CharacterController.generated.h"
 
+class UCharacterWidget;
+
 UCLASS()
 class TECH_DEMO_4_API ACharacterController : public ACharacter
 {
@@ -34,8 +36,18 @@ public:
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
+	UPROPERTY(EditAnywhere, Category = "Health")
+	float MaxHealth;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
-	int Health;
+	float Health;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	float HealthPercentage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aiming")
+	ESlateVisibility CrosshairVisible;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Widget")
+	UCharacterWidget* CharacterWidget;
 
 private:
 	// Variable:
@@ -44,6 +56,11 @@ private:
 	
 	bool bIsAimedIn;
 	bool bIsDead;
+	bool bHasShot;
+
+	UPROPERTY(EditAnywhere, Category = "Timers")
+	float ShotDuration;
+	float CurrentShotInterval;
 	
 	// Axis Functions:
 	void MoveForward(float Value);
