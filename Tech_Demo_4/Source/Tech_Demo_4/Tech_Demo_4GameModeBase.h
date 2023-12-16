@@ -15,6 +15,7 @@ class TECH_DEMO_4_API ATech_Demo_4GameModeBase : public AGameModeBase
 	
 protected:
 	virtual void StartPlay() override;
+	void Countdown();
 
 	UPROPERTY()
 	TArray<ACharacterController*> Players;
@@ -24,7 +25,17 @@ public:
 	TArray<UMaterialInstanceConstant*> Materials;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
-	TSubclassOf<class UUserWidget> HUDOverlayAsset;
+	TSubclassOf<class UUserWidget> CharacterHUDOverlayAsset;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
-	UUserWidget* HUDOverlay;
+	UUserWidget* CharacterHUDOverlay;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	TSubclassOf<class UUserWidget> CountdownTimerHUDOverlayAsset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UUserWidget* CountdownTimerHUDOverlay;
+	
+	UPROPERTY(EditAnywhere, Category = "Timer")
+	int Minutes = 3;
+
+	int Seconds = 0;
 };

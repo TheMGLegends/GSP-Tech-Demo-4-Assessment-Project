@@ -10,6 +10,20 @@ void ATech_Demo_4GameModeBase::StartPlay()
 {
 	Super::StartPlay();
 
+	FTimerHandle TimerHandle;
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
+
+	if (CountdownTimerHUDOverlayAsset)
+	{
+		CountdownTimerHUDOverlay = CreateWidget<UUserWidget>(GetWorld(), CountdownTimerHUDOverlayAsset);
+	}
+
+	if (CountdownTimerHUDOverlay != nullptr)
+	{
+		CountdownTimerHUDOverlay->AddToViewport();
+		CountdownTimerHUDOverlay->SetVisibility(ESlateVisibility::Visible);
+	}
+	
 	for(TActorIterator<ACharacterController> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
 	{
 		ACharacterController* CharacterController = *ActorIterator;
@@ -22,18 +36,18 @@ void ATech_Demo_4GameModeBase::StartPlay()
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Found Actor"));
 				
-				if(HUDOverlayAsset)
+				if(CharacterHUDOverlayAsset)
 				{
-					HUDOverlay = CreateWidget<UUserWidget>(Cast<APlayerController>(CharacterController->GetController()), HUDOverlayAsset);
+					CharacterHUDOverlay = CreateWidget<UUserWidget>(Cast<APlayerController>(CharacterController->GetController()), CharacterHUDOverlayAsset);
 				}
 
-				if (HUDOverlay != nullptr)
+				if (CharacterHUDOverlay != nullptr)
 				{
-					Cast<UCharacterWidget>(HUDOverlay)->CharacterPawn = CharacterController->GetController()->GetPawn();
-					Cast<UCharacterWidget>(HUDOverlay)->CharacterController = CharacterController;
-					CharacterController->CharacterWidget = Cast<UCharacterWidget>(HUDOverlay);
-					HUDOverlay->AddToPlayerScreen();
-					HUDOverlay->SetVisibility(ESlateVisibility::Visible);
+					Cast<UCharacterWidget>(CharacterHUDOverlay)->CharacterPawn = CharacterController->GetController()->GetPawn();
+					Cast<UCharacterWidget>(CharacterHUDOverlay)->CharacterController = CharacterController;
+					CharacterController->CharacterWidget = Cast<UCharacterWidget>(CharacterHUDOverlay);
+					CharacterHUDOverlay->AddToPlayerScreen();
+					CharacterHUDOverlay->SetVisibility(ESlateVisibility::Visible);
 				}
 			}
 		}
@@ -42,5 +56,25 @@ void ATech_Demo_4GameModeBase::StartPlay()
 	for (uint8 Index = 0; Index != Players.Num(); ++Index)
 	{
 		Players[Index]->FindComponentByClass<USkeletalMeshComponent>()->SetMaterial(1, Materials[Index]);
+	}
+}
+
+void ATech_Demo_4GameModeBase::Countdown()
+{
+	if (Seconds != 0)
+	{
+		Seconds--;
+	}
+	else
+	{
+		if (Minutes != 0)
+		{
+			Minutes--;
+			Seconds = 59;
+		}
+		else
+		{
+		
+		}
 	}
 }

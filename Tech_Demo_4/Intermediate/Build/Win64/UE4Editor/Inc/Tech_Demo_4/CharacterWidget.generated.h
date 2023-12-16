@@ -13,18 +13,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TECH_DEMO_4_CharacterWidget_generated_h
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_SPARSE_DATA
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_RPC_WRAPPERS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_SPARSE_DATA
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execFade);
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execFade);
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_INCLASS_NO_PURE_DECLS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCharacterWidget(); \
 	friend struct Z_Construct_UClass_UCharacterWidget_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(UCharacterWidget)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_INCLASS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesUCharacterWidget(); \
 	friend struct Z_Construct_UClass_UCharacterWidget_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(UCharacterWidget)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_STANDARD_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCharacterWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCharacterWidget) \
@@ -55,7 +55,7 @@ private: \
 public:
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_ENHANCED_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCharacterWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -68,28 +68,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCharacterWidget)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_PRIVATE_PROPERTY_OFFSET
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_PROLOG
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_GENERATED_BODY_LEGACY \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_PRIVATE_PROPERTY_OFFSET
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_10_PROLOG
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_RPC_WRAPPERS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_INCLASS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_STANDARD_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_RPC_WRAPPERS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_INCLASS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_GENERATED_BODY \
+#define Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_INCLASS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_16_ENHANCED_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_INCLASS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_CharacterWidget_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -95,7 +95,6 @@ void EmptyLinkFunctionForGeneratedCodeCharacterWidget() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterWidget_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "CharacterWidget.h" },
 		{ "ModuleRelativePath", "CharacterWidget.h" },
 	};
@@ -154,7 +153,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterWidget, 1192666298);
+	IMPLEMENT_CLASS(UCharacterWidget, 3881179882);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UCharacterWidget>()
 	{
 		return UCharacterWidget::StaticClass();

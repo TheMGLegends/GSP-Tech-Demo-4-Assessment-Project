@@ -7,9 +7,6 @@
 #include "Blueprint/UserWidget.h"
 #include "CharacterWidget.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class TECH_DEMO_4_API UCharacterWidget : public UUserWidget
 {
