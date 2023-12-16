@@ -3,14 +3,25 @@
 #include "Tech_Demo_4GameModeBase.h"
 
 #include "CharacterWidget.h"
+#include "CountdownWidget.h"
 #include "EngineUtils.h"
 #include "Blueprint/UserWidget.h"
+
+ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
+{
+	CharacterHUDOverlay = nullptr;
+	CountdownTimerHUDOverlay = nullptr;
+	
+	//Minutes = 3;
+	//Seconds = 0;
+	Minutes = 0;
+	Seconds = 10;
+}
 
 void ATech_Demo_4GameModeBase::StartPlay()
 {
 	Super::StartPlay();
-
-	FTimerHandle TimerHandle;
+	
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
 
 	if (CountdownTimerHUDOverlayAsset)
@@ -22,6 +33,7 @@ void ATech_Demo_4GameModeBase::StartPlay()
 	{
 		CountdownTimerHUDOverlay->AddToViewport();
 		CountdownTimerHUDOverlay->SetVisibility(ESlateVisibility::Visible);
+		Cast<UCountdownWidget>(CountdownTimerHUDOverlay)->GameModeBase = this;
 	}
 	
 	for(TActorIterator<ACharacterController> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
@@ -74,7 +86,26 @@ void ATech_Demo_4GameModeBase::Countdown()
 		}
 		else
 		{
-		
+			UE_LOG(LogTemp, Warning, TEXT("Reached 0!"));
+			GetWorldTimerManager().ClearTimer(TimerHandle);
+			GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
+			UE_LOG(LogTemp, Warning, TEXT("Started other timer"));
 		}
 	}
+}
+
+void ATech_Demo_4GameModeBase::RespawnPlayers()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Started respawn!"));
+	GetWorldTimerManager().ClearTimer(TimerHandle);
+
+	for (uint8 i = 0; i < Players.Num(); ++i)
+	{
+		Players[i]->Respawn();
+	}
+
+	Minutes = 3;
+	Seconds = 0;
+	
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
 }

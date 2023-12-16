@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tech_Demo_4.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5F7799F1-B7A1-407F-995E-31803058D0FC}</UniqueIdentifier>
+      <UniqueIdentifier>{2E09B970-2FBC-4AE9-996E-1679A7F5AEB4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tech_Demo_4.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{14F13603-FFE5-4D34-AC7D-E1CA3243E4C3}</UniqueIdentifier>
+      <UniqueIdentifier>{FDC53A04-1EC8-4261-9604-3AEFC943E675}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tech_Demo_4">
-      <UniqueIdentifier>{33F016B1-A181-4F14-A30D-28B1C6992CFD}</UniqueIdentifier>
+      <UniqueIdentifier>{1FD59AD0-FFB1-4E50-BE10-773FDF592B03}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tech_Demo_4\CharacterAnimationController.cpp">
       <Filter>Source\Tech_Demo_4</Filter>
@@ -47,10 +47,10 @@
     <ClInclude Include="..\..\Source\Tech_Demo_4\CharacterWidget.h">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Tech_Demo_4\GS_Countdown.cpp">
+    <ClCompile Include="..\..\Source\Tech_Demo_4\CountdownWidget.cpp">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Tech_Demo_4\GS_Countdown.h">
+    <ClInclude Include="..\..\Source\Tech_Demo_4\CountdownWidget.h">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClInclude>
     <None Include="..\..\Source\Tech_Demo_4\Tech_Demo_4.Build.cs">

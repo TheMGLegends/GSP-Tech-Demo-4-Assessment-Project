@@ -32,9 +32,12 @@ protected:
 
 public:	
 	void TakeDamage(int Damage);
+	void Respawn();
 	bool GetIsDead() const { return bIsDead; }
+	
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
+
 
 	UPROPERTY(EditAnywhere, Category = "Health")
 	float MaxHealth;
@@ -48,6 +51,8 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Widget")
 	UCharacterWidget* CharacterWidget;
+
+	FTransform Origin;
 
 private:
 	// Variable:

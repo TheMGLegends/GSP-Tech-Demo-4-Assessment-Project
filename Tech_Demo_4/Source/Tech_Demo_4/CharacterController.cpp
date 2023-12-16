@@ -19,7 +19,7 @@ ACharacterController::ACharacterController()
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 	SpringArm->TargetArmLength = 150.0f;
-	SpringArm->SetRelativeLocation(FVector(0, 0, 90));
+	SpringArm->SetRelativeLocation(FVector(0, 25, 90));
 	SpringArm->SetRelativeRotation((FRotator(0.0f, 0.0f, 0.0f)));
 
 	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
@@ -43,6 +43,10 @@ ACharacterController::ACharacterController()
 void ACharacterController::BeginPlay()
 {
 	Super::BeginPlay();
+
+	Origin = GetActorTransform();
+
+	UE_LOG(LogTemp, Warning, TEXT("Initial Location: %s"), *Origin.ToString());
 
 	if (const USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
     {
@@ -116,6 +120,23 @@ void ACharacterController::TakeDamage(const int Damage)
 	}
 }
 
+void ACharacterController::Respawn()
+{
+	bIsDead = false;
+	
+	SetActorTransform(Origin);
+	AimOut();
+	Camera->SetRelativeLocation(FVector(0, 20, 0));
+	
+	SpringArm->SetRelativeLocation(FVector(0, 25, 90));
+	SpringArm->SetRelativeRotation((FRotator(0.0f, 0.0f, 0.0f)));
+	
+	bHasShot = false;
+	
+	Health = MaxHealth;
+	HealthPercentage = Health / MaxHealth;
+}
+
 void ACharacterController::MoveForward(const float Value)
 {
 	if (Value && !bIsDead)
@@ -167,7 +188,7 @@ void ACharacterController::Shoot()
 	{
 		// Testing Code:
 		TakeDamage(10);
-		GLog->Logf(TEXT("Current Health: %d"), Health);
+		GLog->Logf(TEXT("Current Health: %f"), Health);
 		// ------------------------------------------------
 
 		bHasShot = true;

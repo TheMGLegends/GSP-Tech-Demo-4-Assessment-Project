@@ -8,6 +8,8 @@
 #include "Materials/MaterialInstanceConstant.h"
 #include "Tech_Demo_4GameModeBase.generated.h"
 
+class UCountdownWidget;
+
 UCLASS()
 class TECH_DEMO_4_API ATech_Demo_4GameModeBase : public AGameModeBase
 {
@@ -16,11 +18,16 @@ class TECH_DEMO_4_API ATech_Demo_4GameModeBase : public AGameModeBase
 protected:
 	virtual void StartPlay() override;
 	void Countdown();
+	void RespawnPlayers();
 
 	UPROPERTY()
 	TArray<ACharacterController*> Players;
+
+	FTimerHandle TimerHandle;
 	
 public:
+	ATech_Demo_4GameModeBase();
+	
 	UPROPERTY(EditAnywhere, Category = "Materials")
 	TArray<UMaterialInstanceConstant*> Materials;
 
@@ -34,8 +41,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	UUserWidget* CountdownTimerHUDOverlay;
 	
-	UPROPERTY(EditAnywhere, Category = "Timer")
-	int Minutes = 3;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timer")
+	int Minutes;
 
-	int Seconds = 0;
+	UPROPERTY(BlueprintReadWrite, Category = "Timer");
+	int Seconds;
 };
