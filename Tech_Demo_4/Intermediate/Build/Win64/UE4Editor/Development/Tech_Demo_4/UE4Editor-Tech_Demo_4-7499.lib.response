@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Tech_Demo_4-7499.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\Tech_Demo_4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CharacterAnimationController.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CharacterController.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CharacterWidget.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CountdownWidget.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\Tech_Demo_4.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\Tech_Demo_4GameModeBase.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CharacterAnimationController.gen.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CharacterController.gen.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CharacterWidget.gen.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\CountdownWidget.gen.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\Tech_Demo_4.init.gen.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\Tech_Demo_4GameModeBase.gen.cpp.obj"
+"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\Default.rc2.res"
+/OUT:"B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-7499.lib"

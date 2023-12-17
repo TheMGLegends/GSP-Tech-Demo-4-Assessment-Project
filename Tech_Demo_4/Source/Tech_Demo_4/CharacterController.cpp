@@ -31,12 +31,20 @@ ACharacterController::ACharacterController()
 	
 	ShotDuration = 1.2f;
 	CurrentShotInterval = 0.0f;
+
+	ReloadDuration = 3.3f;
+	CurrentReloadInterval = 0.0f;
 	
 	MaxHealth = 200.0f;
 	Health = MaxHealth;
 	HealthPercentage = Health / MaxHealth;
 
+	ClipSize = 10;
+	Ammo = ClipSize;
+	Clips = 2;
+
 	CrosshairVisible = ESlateVisibility::Hidden;
+	ReloadVisible = ESlateVisibility::Hidden;
 }
 
 // Called when the game starts or when spawned
@@ -62,6 +70,12 @@ void ACharacterController::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if ((bIsAimedIn || bIsDead) && bIsReloading)
+	{
+		CurrentReloadInterval = 0.0f;
+		bIsReloading = false;
+	}
+
 	if (bHasShot)
 	{
 		CurrentShotInterval += DeltaTime;
@@ -71,6 +85,30 @@ void ACharacterController::Tick(const float DeltaTime)
 			CurrentShotInterval = 0.0f;
 			bHasShot = false;
 		}
+	}
+
+	if (bIsReloading)
+	{
+		CurrentReloadInterval += DeltaTime;
+
+		if (CurrentReloadInterval > ReloadDuration)
+		{
+			CurrentReloadInterval = 0.0f;
+			
+			Ammo = ClipSize;
+			Clips--;
+			
+			bIsReloading = false;
+		}
+	}
+
+	if (AnimationController->Montage_IsPlaying(ReloadMontage) && ReloadVisible == ESlateVisibility::Hidden)
+	{
+		ReloadVisible = ESlateVisibility::Visible;
+	}
+	else if (!AnimationController->Montage_IsPlaying(ReloadMontage) && ReloadVisible != ESlateVisibility::Hidden)
+	{
+		ReloadVisible = ESlateVisibility::Hidden;
 	}
 }
 
@@ -135,6 +173,9 @@ void ACharacterController::Respawn()
 	
 	Health = MaxHealth;
 	HealthPercentage = Health / MaxHealth;
+
+	Ammo = ClipSize;
+	Clips = 2;
 }
 
 void ACharacterController::MoveForward(const float Value)
@@ -184,13 +225,14 @@ void ACharacterController::Jump()
 
 void ACharacterController::Shoot()
 {
-	if (bIsAimedIn && !bHasShot && !bIsDead)
+	if (bIsAimedIn && !bHasShot && !bIsDead && Ammo > 0)
 	{
 		// Testing Code:
 		TakeDamage(10);
 		GLog->Logf(TEXT("Current Health: %f"), Health);
 		// ------------------------------------------------
 
+		Ammo--;
 		bHasShot = true;
 		PlayAnimMontage(ShootMontage);
 	}
@@ -210,9 +252,10 @@ void ACharacterController::Aim()
 
 void ACharacterController::Reload()
 {
-	if (!bIsDead)
+	if (!bIsDead && Clips > 0 && Ammo < ClipSize)
 	{
 		AimOut();
+		bIsReloading = true;
 		PlayAnimMontage(ReloadMontage);
 	}
 }

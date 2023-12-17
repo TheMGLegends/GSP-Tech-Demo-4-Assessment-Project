@@ -12,10 +12,8 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 	CharacterHUDOverlay = nullptr;
 	CountdownTimerHUDOverlay = nullptr;
 	
-	//Minutes = 3;
-	//Seconds = 0;
-	Minutes = 0;
-	Seconds = 10;
+	Minutes = 3;
+	Seconds = 0;
 }
 
 void ATech_Demo_4GameModeBase::StartPlay()

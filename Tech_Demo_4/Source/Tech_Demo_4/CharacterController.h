@@ -46,8 +46,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	float HealthPercentage;
 
+	UPROPERTY(EditAnywhere, Category = "Ammo")
+	int ClipSize;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
+	int Ammo;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
+	int Clips;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aiming")
 	ESlateVisibility CrosshairVisible;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Reloading")
+	ESlateVisibility ReloadVisible;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Widget")
 	UCharacterWidget* CharacterWidget;
@@ -62,10 +71,15 @@ private:
 	bool bIsAimedIn;
 	bool bIsDead;
 	bool bHasShot;
+	bool bIsReloading;
 
 	UPROPERTY(EditAnywhere, Category = "Timers")
 	float ShotDuration;
 	float CurrentShotInterval;
+
+	UPROPERTY(EditAnywhere, Category = "Timers")
+	float ReloadDuration;
+	float CurrentReloadInterval;
 	
 	// Axis Functions:
 	void MoveForward(float Value);
