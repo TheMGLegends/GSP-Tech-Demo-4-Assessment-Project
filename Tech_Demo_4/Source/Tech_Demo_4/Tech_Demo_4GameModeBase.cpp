@@ -9,11 +9,16 @@
 
 ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 {
+	BlueMaterial = nullptr;
+	RedMaterial = nullptr;
+	
 	CharacterHUDOverlay = nullptr;
 	CountdownTimerHUDOverlay = nullptr;
 	
 	Minutes = 3;
 	Seconds = 0;
+
+	Round = 1;
 }
 
 void ATech_Demo_4GameModeBase::StartPlay()
@@ -66,6 +71,17 @@ void ATech_Demo_4GameModeBase::StartPlay()
 	for (uint8 Index = 0; Index != Players.Num(); ++Index)
 	{
 		Players[Index]->FindComponentByClass<USkeletalMeshComponent>()->SetMaterial(1, Materials[Index]);
+		
+		if (Materials[Index] == RedMaterial)
+		{
+			Cast<ACharacterController>(Players[Index])->Name = "Red";
+		}
+		else if (Materials[Index] == BlueMaterial)
+		{
+			Cast<ACharacterController>(Players[Index])->Name = "Blue";
+		}
+
+		UE_LOG(LogTemp, Warning, TEXT("Character Name: %s"), *Cast<ACharacterController>(Players[Index])->Name);
 	}
 }
 
@@ -84,22 +100,20 @@ void ATech_Demo_4GameModeBase::Countdown()
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Reached 0!"));
 			GetWorldTimerManager().ClearTimer(TimerHandle);
+			
 			GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
-			UE_LOG(LogTemp, Warning, TEXT("Started other timer"));
 		}
 	}
 }
 
 void ATech_Demo_4GameModeBase::RespawnPlayers()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Started respawn!"));
 	GetWorldTimerManager().ClearTimer(TimerHandle);
 
-	for (uint8 i = 0; i < Players.Num(); ++i)
+	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
-		Players[i]->Respawn();
+		Players[Index]->Respawn();
 	}
 
 	Minutes = 3;

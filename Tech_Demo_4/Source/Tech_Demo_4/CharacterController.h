@@ -38,6 +38,8 @@ public:
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Name")
+	FString Name;
 
 	UPROPERTY(EditAnywhere, Category = "Health")
 	float MaxHealth;
@@ -52,6 +54,9 @@ public:
 	int Ammo;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int Clips;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score")
+	int Score;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aiming")
 	ESlateVisibility CrosshairVisible;

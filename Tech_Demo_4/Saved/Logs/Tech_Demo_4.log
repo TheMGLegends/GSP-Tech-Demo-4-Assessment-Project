@@ -2753,3 +2753,1230 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2023.12.17-10.52.33:529][612]LogContentValidation: Display: Validating World /Game/Maps/TechDemo4_Map.TechDemo4_Map
 [2023.12.17-10.52.33:529][612]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/TechDemo4_Map_BuiltData.TechDemo4_Map_BuiltData
 [2023.12.17-10.52.35:085][744]LogUObjectHash: Compacting FUObjectHashTables data took   4.09ms
+[2023.12.17-10.58.32:556][507]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-10.58.32:563][507]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-10.58.32:563][507]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 10:58:32)
+[2023.12.17-10.58.32:609][507]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-10.58.32:688][507]LogPlayLevel: PIE: StaticDuplicateObject took: (0.079026s)
+[2023.12.17-10.58.32:690][507]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-10.58.32:690][507]LogPlayLevel: PIE: World Init took: (0.001781s)
+[2023.12.17-10.58.32:690][507]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.081236s)
+[2023.12.17-10.58.32:749][507]LogUObjectHash: Compacting FUObjectHashTables data took   4.24ms
+[2023.12.17-10.58.32:755][507]LogAudio: Display: Creating Audio Device:                 Id: 19, Scope: Unique, Realtime: True
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-10.58.32:755][507]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-10.58.32:755][507]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-10.58.32:755][507]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-10.58.32:756][507]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-10.58.32:756][507]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-10.58.32:756][507]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-10.58.32:761][507]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-10.58.32:761][507]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-10.58.32:770][507]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-10.58.32:770][507]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-10.58.32:770][507]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-10.58.32:770][507]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-10.58.32:771][507]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-10.58.32:771][507]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-10.58.32:771][507]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-10.58.32:772][507]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-10.58.32:772][507]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-10.58.32:772][507]LogInit: FAudioDevice initialized.
+[2023.12.17-10.58.32:772][507]LogAudio: Display: Audio Device (ID: 19) registered with world 'TechDemo4_Map'.
+[2023.12.17-10.58.32:781][507]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-10.58.32:811][507]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-10.58.32
+[2023.12.17-10.58.32:812][507]LogWorld: Bringing up level for play took: 0.029305
+[2023.12.17-10.58.32:812][507]LogOnline: OSS: Creating online subsystem instance for: :Context_35
+[2023.12.17-10.58.32:819][507]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-10.58.32:819][507]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-10.58.32:819][507]LogTemp: Warning: Found Actor
+[2023.12.17-10.58.32:820][507]LogTemp: Warning: Found Actor
+[2023.12.17-10.58.32:820][507]PIE: Server logged in
+[2023.12.17-10.58.32:822][507]PIE: Play in editor total start time 0.26 seconds.
+[2023.12.17-10.58.41:880][393]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-10.58.41:881][393]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-10.58.41:881][393]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-10.58.41:886][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-10.58.41:895][393]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-10.58.41:902][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-10.58.41:952][393]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-10.58.41:954][393]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-10.58.41:956][393]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-10.58.41:966][393]LogUObjectHash: Compacting FUObjectHashTables data took   3.67ms
+[2023.12.17-10.58.41:986][394]LogPlayLevel: Display: Destroying online subsystem :Context_35
+[2023.12.17-11.00.36:040][882]LogUObjectHash: Compacting FUObjectHashTables data took   5.81ms
+[2023.12.17-11.00.36:071][882]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.00.36:098][882]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUDDBAADE684830A80A48081882F584A129.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.00.36:116][882]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.00.36:116][882]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.00.51:726][696]LogUObjectHash: Compacting FUObjectHashTables data took   4.87ms
+[2023.12.17-11.00.51:744][696]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.00.51:771][696]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUD56B725FE46392F83EF5777A56DF23D21.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.00.51:787][696]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.00.51:788][696]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.01.00:956][778]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2023.12.17-11.01.00:971][778]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.01.00:998][778]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUD0CB88CF14538CDDE147FD89B84731F21.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.01.01:013][778]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.01.01:014][778]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.01.02:988][  6]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2023.12.17-11.01.03:931][110]BlueprintLog: New page: Compile CharacterHUD
+[2023.12.17-11.01.03:987][110]LogUObjectHash: Compacting FUObjectHashTables data took   3.90ms
+[2023.12.17-11.01.15:201][387]LogUObjectHash: Compacting FUObjectHashTables data took   5.38ms
+[2023.12.17-11.01.15:216][387]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.01.15:243][387]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUD559BC4ED426CA92421E73C8268D7E92B.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.01.15:258][387]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.01.15:258][387]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.01.37:262][964]LogUObjectHash: Compacting FUObjectHashTables data took   5.26ms
+[2023.12.17-11.01.37:292][964]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.01.37:320][964]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUDB51F939A4863A397C2E35AA9E2704977.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.01.37:340][964]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.01.37:340][964]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.01.46:283][996]LogUObjectHash: Compacting FUObjectHashTables data took   5.09ms
+[2023.12.17-11.01.46:309][996]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.01.46:336][996]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUDF5855C404B13FDED55AE9CBF587786B3.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.01.46:351][996]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.01.46:351][996]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.02.11:647][917]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2023.12.17-11.02.11:675][917]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.02.11:702][917]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUDC262E4294BBC47E3CEAE21A47AA0AB2A.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.02.11:719][917]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.02.11:719][917]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.02.16:104][414]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2023.12.17-11.02.16:133][414]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.02.16:161][414]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUDF597B64A40CA6D2C2C240683EA2B6C65.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.02.16:180][414]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.02.16:180][414]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.02.19:392][784]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2023.12.17-11.02.19:413][784]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CharacterHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset" SILENT=true
+[2023.12.17-11.02.19:440][784]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CharacterHUDFDACFA7D4CB18FC1EFED73A07FECFD6A.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CharacterHUD.uasset'
+[2023.12.17-11.02.19:456][784]AssetCheck: New page: Asset Save: CharacterHUD
+[2023.12.17-11.02.19:456][784]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CharacterHUD.CharacterHUD
+[2023.12.17-11.02.22:981][193]BlueprintLog: New page: Compile CharacterHUD
+[2023.12.17-11.02.23:062][193]LogUObjectHash: Compacting FUObjectHashTables data took   4.10ms
+[2023.12.17-11.02.24:217][290]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.02.24:224][290]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.02.24:224][290]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:02:24)
+[2023.12.17-11.02.24:259][290]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.02.24:337][290]LogPlayLevel: PIE: StaticDuplicateObject took: (0.077008s)
+[2023.12.17-11.02.24:338][290]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.02.24:339][290]LogPlayLevel: PIE: World Init took: (0.001819s)
+[2023.12.17-11.02.24:339][290]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.079246s)
+[2023.12.17-11.02.24:393][290]LogUObjectHash: Compacting FUObjectHashTables data took   5.49ms
+[2023.12.17-11.02.24:394][290]LogAudio: Display: Creating Audio Device:                 Id: 20, Scope: Unique, Realtime: True
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.02.24:394][290]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.02.24:394][290]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.02.24:394][290]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.02.24:394][290]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.02.24:394][290]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.02.24:395][290]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.02.24:399][290]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.02.24:399][290]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.02.24:408][290]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.02.24:409][290]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.02.24:409][290]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.02.24:409][290]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.02.24:409][290]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.02.24:410][290]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.02.24:410][290]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.02.24:410][290]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.02.24:410][290]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.02.24:410][290]LogInit: FAudioDevice initialized.
+[2023.12.17-11.02.24:410][290]LogAudio: Display: Audio Device (ID: 20) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.02.24:422][290]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.02.24:452][290]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.02.24
+[2023.12.17-11.02.24:453][290]LogWorld: Bringing up level for play took: 0.029790
+[2023.12.17-11.02.24:453][290]LogOnline: OSS: Creating online subsystem instance for: :Context_36
+[2023.12.17-11.02.24:462][290]LogTemp: Warning: Initial Location: 220.000000,-400.000000,62.000008|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.02.24:462][290]LogTemp: Warning: Initial Location: 210.000000,2390.000000,232.699570|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.02.24:462][290]LogTemp: Warning: Found Actor
+[2023.12.17-11.02.24:463][290]LogTemp: Warning: Found Actor
+[2023.12.17-11.02.24:464][290]PIE: Server logged in
+[2023.12.17-11.02.24:465][290]PIE: Play in editor total start time 0.242 seconds.
+[2023.12.17-11.02.31:530][950]Current Health: 190.000000
+[2023.12.17-11.02.33:061][102]Current Health: 180.000000
+[2023.12.17-11.02.53:041][ 11]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.02.53:041][ 11]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.02.53:042][ 11]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.02.53:046][ 11]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.02.53:058][ 11]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.02.53:066][ 11]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.02.53:115][ 11]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.02.53:115][ 11]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.02.53:117][ 11]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.02.53:119][ 11]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.02.53:128][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   3.74ms
+[2023.12.17-11.02.53:155][ 12]LogPlayLevel: Display: Destroying online subsystem :Context_36
+[2023.12.17-11.22.11:558][362]Candidate modules for hot reload:
+[2023.12.17-11.22.11:559][362]  Tech_Demo_4
+[2023.12.17-11.22.11:559][362]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,8662 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.22.11:563][362]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.22.12:562][366]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2023.12.17-11.22.30:345][419]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:22:30
+[2023.12.17-11.22.30:345][419]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.22.30:346][419]CompilerResultsLog: Parsing headers for Tech_Demo_4Editor
+[2023.12.17-11.22.30:346][419]CompilerResultsLog:   Running UnrealHeaderTool "B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Tech_Demo_4.uproject" "B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\Tech_Demo_4Editor\Development\Tech_Demo_4Editor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\matej\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2023.12.17-11.22.30:346][419]CompilerResultsLog: LogInit: Display: Loading text-based GConfig....
+[2023.12.17-11.22.30:346][419]CompilerResultsLog: Reflection code generated for Tech_Demo_4Editor in 4.8179224 seconds
+[2023.12.17-11.22.30:346][419]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.22.30:346][419]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.22.30:346][419]CompilerResultsLog: Building 12 actions with 4 processes...
+[2023.12.17-11.22.30:347][419]CompilerResultsLog:   [1/12] CountdownWidget.cpp
+[2023.12.17-11.22.30:347][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:347][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:347][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:347][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:347][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   [2/12] CharacterWidget.cpp
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:348][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   [3/12] CharacterController.cpp
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:349][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:350][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:350][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:350][419]CompilerResultsLog:   [4/12] Tech_Demo_4GameModeBase.cpp
+[2023.12.17-11.22.30:350][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:350][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:350][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:351][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:351][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:351][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:351][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:351][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:351][419]CompilerResultsLog:   [5/12] Tech_Demo_4.init.gen.cpp
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   [6/12] CharacterController.gen.cpp
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4/CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:352][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4/CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   [7/12] Tech_Demo_4GameModeBase.gen.cpp
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:353][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:354][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:354][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:355][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:355][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:355][419]CompilerResultsLog:   [8/12] CharacterWidget.gen.cpp
+[2023.12.17-11.22.30:355][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:355][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:356][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:356][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:356][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:356][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:356][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:356][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   [9/12] CountdownWidget.gen.cpp
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.22.30:357][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.22.30:358][419]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.22.30:358][419]CompilerResultsLog:   [10/12] UE4Editor-Tech_Demo_4-8662.lib
+[2023.12.17-11.22.30:358][419]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-8662.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-8662.exp
+[2023.12.17-11.22.30:358][419]CompilerResultsLog:   [11/12] UE4Editor-Tech_Demo_4-8662.dll
+[2023.12.17-11.22.30:358][419]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-8662.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-8662.suppressed.exp
+[2023.12.17-11.22.30:358][419]CompilerResultsLog:   [12/12] Tech_Demo_4Editor.target
+[2023.12.17-11.22.30:358][419]CompilerResultsLog: Total time in Parallel executor: 12.30 seconds
+[2023.12.17-11.22.30:358][419]CompilerResultsLog: Total execution time: 18.54 seconds
+[2023.12.17-11.22.30:358][419]LogMainFrame: MainFrame: Module compiling took 18.804 seconds
+[2023.12.17-11.22.30:376][419]LogClass: Could not find existing class CharacterController in package /Script/Tech_Demo_4 for HotReload, assuming new class
+[2023.12.17-11.22.30:383][419]LogClass: Could not find existing class Tech_Demo_4GameModeBase in package /Script/Tech_Demo_4 for HotReload, assuming new class
+[2023.12.17-11.22.30:396][419]LogHotReload: Re-instancing CharacterController after hot-reload.
+[2023.12.17-11.22.30:506][419]LogHotReload: Re-instancing Tech_Demo_4GameModeBase after hot-reload.
+[2023.12.17-11.22.30:584][419]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0004 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.22.30:594][419]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.22.30:778][419]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0173 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.22.30:778][419]Display: HotReload took 19.2s.
+[2023.12.17-11.24.24:393][758]Candidate modules for hot reload:
+[2023.12.17-11.24.24:393][758]  Tech_Demo_4
+[2023.12.17-11.24.24:393][758]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,1038 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.24.24:398][758]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.24.31:430][779]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:24:31
+[2023.12.17-11.24.31:430][779]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.24.31:430][779]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.24.31:431][779]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.24.31:431][779]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.12.17-11.24.31:431][779]CompilerResultsLog:   [1/4] CharacterController.cpp
+[2023.12.17-11.24.31:431][779]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.24.31:431][779]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.24.31:432][779]CompilerResultsLog:   [2/4] UE4Editor-Tech_Demo_4-1038.lib
+[2023.12.17-11.24.31:433][779]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-1038.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-1038.exp
+[2023.12.17-11.24.31:433][779]CompilerResultsLog:   [3/4] UE4Editor-Tech_Demo_4-1038.dll
+[2023.12.17-11.24.31:433][779]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-1038.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-1038.suppressed.exp
+[2023.12.17-11.24.31:433][779]CompilerResultsLog:   [4/4] Tech_Demo_4Editor.target
+[2023.12.17-11.24.31:433][779]CompilerResultsLog: Total time in Parallel executor: 5.46 seconds
+[2023.12.17-11.24.31:434][779]CompilerResultsLog: Total execution time: 6.72 seconds
+[2023.12.17-11.24.31:434][779]LogMainFrame: MainFrame: Module compiling took 7.047 seconds
+[2023.12.17-11.24.31:471][779]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0003 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.24.31:480][779]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.24.31:664][779]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0112 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.24.31:664][779]Display: HotReload took  7.3s.
+[2023.12.17-11.24.37:603][970]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.24.37:613][970]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.24.37:613][970]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:24:37)
+[2023.12.17-11.24.37:639][970]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.24.37:720][970]LogPlayLevel: PIE: StaticDuplicateObject took: (0.080256s)
+[2023.12.17-11.24.37:721][970]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.24.37:722][970]LogPlayLevel: PIE: World Init took: (0.001752s)
+[2023.12.17-11.24.37:722][970]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.082391s)
+[2023.12.17-11.24.37:882][970]LogUObjectHash: Compacting FUObjectHashTables data took   6.79ms
+[2023.12.17-11.24.37:883][970]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2023.12.17-11.24.37:883][970]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.24.37:883][970]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.24.37:884][970]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.24.37:884][970]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.24.37:884][970]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.24.37:884][970]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.24.37:884][970]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.24.37:884][970]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.24.37:884][970]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.24.37:884][970]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.24.37:884][970]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.24.37:884][970]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.24.37:890][970]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.24.37:890][970]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.24.37:899][970]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.24.37:899][970]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.24.37:899][970]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.24.37:899][970]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.24.37:900][970]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.24.37:900][970]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.24.37:900][970]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.24.37:902][970]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.24.37:902][970]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.24.37:902][970]LogInit: FAudioDevice initialized.
+[2023.12.17-11.24.37:902][970]LogAudio: Display: Audio Device (ID: 21) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.24.37:915][970]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.24.37:944][970]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.24.37
+[2023.12.17-11.24.37:944][970]LogWorld: Bringing up level for play took: 0.029432
+[2023.12.17-11.24.37:945][970]LogOnline: OSS: Creating online subsystem instance for: :Context_37
+[2023.12.17-11.24.37:952][970]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.24.37:952][970]LogTemp: Warning: 
+[2023.12.17-11.24.37:952][970]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.24.37:952][970]LogTemp: Warning: 
+[2023.12.17-11.24.37:952][970]LogTemp: Warning: Found Actor
+[2023.12.17-11.24.37:953][970]LogTemp: Warning: Found Actor
+[2023.12.17-11.24.37:953][970]PIE: Server logged in
+[2023.12.17-11.24.37:954][970]PIE: Play in editor total start time 0.344 seconds.
+[2023.12.17-11.24.51:452][216]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.24.51:452][216]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.24.51:453][216]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.24.51:457][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.24.51:466][216]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.24.51:474][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.24.51:529][216]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.24.51:533][216]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.24.51:534][216]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.24.51:537][216]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.24.51:576][216]LogUObjectHash: Compacting FUObjectHashTables data took   6.39ms
+[2023.12.17-11.24.51:605][217]LogPlayLevel: Display: Destroying online subsystem :Context_37
+[2023.12.17-11.25.08:641][448]Candidate modules for hot reload:
+[2023.12.17-11.25.08:641][448]  Tech_Demo_4
+[2023.12.17-11.25.08:642][448]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,3432 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.25.08:645][448]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.25.09:365][451]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2023.12.17-11.25.16:044][471]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:25:16
+[2023.12.17-11.25.16:044][471]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.25.16:044][471]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.25.16:044][471]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.25.16:044][471]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   [1/4] CharacterController.cpp
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.25.16:045][471]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.25.16:046][471]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.25.16:046][471]CompilerResultsLog:   [2/4] UE4Editor-Tech_Demo_4-3432.lib
+[2023.12.17-11.25.16:046][471]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3432.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3432.exp
+[2023.12.17-11.25.16:046][471]CompilerResultsLog:   [3/4] UE4Editor-Tech_Demo_4-3432.dll
+[2023.12.17-11.25.16:046][471]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3432.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3432.suppressed.exp
+[2023.12.17-11.25.16:046][471]CompilerResultsLog:   [4/4] Tech_Demo_4Editor.target
+[2023.12.17-11.25.16:046][471]CompilerResultsLog: Total time in Parallel executor: 5.64 seconds
+[2023.12.17-11.25.16:046][471]CompilerResultsLog: Total execution time: 7.15 seconds
+[2023.12.17-11.25.16:046][471]LogMainFrame: MainFrame: Module compiling took 7.409 seconds
+[2023.12.17-11.25.16:082][471]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0003 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.25.16:092][471]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.25.16:267][471]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0131 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.25.16:267][471]Display: HotReload took  7.6s.
+[2023.12.17-11.25.40:148][743]LogUObjectHash: Compacting FUObjectHashTables data took   6.17ms
+[2023.12.17-11.25.40:176][743]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/BP_ThirdPerson_GameMode24BE3A31470B69A526D51389DB4275EE.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Blueprints/BP_ThirdPerson_GameMode.uasset'
+[2023.12.17-11.25.40:195][743]AssetCheck: New page: Asset Save: BP_ThirdPerson_GameMode
+[2023.12.17-11.25.40:195][743]LogContentValidation: Display: Validating Blueprint /Game/Blueprints/BP_ThirdPerson_GameMode.BP_ThirdPerson_GameMode
+[2023.12.17-11.25.40:515][779]LogSlate: Took 0.007293 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2023.12.17-11.25.40:887][823]BlueprintLog: New page: Compile BP_ThirdPerson_GameMode
+[2023.12.17-11.25.40:992][823]LogUObjectHash: Compacting FUObjectHashTables data took   5.45ms
+[2023.12.17-11.25.42:536][986]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.25.42:544][986]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.25.42:544][986]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:25:42)
+[2023.12.17-11.25.42:580][986]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.25.42:659][986]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078897s)
+[2023.12.17-11.25.42:660][986]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.25.42:660][986]LogPlayLevel: PIE: World Init took: (0.001682s)
+[2023.12.17-11.25.42:661][986]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.080923s)
+[2023.12.17-11.25.42:714][986]LogUObjectHash: Compacting FUObjectHashTables data took   5.41ms
+[2023.12.17-11.25.42:715][986]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.25.42:715][986]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.25.42:715][986]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.25.42:715][986]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.25.42:716][986]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.25.42:716][986]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.25.42:716][986]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.25.42:721][986]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.25.42:721][986]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.25.42:729][986]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.25.42:729][986]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.25.42:729][986]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.25.42:729][986]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.25.42:730][986]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.25.42:730][986]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.25.42:730][986]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.25.42:732][986]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.25.42:732][986]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.25.42:732][986]LogInit: FAudioDevice initialized.
+[2023.12.17-11.25.42:732][986]LogAudio: Display: Audio Device (ID: 22) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.25.42:743][986]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.25.42:774][986]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.25.42
+[2023.12.17-11.25.42:775][986]LogWorld: Bringing up level for play took: 0.030219
+[2023.12.17-11.25.42:775][986]LogOnline: OSS: Creating online subsystem instance for: :Context_38
+[2023.12.17-11.25.42:783][986]LogTemp: Warning: Initial Location: 220.000000,-400.000000,62.000008|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.25.42:783][986]LogTemp: Warning: Character Name: 
+[2023.12.17-11.25.42:784][986]LogTemp: Warning: Initial Location: 210.000000,2390.000000,232.699570|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.25.42:784][986]LogTemp: Warning: Character Name: 
+[2023.12.17-11.25.42:784][986]LogTemp: Warning: Found Actor
+[2023.12.17-11.25.42:784][986]LogTemp: Warning: Found Actor
+[2023.12.17-11.25.42:785][986]PIE: Server logged in
+[2023.12.17-11.25.42:786][986]PIE: Play in editor total start time 0.244 seconds.
+[2023.12.17-11.25.56:561][299]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.25.56:561][299]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.25.56:562][299]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.25.56:567][299]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.25.56:576][299]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.25.56:584][299]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.25.56:634][299]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.25.56:634][299]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.25.56:635][299]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.25.56:638][299]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.25.56:646][299]LogUObjectHash: Compacting FUObjectHashTables data took   3.84ms
+[2023.12.17-11.25.56:675][300]LogPlayLevel: Display: Destroying online subsystem :Context_38
+[2023.12.17-11.26.29:005][652]Candidate modules for hot reload:
+[2023.12.17-11.26.29:005][652]  Tech_Demo_4
+[2023.12.17-11.26.29:005][652]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,9287 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.26.29:014][652]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.26.29:733][653]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2023.12.17-11.26.36:458][675]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:26:36
+[2023.12.17-11.26.36:458][675]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.26.36:458][675]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.26.36:459][675]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.26.36:459][675]CompilerResultsLog: Building 5 actions with 4 processes...
+[2023.12.17-11.26.36:459][675]CompilerResultsLog:   [1/5] CharacterController.cpp
+[2023.12.17-11.26.36:459][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.26.36:459][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.26.36:459][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.26.36:459][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.26.36:460][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.26.36:460][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.26.36:460][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.26.36:460][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.26.36:460][675]CompilerResultsLog:   [2/5] Tech_Demo_4GameModeBase.cpp
+[2023.12.17-11.26.36:460][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.26.36:461][675]CompilerResultsLog:   [3/5] UE4Editor-Tech_Demo_4-9287.lib
+[2023.12.17-11.26.36:462][675]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-9287.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-9287.exp
+[2023.12.17-11.26.36:462][675]CompilerResultsLog:   [4/5] UE4Editor-Tech_Demo_4-9287.dll
+[2023.12.17-11.26.36:463][675]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-9287.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-9287.suppressed.exp
+[2023.12.17-11.26.36:463][675]CompilerResultsLog:   [5/5] Tech_Demo_4Editor.target
+[2023.12.17-11.26.36:463][675]CompilerResultsLog: Total time in Parallel executor: 5.94 seconds
+[2023.12.17-11.26.36:463][675]CompilerResultsLog: Total execution time: 7.08 seconds
+[2023.12.17-11.26.36:463][675]LogMainFrame: MainFrame: Module compiling took 7.463 seconds
+[2023.12.17-11.26.36:497][675]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0004 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.26.36:506][675]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.26.36:679][675]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0116 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.26.36:679][675]Display: HotReload took  7.7s.
+[2023.12.17-11.26.42:747][949]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.26.42:754][949]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.26.42:754][949]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:26:42)
+[2023.12.17-11.26.42:780][949]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.26.42:859][949]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078933s)
+[2023.12.17-11.26.42:860][949]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.26.42:860][949]LogPlayLevel: PIE: World Init took: (0.001558s)
+[2023.12.17-11.26.42:861][949]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.080858s)
+[2023.12.17-11.26.42:969][949]LogUObjectHash: Compacting FUObjectHashTables data took   6.13ms
+[2023.12.17-11.26.42:970][949]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2023.12.17-11.26.42:970][949]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.26.42:970][949]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.26.42:970][949]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.26.42:970][949]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.26.42:970][949]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.26.42:971][949]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.26.42:971][949]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.26.42:971][949]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.26.42:971][949]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.26.42:971][949]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.26.42:971][949]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.26.42:971][949]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.26.42:977][949]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.26.42:977][949]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.26.42:985][949]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.26.42:985][949]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.26.42:985][949]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.26.42:985][949]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.26.42:986][949]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.26.42:986][949]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.26.42:986][949]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.26.42:987][949]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.26.42:987][949]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.26.42:987][949]LogInit: FAudioDevice initialized.
+[2023.12.17-11.26.42:987][949]LogAudio: Display: Audio Device (ID: 23) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.26.42:997][949]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.26.43:027][949]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.26.43
+[2023.12.17-11.26.43:028][949]LogWorld: Bringing up level for play took: 0.029579
+[2023.12.17-11.26.43:028][949]LogOnline: OSS: Creating online subsystem instance for: :Context_39
+[2023.12.17-11.26.43:034][949]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.26.43:035][949]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.26.43:035][949]LogTemp: Warning: Found Actor
+[2023.12.17-11.26.43:036][949]LogTemp: Warning: Found Actor
+[2023.12.17-11.26.43:036][949]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.26.43:036][949]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.26.43:036][949]PIE: Server logged in
+[2023.12.17-11.26.43:037][949]PIE: Play in editor total start time 0.285 seconds.
+[2023.12.17-11.27.58:893][956]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.27.58:893][956]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.27.58:894][956]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.27.58:898][956]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.27.58:908][956]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.27.58:915][956]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.27.58:964][956]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.27.58:964][956]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.27.58:965][956]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.27.58:969][956]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.27.58:978][956]LogUObjectHash: Compacting FUObjectHashTables data took   5.53ms
+[2023.12.17-11.27.59:005][957]LogPlayLevel: Display: Destroying online subsystem :Context_39
+[2023.12.17-11.27.59:650][ 32]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.27.59:657][ 32]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.27.59:657][ 32]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:27:59)
+[2023.12.17-11.27.59:657][ 32]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.27.59:735][ 32]LogPlayLevel: PIE: StaticDuplicateObject took: (0.077502s)
+[2023.12.17-11.27.59:736][ 32]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.27.59:737][ 32]LogPlayLevel: PIE: World Init took: (0.001472s)
+[2023.12.17-11.27.59:737][ 32]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.079282s)
+[2023.12.17-11.27.59:788][ 32]LogUObjectHash: Compacting FUObjectHashTables data took   3.67ms
+[2023.12.17-11.27.59:789][ 32]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.27.59:789][ 32]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.27.59:790][ 32]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.27.59:790][ 32]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.27.59:790][ 32]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.27.59:790][ 32]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.27.59:790][ 32]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.27.59:795][ 32]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.27.59:795][ 32]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.27.59:801][ 32]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.27.59:802][ 32]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.27.59:802][ 32]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.27.59:802][ 32]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.27.59:802][ 32]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.27.59:802][ 32]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.27.59:802][ 32]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.27.59:804][ 32]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.27.59:804][ 32]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.27.59:804][ 32]LogInit: FAudioDevice initialized.
+[2023.12.17-11.27.59:804][ 32]LogAudio: Display: Audio Device (ID: 24) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.27.59:813][ 32]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.27.59:843][ 32]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.27.59
+[2023.12.17-11.27.59:844][ 32]LogWorld: Bringing up level for play took: 0.029885
+[2023.12.17-11.27.59:844][ 32]LogOnline: OSS: Creating online subsystem instance for: :Context_40
+[2023.12.17-11.27.59:852][ 32]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.27.59:853][ 32]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.27.59:853][ 32]LogTemp: Warning: Found Actor
+[2023.12.17-11.27.59:854][ 32]LogTemp: Warning: Found Actor
+[2023.12.17-11.27.59:854][ 32]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.27.59:854][ 32]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.27.59:854][ 32]PIE: Server logged in
+[2023.12.17-11.27.59:855][ 32]PIE: Play in editor total start time 0.2 seconds.
+[2023.12.17-11.28.10:742][977]Cmd: SELECT NONE
+[2023.12.17-11.28.21:502][872]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.28.21:502][872]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.28.21:503][872]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.28.21:507][872]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.28.21:516][872]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.28.21:524][872]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.28.21:576][872]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.28.21:576][872]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.28.21:577][872]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.28.21:591][872]LogUObjectHash: Compacting FUObjectHashTables data took   4.20ms
+[2023.12.17-11.28.21:627][873]LogPlayLevel: Display: Destroying online subsystem :Context_40
+[2023.12.17-11.30.36:445][394]Candidate modules for hot reload:
+[2023.12.17-11.30.36:445][394]  Tech_Demo_4
+[2023.12.17-11.30.36:446][394]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,5787 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.30.36:450][394]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.30.37:272][397]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2023.12.17-11.30.43:819][417]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:30:43
+[2023.12.17-11.30.43:819][417]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.30.43:820][417]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.30.43:820][417]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.30.43:820][417]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.12.17-11.30.43:820][417]CompilerResultsLog:   [1/4] Tech_Demo_4GameModeBase.cpp
+[2023.12.17-11.30.43:820][417]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.30.43:821][417]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.30.43:821][417]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.30.43:821][417]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.30.43:821][417]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.30.43:822][417]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.30.43:822][417]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.30.43:822][417]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.30.43:822][417]CompilerResultsLog:   [2/4] UE4Editor-Tech_Demo_4-5787.lib
+[2023.12.17-11.30.43:822][417]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-5787.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-5787.exp
+[2023.12.17-11.30.43:823][417]CompilerResultsLog:   [3/4] UE4Editor-Tech_Demo_4-5787.dll
+[2023.12.17-11.30.43:823][417]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-5787.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-5787.suppressed.exp
+[2023.12.17-11.30.43:823][417]CompilerResultsLog:   [4/4] Tech_Demo_4Editor.target
+[2023.12.17-11.30.43:823][417]CompilerResultsLog: Total time in Parallel executor: 5.79 seconds
+[2023.12.17-11.30.43:823][417]CompilerResultsLog: Total execution time: 7.23 seconds
+[2023.12.17-11.30.43:824][417]LogMainFrame: MainFrame: Module compiling took 7.383 seconds
+[2023.12.17-11.30.43:858][417]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0003 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.30.43:867][417]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.30.44:041][417]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0135 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.30.44:041][417]Display: HotReload took  7.6s.
+[2023.12.17-11.30.46:309][592]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.30.46:317][592]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.30.46:318][592]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:30:46)
+[2023.12.17-11.30.46:318][592]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.30.46:396][592]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078932s)
+[2023.12.17-11.30.46:398][592]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.30.46:398][592]LogPlayLevel: PIE: World Init took: (0.001849s)
+[2023.12.17-11.30.46:399][592]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.081331s)
+[2023.12.17-11.30.46:502][592]LogUObjectHash: Compacting FUObjectHashTables data took   6.68ms
+[2023.12.17-11.30.46:503][592]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2023.12.17-11.30.46:503][592]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.30.46:503][592]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.30.46:503][592]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.30.46:503][592]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.30.46:503][592]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.30.46:503][592]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.30.46:504][592]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.30.46:504][592]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.30.46:504][592]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.30.46:504][592]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.30.46:504][592]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.30.46:504][592]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.30.46:510][592]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.30.46:510][592]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.30.46:518][592]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.30.46:519][592]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.30.46:519][592]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.30.46:519][592]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.30.46:520][592]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.30.46:520][592]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.30.46:520][592]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.30.46:521][592]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.30.46:522][592]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.30.46:522][592]LogInit: FAudioDevice initialized.
+[2023.12.17-11.30.46:522][592]LogAudio: Display: Audio Device (ID: 25) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.30.46:534][592]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.30.46:564][592]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.30.46
+[2023.12.17-11.30.46:565][592]LogWorld: Bringing up level for play took: 0.029454
+[2023.12.17-11.30.46:565][592]LogOnline: OSS: Creating online subsystem instance for: :Context_41
+[2023.12.17-11.30.46:574][592]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.30.46:574][592]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.30.46:575][592]LogTemp: Warning: Found Actor
+[2023.12.17-11.30.46:575][592]LogTemp: Warning: Found Actor
+[2023.12.17-11.30.46:576][592]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.30.46:576][592]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.30.46:576][592]PIE: Server logged in
+[2023.12.17-11.30.46:577][592]PIE: Play in editor total start time 0.261 seconds.
+[2023.12.17-11.30.56:172][377]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.30.56:172][377]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.30.56:173][377]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.30.56:177][377]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.30.56:189][377]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.30.56:197][377]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.30.56:247][377]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.30.56:255][377]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.30.56:256][377]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.30.56:259][377]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.30.56:289][377]LogUObjectHash: Compacting FUObjectHashTables data took   4.84ms
+[2023.12.17-11.30.56:331][378]LogPlayLevel: Display: Destroying online subsystem :Context_41
+[2023.12.17-11.31.36:055][772]Candidate modules for hot reload:
+[2023.12.17-11.31.36:055][772]  Tech_Demo_4
+[2023.12.17-11.31.36:055][772]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,3595 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.31.36:058][772]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.31.36:419][783]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2023.12.17-11.31.47:763][ 58]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:31:47
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   [1/4] Tech_Demo_4GameModeBase.cpp
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   [2/4] UE4Editor-Tech_Demo_4-3595.lib
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3595.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3595.exp
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   [3/4] UE4Editor-Tech_Demo_4-3595.dll
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3595.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-3595.suppressed.exp
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog:   [4/4] Tech_Demo_4Editor.target
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog: Total time in Parallel executor: 9.93 seconds
+[2023.12.17-11.31.47:764][ 58]CompilerResultsLog: Total execution time: 11.60 seconds
+[2023.12.17-11.31.47:764][ 58]LogMainFrame: MainFrame: Module compiling took 11.713 seconds
+[2023.12.17-11.31.47:798][ 58]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0003 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.31.47:806][ 58]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.31.47:972][ 58]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0114 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.31.47:972][ 58]Display: HotReload took 11.9s.
+[2023.12.17-11.31.49:641][211]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.31.49:650][211]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.31.49:650][211]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:31:49)
+[2023.12.17-11.31.49:680][211]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.31.49:758][211]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078440s)
+[2023.12.17-11.31.49:760][211]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.31.49:760][211]LogPlayLevel: PIE: World Init took: (0.001603s)
+[2023.12.17-11.31.49:760][211]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.080444s)
+[2023.12.17-11.31.49:858][211]LogUObjectHash: Compacting FUObjectHashTables data took   6.25ms
+[2023.12.17-11.31.49:860][211]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.31.49:860][211]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.31.49:860][211]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.31.49:861][211]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.31.49:861][211]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.31.49:861][211]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.31.49:861][211]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.31.49:866][211]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.31.49:866][211]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.31.49:874][211]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.31.49:874][211]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.31.49:874][211]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.31.49:874][211]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.31.49:875][211]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.31.49:875][211]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.31.49:875][211]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.31.49:876][211]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.31.49:876][211]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.31.49:876][211]LogInit: FAudioDevice initialized.
+[2023.12.17-11.31.49:876][211]LogAudio: Display: Audio Device (ID: 26) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.31.49:884][211]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.31.49:913][211]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.31.49
+[2023.12.17-11.31.49:914][211]LogWorld: Bringing up level for play took: 0.029463
+[2023.12.17-11.31.49:915][211]LogOnline: OSS: Creating online subsystem instance for: :Context_42
+[2023.12.17-11.31.49:922][211]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.31.49:923][211]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.31.49:923][211]LogTemp: Warning: Found Actor
+[2023.12.17-11.31.49:924][211]LogTemp: Warning: Found Actor
+[2023.12.17-11.31.49:924][211]LogTemp: Warning: Character Name: 
+[2023.12.17-11.31.49:924][211]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.31.49:924][211]PIE: Server logged in
+[2023.12.17-11.31.49:925][211]PIE: Play in editor total start time 0.277 seconds.
+[2023.12.17-11.32.10:782][963]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.32.10:782][963]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.32.10:783][963]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.32.10:787][963]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.32.10:797][963]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.32.10:805][963]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.32.10:858][963]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.32.10:866][963]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.32.10:867][963]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.32.10:870][963]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.32.10:899][963]LogUObjectHash: Compacting FUObjectHashTables data took   5.19ms
+[2023.12.17-11.32.10:916][964]LogPlayLevel: Display: Destroying online subsystem :Context_42
+[2023.12.17-11.32.17:542][606]LogUObjectHash: Compacting FUObjectHashTables data took   3.68ms
+[2023.12.17-11.32.17:573][606]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/BP_ThirdPerson_GameMode6A648B994249C1B6B7274E841F3B8FFA.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Blueprints/BP_ThirdPerson_GameMode.uasset'
+[2023.12.17-11.32.17:586][606]AssetCheck: New page: Asset Save: BP_ThirdPerson_GameMode
+[2023.12.17-11.32.17:586][606]LogContentValidation: Display: Validating Blueprint /Game/Blueprints/BP_ThirdPerson_GameMode.BP_ThirdPerson_GameMode
+[2023.12.17-11.32.19:353][803]BlueprintLog: New page: Compile BP_ThirdPerson_GameMode
+[2023.12.17-11.32.19:443][803]LogUObjectHash: Compacting FUObjectHashTables data took   4.60ms
+[2023.12.17-11.32.25:608][929]Candidate modules for hot reload:
+[2023.12.17-11.32.25:609][929]  Tech_Demo_4
+[2023.12.17-11.32.25:609][929]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,6634 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.17-11.32.25:612][929]Warning: Starting HotReload took  0.0s.
+[2023.12.17-11.32.26:557][930]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2023.12.17-11.32.32:274][949]CompilerResultsLog: New page: Compilation - 17 Dec 2023, 11:32:32
+[2023.12.17-11.32.32:274][949]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.17-11.32.32:275][949]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.17-11.32.32:275][949]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.17-11.32.32:276][949]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.12.17-11.32.32:276][949]CompilerResultsLog:   [1/4] Tech_Demo_4GameModeBase.cpp
+[2023.12.17-11.32.32:276][949]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(18): warning C4263: 'void UCharacterAnimationController::NativeUpdateAnimation(void)': member function does not override any base class virtual member function
+[2023.12.17-11.32.32:276][949]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterAnimationController.h(40): warning C4264: 'void UAnimInstance::NativeUpdateAnimation(float)': no override available for virtual member function from base 'UAnimInstance'; function is hidden
+[2023.12.17-11.32.32:276][949]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h(1138): note: see declaration of 'UAnimInstance::NativeUpdateAnimation'
+[2023.12.17-11.32.32:276][949]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Animation/AnimBlueprintGeneratedClass.h(21): note: see declaration of 'UAnimInstance'
+[2023.12.17-11.32.32:277][949]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(34): warning C4263: 'void ACharacterController::TakeDamage(int)': member function does not override any base class virtual member function
+[2023.12.17-11.32.32:277][949]CompilerResultsLog:   B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterController.h(120): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+[2023.12.17-11.32.32:277][949]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+[2023.12.17-11.32.32:277][949]CompilerResultsLog:   C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h(31): note: see declaration of 'APawn'
+[2023.12.17-11.32.32:278][949]CompilerResultsLog:   [2/4] UE4Editor-Tech_Demo_4-6634.lib
+[2023.12.17-11.32.32:278][949]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-6634.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-6634.exp
+[2023.12.17-11.32.32:278][949]CompilerResultsLog:   [3/4] UE4Editor-Tech_Demo_4-6634.dll
+[2023.12.17-11.32.32:278][949]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-6634.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-6634.suppressed.exp
+[2023.12.17-11.32.32:278][949]CompilerResultsLog:   [4/4] Tech_Demo_4Editor.target
+[2023.12.17-11.32.32:278][949]CompilerResultsLog: Total time in Parallel executor: 5.17 seconds
+[2023.12.17-11.32.32:278][949]CompilerResultsLog: Total execution time: 6.50 seconds
+[2023.12.17-11.32.32:279][949]LogMainFrame: MainFrame: Module compiling took 6.675 seconds
+[2023.12.17-11.32.32:313][949]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0003 seconds. Added 5 classes and 2 folders.
+[2023.12.17-11.32.32:322][949]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2023.12.17-11.32.32:493][949]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0117 seconds. Added 3720 classes and 872 folders.
+[2023.12.17-11.32.32:493][949]Display: HotReload took  6.9s.
+[2023.12.17-11.32.35:647][ 71]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.32.35:655][ 71]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.32.35:656][ 71]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:32:35)
+[2023.12.17-11.32.35:679][ 71]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.32.35:756][ 71]LogPlayLevel: PIE: StaticDuplicateObject took: (0.076476s)
+[2023.12.17-11.32.35:757][ 71]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.32.35:758][ 71]LogPlayLevel: PIE: World Init took: (0.001456s)
+[2023.12.17-11.32.35:758][ 71]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.078258s)
+[2023.12.17-11.32.35:860][ 71]LogUObjectHash: Compacting FUObjectHashTables data took   6.26ms
+[2023.12.17-11.32.35:861][ 71]LogAudio: Display: Creating Audio Device:                 Id: 27, Scope: Unique, Realtime: True
+[2023.12.17-11.32.35:861][ 71]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.32.35:861][ 71]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.32.35:861][ 71]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.32.35:861][ 71]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.32.35:861][ 71]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.32.35:862][ 71]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.32.35:862][ 71]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.32.35:862][ 71]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.32.35:862][ 71]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.32.35:862][ 71]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.32.35:862][ 71]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.32.35:862][ 71]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.32.35:868][ 71]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.32.35:868][ 71]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.32.35:876][ 71]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.32.35:876][ 71]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.32.35:876][ 71]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.32.35:876][ 71]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.32.35:877][ 71]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.32.35:877][ 71]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.32.35:877][ 71]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.32.35:878][ 71]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.32.35:878][ 71]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.32.35:878][ 71]LogInit: FAudioDevice initialized.
+[2023.12.17-11.32.35:878][ 71]LogAudio: Display: Audio Device (ID: 27) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.32.35:890][ 71]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.32.35:920][ 71]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.32.35
+[2023.12.17-11.32.35:921][ 71]LogWorld: Bringing up level for play took: 0.029851
+[2023.12.17-11.32.35:921][ 71]LogOnline: OSS: Creating online subsystem instance for: :Context_43
+[2023.12.17-11.32.35:930][ 71]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.32.35:930][ 71]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.32.35:931][ 71]LogTemp: Warning: Found Actor
+[2023.12.17-11.32.35:931][ 71]LogTemp: Warning: Found Actor
+[2023.12.17-11.32.35:932][ 71]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.32.35:932][ 71]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.32.35:932][ 71]PIE: Server logged in
+[2023.12.17-11.32.35:933][ 71]PIE: Play in editor total start time 0.279 seconds.
+[2023.12.17-11.32.50:513][238]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.32.50:513][238]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.32.50:514][238]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.32.50:518][238]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.32.50:528][238]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.32.50:536][238]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.32.50:586][238]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.32.50:587][238]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.32.50:588][238]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.32.50:591][238]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.32.50:604][238]LogUObjectHash: Compacting FUObjectHashTables data took   4.70ms
+[2023.12.17-11.32.50:636][239]LogPlayLevel: Display: Destroying online subsystem :Context_43
+[2023.12.17-11.34.08:130][968]LogUObjectHash: Compacting FUObjectHashTables data took   5.37ms
+[2023.12.17-11.34.08:157][968]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.34.08:164][968]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD2686F2FB42FC38D95F3A1191B8A9A5F6.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.34.08:186][968]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.34.08:186][968]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.34.11:162][319]BlueprintLog: New page: Compile CountdownTimerHUD
+[2023.12.17-11.34.11:240][319]LogUObjectHash: Compacting FUObjectHashTables data took   4.17ms
+[2023.12.17-11.35.07:292][934]LogUObjectHash: Compacting FUObjectHashTables data took   4.59ms
+[2023.12.17-11.35.07:322][934]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.35.07:330][934]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD7600C57B440132EAC7028798CF30D4A6.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.35.07:347][934]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.35.07:347][934]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.35.12:143][495]LogUObjectHash: Compacting FUObjectHashTables data took   5.03ms
+[2023.12.17-11.35.12:163][495]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.35.12:170][495]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUDC870CB1B45BB0ED8596CC7A37E350E9F.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.35.12:184][495]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.35.12:184][495]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.35.27:291][257]LogUObjectHash: Compacting FUObjectHashTables data took   4.94ms
+[2023.12.17-11.35.27:314][257]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.35.27:321][257]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD638F6E8543C3C44CD9A11E864C32FF01.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.35.27:337][257]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.35.27:337][257]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.35.37:658][462]LogUObjectHash: Compacting FUObjectHashTables data took   4.97ms
+[2023.12.17-11.35.37:708][462]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.35.37:715][462]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD8932CD394325B9E2DE2B4A8FF4BD01EA.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.35.37:730][462]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.35.37:730][462]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.35.42:508][ 15]LogUObjectHash: Compacting FUObjectHashTables data took   4.74ms
+[2023.12.17-11.35.42:566][ 15]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.35.42:573][ 15]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD72F1138E43E1C24769A4C88D37571CD1.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.35.42:589][ 15]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.35.42:589][ 15]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.36.16:181][993]Cmd: TRANSACTION UNDO
+[2023.12.17-11.36.16:181][993]LogEditorTransaction: Undo Move Widget
+[2023.12.17-11.36.34:117][ 55]LogUObjectHash: Compacting FUObjectHashTables data took   4.88ms
+[2023.12.17-11.36.34:139][ 55]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.36.34:147][ 55]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD98B31A6E486050C6AA7A908CE647390B.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.36.34:164][ 55]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.36.34:164][ 55]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.36.36:702][328]LogUObjectHash: Compacting FUObjectHashTables data took   4.84ms
+[2023.12.17-11.36.36:725][328]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.36.36:732][328]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD28D106BC4CACAE8FC6A949BF5EEAE02A.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.36.36:748][328]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.36.36:748][328]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.36.44:243][201]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2023.12.17-11.36.44:258][201]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.36.44:265][201]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD256B64E443AE374F5DE0A7BE4B9BD31E.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.36.44:281][201]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.36.44:281][201]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.37.10:583][249]LogUObjectHash: Compacting FUObjectHashTables data took   5.15ms
+[2023.12.17-11.37.10:602][249]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.37.10:610][249]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD1983BE6342DC7D628F0A13A01DD129FB.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.37.10:652][249]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.37.10:652][249]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.37.16:975][986]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2023.12.17-11.37.17:004][986]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.37.17:012][986]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD384F3ED24AC75BD70B94CA9189DD4FEC.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.37.17:029][986]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.37.17:029][986]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.37.19:670][287]LogSlate: Window 'Color Picker' being destroyed
+[2023.12.17-11.37.19:986][318]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2023.12.17-11.37.45:746][313]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2023.12.17-11.37.45:774][313]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.37.45:781][313]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUDDAC6505A479DBB72C444A292AA43322A.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.37.45:797][313]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.37.45:797][313]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.37.52:185][ 58]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2023.12.17-11.37.52:204][ 58]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.37.52:212][ 58]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUDAA442A7A49FD91127CC77FA152862126.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.37.52:230][ 58]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.37.52:230][ 58]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.38.16:403][892]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2023.12.17-11.38.16:424][892]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.38.16:432][892]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD723BAADA464B7665D1A84C8F016C7695.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.38.16:448][892]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.38.16:448][892]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.38.52:938][109]LogEditorTransaction: Undo Drag and Drop Widget
+[2023.12.17-11.39.15:769][606]LogUObjectHash: Compacting FUObjectHashTables data took   5.69ms
+[2023.12.17-11.39.15:790][606]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.15:798][606]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD40C2B36F4867C6B2A876949A131A786D.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.15:815][606]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.15:815][606]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.22:073][345]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2023.12.17-11.39.22:099][345]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.22:107][345]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD8CE989FA4D875F9447C58FAD7CF2A714.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.22:123][345]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.22:123][345]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.22:960][440]BlueprintLog: New page: Compile CountdownTimerHUD
+[2023.12.17-11.39.23:039][440]LogUObjectHash: Compacting FUObjectHashTables data took   4.03ms
+[2023.12.17-11.39.25:460][711]LogUObjectHash: Compacting FUObjectHashTables data took   4.87ms
+[2023.12.17-11.39.25:489][711]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.25:498][711]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD8023427E4DCA80855B96F9985AA1F9B3.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.25:514][711]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.25:514][711]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.39:712][400]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2023.12.17-11.39.39:732][400]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.39:740][400]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUDDF95AA8E468772D56DE98994EF668FA6.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.39:755][400]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.39:755][400]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.45:083][ 33]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2023.12.17-11.39.45:107][ 33]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.45:115][ 33]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD690FA3EA45E22B5B8C1B3ABC8BDC0DDF.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.45:129][ 33]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.45:129][ 33]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.48:018][367]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2023.12.17-11.39.48:043][367]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.48:051][367]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD4E50BE754A01307A40B7EDB705A407BB.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.48:067][367]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.48:068][367]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.50:339][629]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2023.12.17-11.39.50:364][629]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.50:373][629]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD179509AD4B226F48A7D0F19D96C3A191.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.50:390][629]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.50:391][629]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.52:434][874]Cmd: TRANSACTION UNDO
+[2023.12.17-11.39.52:434][874]LogEditorTransaction: Undo Edit Left
+[2023.12.17-11.39.52:696][882]Cmd: TRANSACTION UNDO
+[2023.12.17-11.39.52:696][882]LogEditorTransaction: Undo Edit Right
+[2023.12.17-11.39.53:386][943]Cmd: TRANSACTION UNDO
+[2023.12.17-11.39.53:386][943]LogEditorTransaction: Undo Resize Widget
+[2023.12.17-11.39.54:446][ 64]Cmd: TRANSACTION UNDO
+[2023.12.17-11.39.54:446][ 64]LogEditorTransaction: Undo Resize Widget
+[2023.12.17-11.39.56:066][248]LogUObjectHash: Compacting FUObjectHashTables data took   4.82ms
+[2023.12.17-11.39.56:084][248]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.39.56:092][248]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD7D3AC43347CD57F4F0D5D496A6522133.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.39.56:108][248]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.39.56:108][248]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.39.58:382][514]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2023.12.17-11.39.59:418][635]BlueprintLog: New page: Compile CountdownTimerHUD
+[2023.12.17-11.39.59:472][635]LogUObjectHash: Compacting FUObjectHashTables data took   4.28ms
+[2023.12.17-11.40.13:344][224]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.40.13:352][224]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.40.13:352][224]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:40:13)
+[2023.12.17-11.40.13:380][224]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.40.13:459][224]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078906s)
+[2023.12.17-11.40.13:460][224]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.40.13:460][224]LogPlayLevel: PIE: World Init took: (0.001599s)
+[2023.12.17-11.40.13:461][224]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.080859s)
+[2023.12.17-11.40.13:514][224]LogUObjectHash: Compacting FUObjectHashTables data took   5.01ms
+[2023.12.17-11.40.13:516][224]LogAudio: Display: Creating Audio Device:                 Id: 28, Scope: Unique, Realtime: True
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.40.13:516][224]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.40.13:516][224]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.40.13:517][224]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.40.13:517][224]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.40.13:517][224]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.40.13:517][224]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.40.13:522][224]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.40.13:523][224]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.40.13:531][224]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.40.13:532][224]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.40.13:532][224]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.40.13:532][224]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.40.13:532][224]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.40.13:533][224]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.40.13:533][224]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.40.13:534][224]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.40.13:534][224]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.40.13:534][224]LogInit: FAudioDevice initialized.
+[2023.12.17-11.40.13:534][224]LogAudio: Display: Audio Device (ID: 28) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.40.13:544][224]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.40.13:575][224]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.40.13
+[2023.12.17-11.40.13:576][224]LogWorld: Bringing up level for play took: 0.030875
+[2023.12.17-11.40.13:577][224]LogOnline: OSS: Creating online subsystem instance for: :Context_44
+[2023.12.17-11.40.13:586][224]LogTemp: Warning: Initial Location: 220.000000,-400.000000,62.000008|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.40.13:586][224]LogTemp: Warning: Initial Location: 210.000000,2390.000000,232.699570|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.40.13:586][224]LogTemp: Warning: Found Actor
+[2023.12.17-11.40.13:587][224]LogTemp: Warning: Found Actor
+[2023.12.17-11.40.13:588][224]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.40.13:588][224]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.40.13:588][224]PIE: Server logged in
+[2023.12.17-11.40.13:589][224]PIE: Play in editor total start time 0.239 seconds.
+[2023.12.17-11.40.18:533][681]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.40.18:533][681]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.40.18:534][681]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.40.18:538][681]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.40.18:545][681]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.40.18:553][681]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.40.18:603][681]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.40.18:604][681]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.40.18:605][681]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.40.18:608][681]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.40.18:617][681]LogUObjectHash: Compacting FUObjectHashTables data took   4.46ms
+[2023.12.17-11.40.18:644][682]LogPlayLevel: Display: Destroying online subsystem :Context_44
+[2023.12.17-11.40.34:799][599]LogEditorTransaction: Undo Resize Widget
+[2023.12.17-11.40.54:893][913]LogUObjectHash: Compacting FUObjectHashTables data took   5.13ms
+[2023.12.17-11.40.54:917][913]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.40.54:925][913]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD4A38BB144A4EFA854E80CE95814D603D.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.40.54:941][913]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.40.54:942][913]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.40.55:447][971]BlueprintLog: New page: Compile CountdownTimerHUD
+[2023.12.17-11.40.55:526][971]LogUObjectHash: Compacting FUObjectHashTables data took   3.90ms
+[2023.12.17-11.40.56:980][112]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.40.56:988][112]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.40.56:988][112]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:40:56)
+[2023.12.17-11.40.57:010][112]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.40.57:089][112]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078175s)
+[2023.12.17-11.40.57:090][112]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.40.57:091][112]LogPlayLevel: PIE: World Init took: (0.001710s)
+[2023.12.17-11.40.57:091][112]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.080273s)
+[2023.12.17-11.40.57:144][112]LogUObjectHash: Compacting FUObjectHashTables data took   4.85ms
+[2023.12.17-11.40.57:145][112]LogAudio: Display: Creating Audio Device:                 Id: 29, Scope: Unique, Realtime: True
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.40.57:145][112]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.40.57:145][112]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.40.57:146][112]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.40.57:146][112]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.40.57:146][112]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.40.57:146][112]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.40.57:151][112]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.40.57:151][112]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.40.57:158][112]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.40.57:159][112]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.40.57:159][112]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.40.57:159][112]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.40.57:159][112]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.40.57:159][112]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.40.57:159][112]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.40.57:161][112]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.40.57:161][112]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.40.57:161][112]LogInit: FAudioDevice initialized.
+[2023.12.17-11.40.57:161][112]LogAudio: Display: Audio Device (ID: 29) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.40.57:169][112]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.40.57:199][112]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.40.57
+[2023.12.17-11.40.57:200][112]LogWorld: Bringing up level for play took: 0.029675
+[2023.12.17-11.40.57:200][112]LogOnline: OSS: Creating online subsystem instance for: :Context_45
+[2023.12.17-11.40.57:208][112]LogTemp: Warning: Initial Location: 220.000000,-400.000000,62.000008|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.40.57:209][112]LogTemp: Warning: Initial Location: 210.000000,2390.000000,232.699570|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.40.57:209][112]LogTemp: Warning: Found Actor
+[2023.12.17-11.40.57:210][112]LogTemp: Warning: Found Actor
+[2023.12.17-11.40.57:210][112]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.40.57:211][112]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.40.57:211][112]PIE: Server logged in
+[2023.12.17-11.40.57:212][112]PIE: Play in editor total start time 0.225 seconds.
+[2023.12.17-11.41.05:932][966]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.41.05:932][966]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.41.05:933][966]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.41.05:937][966]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.41.05:947][966]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.41.05:955][966]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.41.06:004][966]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.41.06:005][966]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.41.06:007][966]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.41.06:009][966]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.41.06:018][966]LogUObjectHash: Compacting FUObjectHashTables data took   3.99ms
+[2023.12.17-11.41.06:045][967]LogPlayLevel: Display: Destroying online subsystem :Context_45
+[2023.12.17-11.41.12:860][745]LogUObjectHash: Compacting FUObjectHashTables data took   3.69ms
+[2023.12.17-11.41.12:883][745]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/CountdownTimerHUD" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset" SILENT=true
+[2023.12.17-11.41.12:890][745]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/CountdownTimerHUD3F7855BF4B7CE78FB7F4789A47537617.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/UI/CountdownTimerHUD.uasset'
+[2023.12.17-11.41.12:906][745]AssetCheck: New page: Asset Save: CountdownTimerHUD
+[2023.12.17-11.41.12:907][745]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/CountdownTimerHUD.CountdownTimerHUD
+[2023.12.17-11.41.13:884][857]BlueprintLog: New page: Compile CountdownTimerHUD
+[2023.12.17-11.41.13:964][857]LogUObjectHash: Compacting FUObjectHashTables data took   4.14ms
+[2023.12.17-11.41.15:197][969]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.17-11.41.15:204][969]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.17-11.41.15:204][969]PIE: New page: PIE session: TechDemo4_Map (17 Dec 2023, 11:41:15)
+[2023.12.17-11.41.15:230][969]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.41.15:309][969]LogPlayLevel: PIE: StaticDuplicateObject took: (0.078998s)
+[2023.12.17-11.41.15:310][969]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.17-11.41.15:311][969]LogPlayLevel: PIE: World Init took: (0.001506s)
+[2023.12.17-11.41.15:311][969]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TechDemo4_Map.TechDemo4_Map to /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map (0.080941s)
+[2023.12.17-11.41.15:365][969]LogUObjectHash: Compacting FUObjectHashTables data took   4.91ms
+[2023.12.17-11.41.15:366][969]LogAudio: Display: Creating Audio Device:                 Id: 30, Scope: Unique, Realtime: True
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.17-11.41.15:366][969]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.17-11.41.15:366][969]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.17-11.41.15:367][969]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.17-11.41.15:367][969]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.17-11.41.15:367][969]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.17-11.41.15:367][969]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.17-11.41.15:372][969]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.17-11.41.15:372][969]LogAudioMixer: Display: 1: FrontRight
+[2023.12.17-11.41.15:379][969]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.17-11.41.15:380][969]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.17-11.41.15:380][969]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.17-11.41.15:380][969]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.17-11.41.15:380][969]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.17-11.41.15:380][969]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.17-11.41.15:380][969]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.17-11.41.15:382][969]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.17-11.41.15:382][969]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.17-11.41.15:382][969]LogInit: FAudioDevice initialized.
+[2023.12.17-11.41.15:382][969]LogAudio: Display: Audio Device (ID: 30) registered with world 'TechDemo4_Map'.
+[2023.12.17-11.41.15:394][969]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.17-11.41.15:425][969]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.17-11.41.15
+[2023.12.17-11.41.15:426][969]LogWorld: Bringing up level for play took: 0.030635
+[2023.12.17-11.41.15:426][969]LogOnline: OSS: Creating online subsystem instance for: :Context_46
+[2023.12.17-11.41.15:434][969]LogTemp: Warning: Initial Location: 210.000000,2390.000000,242.000000|0.000000,-90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.41.15:435][969]LogTemp: Warning: Initial Location: 220.000000,-400.000000,56.517765|0.000000,90.000114,0.000000|1.000000,1.000000,1.000000
+[2023.12.17-11.41.15:435][969]LogTemp: Warning: Found Actor
+[2023.12.17-11.41.15:436][969]LogTemp: Warning: Found Actor
+[2023.12.17-11.41.15:437][969]LogTemp: Warning: Character Name: Red
+[2023.12.17-11.41.15:437][969]LogTemp: Warning: Character Name: Blue
+[2023.12.17-11.41.15:437][969]PIE: Server logged in
+[2023.12.17-11.41.15:438][969]PIE: Play in editor total start time 0.235 seconds.
+[2023.12.17-11.41.25:215][855]Current Health: 190.000000
+[2023.12.17-11.41.27:188][ 29]Current Health: 180.000000
+[2023.12.17-11.41.31:883][442]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.41.31:883][442]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.17-11.41.31:883][442]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.17-11.41.31:887][442]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.41.31:895][442]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.17-11.41.31:903][442]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.17-11.41.31:954][442]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.17-11.41.31:956][442]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.41.31:957][442]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.17-11.41.31:960][442]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.17-11.41.31:969][442]LogUObjectHash: Compacting FUObjectHashTables data took   3.99ms
+[2023.12.17-11.41.31:989][443]LogPlayLevel: Display: Destroying online subsystem :Context_46
+[2023.12.17-11.41.33:420][594]LogUObjectHash: Compacting FUObjectHashTables data took   3.83ms
+[2023.12.17-11.41.33:870][594]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/TechDemo4_MapED9BF8B047271A81DBCE57A0453C41C9.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Maps/TechDemo4_Map.umap'
+[2023.12.17-11.41.33:883][594]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/TechDemo4_Map_BuiltData" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Maps/TechDemo4_Map_BuiltData.uasset" SILENT=true
+[2023.12.17-11.41.35:580][594]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/TechDemo4_Map_BuiltData6621A40A47FCA720F505ADA559F6F26C.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Maps/TechDemo4_Map_BuiltData.uasset'
+[2023.12.17-11.41.35:604][594]AssetCheck: New page: Asset Save: multiple assets
+[2023.12.17-11.41.35:604][594]LogContentValidation: Display: Validating World /Game/Maps/TechDemo4_Map.TechDemo4_Map
+[2023.12.17-11.41.35:604][594]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/TechDemo4_Map_BuiltData.TechDemo4_Map_BuiltData
+[2023.12.17-11.41.48:837][917]LogUObjectHash: Compacting FUObjectHashTables data took   4.15ms
+[2023.12.17-11.41.49:284][917]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/TechDemo4_Map167990F94C37F0F050FF618C1587280D.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Maps/TechDemo4_Map.umap'
+[2023.12.17-11.41.49:294][917]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/TechDemo4_Map_BuiltData" FILE="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Maps/TechDemo4_Map_BuiltData.uasset" SILENT=true
+[2023.12.17-11.41.50:918][917]LogSavePackage: Moving 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Saved/TechDemo4_Map_BuiltDataC054344A497DC842CBF7539B86E2B947.tmp' to 'B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Content/Maps/TechDemo4_Map_BuiltData.uasset'
+[2023.12.17-11.41.50:941][917]AssetCheck: New page: Asset Save: multiple assets
+[2023.12.17-11.41.50:941][917]LogContentValidation: Display: Validating World /Game/Maps/TechDemo4_Map.TechDemo4_Map
+[2023.12.17-11.41.50:941][917]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/TechDemo4_Map_BuiltData.TechDemo4_Map_BuiltData
+[2023.12.17-11.41.52:564][ 79]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms

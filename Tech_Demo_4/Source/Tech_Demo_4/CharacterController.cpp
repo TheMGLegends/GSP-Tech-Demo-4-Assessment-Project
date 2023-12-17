@@ -43,6 +43,8 @@ ACharacterController::ACharacterController()
 	Ammo = ClipSize;
 	Clips = 2;
 
+	Score = 0;
+
 	CrosshairVisible = ESlateVisibility::Hidden;
 	ReloadVisible = ESlateVisibility::Hidden;
 }

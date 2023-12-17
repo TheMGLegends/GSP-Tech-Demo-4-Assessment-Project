@@ -27,6 +27,11 @@ protected:
 	
 public:
 	ATech_Demo_4GameModeBase();
+
+	UPROPERTY(EditAnywhere, Category = "Materials")
+	UMaterialInstanceConstant* BlueMaterial;
+	UPROPERTY(EditAnywhere, Category = "Materials")
+	UMaterialInstanceConstant* RedMaterial;
 	
 	UPROPERTY(EditAnywhere, Category = "Materials")
 	TArray<UMaterialInstanceConstant*> Materials;
@@ -43,7 +48,9 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timer")
 	int Minutes;
-
 	UPROPERTY(BlueprintReadWrite, Category = "Timer");
 	int Seconds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rounds")
+	int Round;
 };
