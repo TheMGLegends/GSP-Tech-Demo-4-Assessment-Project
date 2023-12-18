@@ -52,5 +52,12 @@ public:
 	int Seconds;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rounds")
+	int MaxRounds;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rounds")
 	int Round;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Winner")
+	FString WinnerName;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Winner")
+	ESlateVisibility WinnerVisibility;
 };

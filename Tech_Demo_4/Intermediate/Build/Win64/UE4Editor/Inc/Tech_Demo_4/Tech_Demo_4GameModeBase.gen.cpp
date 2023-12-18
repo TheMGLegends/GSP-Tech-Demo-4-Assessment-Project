@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceConstant_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
+	UMG_API UEnum* Z_Construct_UEnum_UMG_ESlateVisibility();
 // End Cross Module References
 	void ATech_Demo_4GameModeBase::StaticRegisterNativesATech_Demo_4GameModeBase()
 	{
@@ -78,9 +79,22 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Seconds;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxRounds_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxRounds;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Round_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Round;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WinnerName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_WinnerName;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_WinnerVisibility_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WinnerVisibility_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_WinnerVisibility;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -171,12 +185,34 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Seconds = { "Seconds", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, Seconds), METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Seconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Seconds_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_MaxRounds_MetaData[] = {
+		{ "Category", "Rounds" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_MaxRounds = { "MaxRounds", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, MaxRounds), METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_MaxRounds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_MaxRounds_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Round_MetaData[] = {
 		{ "Category", "Rounds" },
 		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Round = { "Round", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, Round), METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Round_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Round_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerName_MetaData[] = {
+		{ "Category", "Winner" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerName = { "WinnerName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, WinnerName), METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerName_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_MetaData[] = {
+		{ "Category", "Winner" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility = { "WinnerVisibility", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, WinnerVisibility), Z_Construct_UEnum_UMG_ESlateVisibility, METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players,
@@ -190,7 +226,11 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_CountdownTimerHUDOverlay,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Minutes,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Seconds,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_MaxRounds,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Round,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATech_Demo_4GameModeBase>::IsAbstract,
@@ -219,7 +259,7 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 297324262);
+	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 3110971404);
 	template<> TECH_DEMO_4_API UClass* StaticClass<ATech_Demo_4GameModeBase>()
 	{
 		return ATech_Demo_4GameModeBase::StaticClass();

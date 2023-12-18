@@ -18,7 +18,10 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 	Minutes = 3;
 	Seconds = 0;
 
+	MaxRounds = 5;
 	Round = 1;
+	
+	WinnerVisibility = ESlateVisibility::Hidden;
 }
 
 void ATech_Demo_4GameModeBase::StartPlay()
@@ -101,6 +104,39 @@ void ATech_Demo_4GameModeBase::Countdown()
 		else
 		{
 			GetWorldTimerManager().ClearTimer(TimerHandle);
+
+			if (Players.Num() == 2)
+			{
+				if (Players[0]->Health > Players[1]->Health)
+				{
+					Players[0]->Score++;
+				}
+				else if (Players[0]->Health < Players[1]->Health)
+				{
+					Players[1]->Score++;
+				}
+	
+				Round++;
+				
+				if (Round > MaxRounds)
+				{
+					if (Players[0]->Score > Players[1]->Score)
+					{
+						WinnerName = Players[0]->Name;
+					}
+					else if (Players[0]->Score < Players[1]->Score)
+					{
+						WinnerName = Players[1]->Name;
+					}
+					else
+					{
+						WinnerName = "No-one";
+					}
+					
+					WinnerVisibility = ESlateVisibility::Visible;
+				}
+			}
+
 			
 			GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
 		}
