@@ -20,10 +20,6 @@ C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplic
 C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Materials/MaterialInstanceConstant.h
 C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MaterialInstanceConstant.generated.h
-C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/SoundCue.h
-C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/SoundNode.h
-C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundNode.generated.h
-C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundCue.generated.h
 B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Inc\Tech_Demo_4\Tech_Demo_4GameModeBase.generated.h
 B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\CharacterWidget.h
 C:\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h

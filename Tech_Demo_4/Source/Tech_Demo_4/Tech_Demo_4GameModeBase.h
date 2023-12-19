@@ -6,7 +6,6 @@
 #include "CharacterController.h"
 #include "GameFramework/GameModeBase.h"
 #include "Materials/MaterialInstanceConstant.h"
-#include "Sound/SoundCue.h"
 #include "Tech_Demo_4GameModeBase.generated.h"
 
 class UCountdownWidget;
