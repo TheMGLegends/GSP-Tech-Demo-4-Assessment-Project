@@ -22,6 +22,8 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	UMG_API UEnum* Z_Construct_UEnum_UMG_ESlateVisibility();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 // End Cross Module References
 	void ATech_Demo_4GameModeBase::StaticRegisterNativesATech_Demo_4GameModeBase()
 	{
@@ -95,6 +97,14 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WinnerVisibility_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_WinnerVisibility;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BattleMusic_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BattleMusic;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Audio_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Audio;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -213,6 +223,21 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility = { "WinnerVisibility", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, WinnerVisibility), Z_Construct_UEnum_UMG_ESlateVisibility, METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_BattleMusic_MetaData[] = {
+		{ "Category", "Music" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_BattleMusic = { "BattleMusic", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, BattleMusic), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_BattleMusic_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_BattleMusic_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Audio_MetaData[] = {
+		{ "Category", "Audio" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Audio = { "Audio", nullptr, (EPropertyFlags)0x0040000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATech_Demo_4GameModeBase, Audio), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Audio_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Audio_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Players,
@@ -231,6 +256,8 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_WinnerVisibility,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_BattleMusic,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::NewProp_Audio,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATech_Demo_4GameModeBase>::IsAbstract,
@@ -259,7 +286,7 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 3110971404);
+	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 2376886490);
 	template<> TECH_DEMO_4_API UClass* StaticClass<ATech_Demo_4GameModeBase>()
 	{
 		return ATech_Demo_4GameModeBase::StaticClass();

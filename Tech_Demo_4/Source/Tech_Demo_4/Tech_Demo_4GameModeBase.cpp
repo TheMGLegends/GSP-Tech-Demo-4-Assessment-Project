@@ -6,6 +6,7 @@
 #include "CountdownWidget.h"
 #include "EngineUtils.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/AudioComponent.h"
 
 ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 {
@@ -14,6 +15,10 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 	
 	CharacterHUDOverlay = nullptr;
 	CountdownTimerHUDOverlay = nullptr;
+	
+	BattleMusic = nullptr;
+
+	Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
 	
 	Minutes = 3;
 	Seconds = 0;
@@ -27,6 +32,15 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 void ATech_Demo_4GameModeBase::StartPlay()
 {
 	Super::StartPlay();
+
+	Audio->SetVolumeMultiplier(0.075f);
+
+	if (BattleMusic != nullptr)
+	{
+		Audio->SetSound(BattleMusic);
+	}
+
+	Audio->Play();
 	
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
 
@@ -104,6 +118,7 @@ void ATech_Demo_4GameModeBase::Countdown()
 		else
 		{
 			GetWorldTimerManager().ClearTimer(TimerHandle);
+			Audio->AdjustVolume(4.0f, 0.0f, EAudioFaderCurve::Linear);
 
 			if (Players.Num() == 2)
 			{
@@ -136,7 +151,6 @@ void ATech_Demo_4GameModeBase::Countdown()
 					WinnerVisibility = ESlateVisibility::Visible;
 				}
 			}
-
 			
 			GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
 		}
@@ -146,6 +160,7 @@ void ATech_Demo_4GameModeBase::Countdown()
 void ATech_Demo_4GameModeBase::RespawnPlayers()
 {
 	GetWorldTimerManager().ClearTimer(TimerHandle);
+	Audio->Play();
 
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{

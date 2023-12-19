@@ -6,6 +6,7 @@
 #include "CharacterController.h"
 #include "GameFramework/GameModeBase.h"
 #include "Materials/MaterialInstanceConstant.h"
+#include "Sound/SoundCue.h"
 #include "Tech_Demo_4GameModeBase.generated.h"
 
 class UCountdownWidget;
@@ -60,4 +61,11 @@ public:
 	FString WinnerName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Winner")
 	ESlateVisibility WinnerVisibility;
+	
+	UPROPERTY(EditAnywhere, Category = "Music")
+	USoundBase* BattleMusic;
+
+private:
+	UPROPERTY(EditAnywhere, Category = "Audio")
+	UAudioComponent* Audio;
 };

@@ -77,6 +77,7 @@ private:
 	bool bIsDead;
 	bool bHasShot;
 	bool bIsReloading;
+	bool bIsShooting;
 
 	UPROPERTY(EditAnywhere, Category = "Timers")
 	float ShotDuration;
@@ -96,6 +97,7 @@ private:
 	// Action Functions:
 	virtual void Jump() override;
 	void Shoot();
+	void StopShoot();
 	void Aim();
 	void Reload();
 
@@ -117,4 +119,9 @@ private:
 	UAnimMontage* ReloadMontage;
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ShootMontage;
+
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* ShotSFX;
+	UPROPERTY(EditAnywhere, Category = "SFX")
+	USoundBase* DeathSFX;
 };

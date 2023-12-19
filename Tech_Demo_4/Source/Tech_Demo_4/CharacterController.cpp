@@ -4,6 +4,7 @@
 #include "CharacterWidget.h"
 #include "Components/SlateWrapperTypes.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ACharacterController::ACharacterController()
@@ -28,6 +29,7 @@ ACharacterController::ACharacterController()
 	bIsAimedIn = false;
 	bIsDead = false;
 	bHasShot = false;
+	bIsShooting = false;
 	
 	ShotDuration = 1.2f;
 	CurrentShotInterval = 0.0f;
@@ -78,7 +80,7 @@ void ACharacterController::Tick(const float DeltaTime)
 		bIsReloading = false;
 	}
 
-	if (bHasShot)
+	if (bIsShooting || bHasShot)
 	{
 		CurrentShotInterval += DeltaTime;
 
@@ -86,6 +88,11 @@ void ACharacterController::Tick(const float DeltaTime)
 		{
 			CurrentShotInterval = 0.0f;
 			bHasShot = false;
+			
+			if (bIsShooting)
+			{
+				Shoot();
+			}
 		}
 	}
 
@@ -128,7 +135,9 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 	// Action Bindings:
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacterController::Jump);
+	
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ACharacterController::Shoot);
+	PlayerInputComponent->BindAction("Shoot", IE_Released, this, &ACharacterController::StopShoot);
 	
 	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::Aim);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ACharacterController::Reload);
@@ -148,6 +157,7 @@ void ACharacterController::TakeDamage(const int Damage)
 		if (Health <= 0)
 		{
 			bIsDead = true;
+			UGameplayStatics::PlaySoundAtLocation(this, DeathSFX, GetActorLocation(), 1.5f);
 			AimOut();
 
 			if (AnimationController != nullptr)
@@ -170,8 +180,9 @@ void ACharacterController::Respawn()
 	
 	SpringArm->SetRelativeLocation(FVector(0, 25, 90));
 	SpringArm->SetRelativeRotation((FRotator(0.0f, 0.0f, 0.0f)));
-	
+
 	bHasShot = false;
+	bIsShooting = false;
 	
 	Health = MaxHealth;
 	HealthPercentage = Health / MaxHealth;
@@ -234,10 +245,17 @@ void ACharacterController::Shoot()
 		GLog->Logf(TEXT("Current Health: %f"), Health);
 		// ------------------------------------------------
 
+		UGameplayStatics::PlaySoundAtLocation(this, ShotSFX, GetActorLocation(), 0.25f);
 		Ammo--;
+		bIsShooting = true;
 		bHasShot = true;
 		PlayAnimMontage(ShootMontage);
 	}
+}
+
+void ACharacterController::StopShoot()
+{
+	bIsShooting = false;
 }
 
 void ACharacterController::Aim()
@@ -257,6 +275,7 @@ void ACharacterController::Reload()
 	if (!bIsDead && Clips > 0 && Ammo < ClipSize)
 	{
 		AimOut();
+		CurrentShotInterval = 0;
 		bIsReloading = true;
 		PlayAnimMontage(ReloadMontage);
 	}
