@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tech_Demo_4.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{2E09B970-2FBC-4AE9-996E-1679A7F5AEB4}</UniqueIdentifier>
+      <UniqueIdentifier>{52B6C653-08C5-4F17-B83B-93C07C47A46E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tech_Demo_4.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{FDC53A04-1EC8-4261-9604-3AEFC943E675}</UniqueIdentifier>
+      <UniqueIdentifier>{0C47F793-9C17-4D59-AD21-7C3279D1C455}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tech_Demo_4">
-      <UniqueIdentifier>{1FD59AD0-FFB1-4E50-BE10-773FDF592B03}</UniqueIdentifier>
+      <UniqueIdentifier>{CA524956-C03E-4104-983F-55B0CC49CBF5}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tech_Demo_4\CharacterAnimationController.cpp">
       <Filter>Source\Tech_Demo_4</Filter>
@@ -51,6 +51,18 @@
       <Filter>Source\Tech_Demo_4</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Tech_Demo_4\CountdownWidget.h">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tech_Demo_4\MainMenuWidget.cpp">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tech_Demo_4\MainMenuWidget.h">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tech_Demo_4\MainMenu_GameModeBase.cpp">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tech_Demo_4\MainMenu_GameModeBase.h">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClInclude>
     <None Include="..\..\Source\Tech_Demo_4\Tech_Demo_4.Build.cs">
