@@ -23,6 +23,7 @@ protected:
 	void Countdown();
 	void RespawnPlayers();
 	void SpawnPickup();
+	void NewRound();
 
 	UPROPERTY()
 	TArray<ACharacterController*> Players;

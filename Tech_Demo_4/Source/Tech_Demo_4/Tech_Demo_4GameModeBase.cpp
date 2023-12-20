@@ -113,6 +113,14 @@ void ATech_Demo_4GameModeBase::StartPlay()
 
 void ATech_Demo_4GameModeBase::Countdown()
 {
+	for (uint8 Index = 0; Index < Players.Num(); ++Index)
+	{
+		if (Players[Index]->GetIsDead())
+		{
+			NewRound();
+		}
+	}
+	
 	if (Seconds != 0)
 	{
 		Seconds--;
@@ -126,43 +134,7 @@ void ATech_Demo_4GameModeBase::Countdown()
 		}
 		else
 		{
-			GetWorldTimerManager().ClearTimer(TimerHandle);
-			GetWorldTimerManager().ClearTimer(TimerHandle2);
-			Audio->AdjustVolume(4.0f, 0.0f, EAudioFaderCurve::Linear);
-
-			if (Players.Num() == 2)
-			{
-				if (Players[0]->Health > Players[1]->Health)
-				{
-					Players[0]->Score++;
-				}
-				else if (Players[0]->Health < Players[1]->Health)
-				{
-					Players[1]->Score++;
-				}
-	
-				Round++;
-				
-				if (Round > MaxRounds)
-				{
-					if (Players[0]->Score > Players[1]->Score)
-					{
-						WinnerName = Players[0]->Name;
-					}
-					else if (Players[0]->Score < Players[1]->Score)
-					{
-						WinnerName = Players[1]->Name;
-					}
-					else
-					{
-						WinnerName = "No-one";
-					}
-					
-					WinnerVisibility = ESlateVisibility::Visible;
-				}
-			}
-			
-			GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
+			NewRound();
 		}
 	}
 }
@@ -250,4 +222,45 @@ void ATech_Demo_4GameModeBase::SpawnPickup()
 			}
 		}
 	}
+}
+
+void ATech_Demo_4GameModeBase::NewRound()
+{
+	Round++;
+	
+	if (Round > MaxRounds)
+	{
+		if (Players[0]->Score > Players[1]->Score)
+		{
+			WinnerName = Players[0]->Name;
+		}
+		else if (Players[0]->Score < Players[1]->Score)
+		{
+			WinnerName = Players[1]->Name;
+		}
+		else
+		{
+			WinnerName = "No-one";
+		}
+					
+		WinnerVisibility = ESlateVisibility::Visible;
+	}
+			
+	GetWorldTimerManager().ClearTimer(TimerHandle);
+	GetWorldTimerManager().ClearTimer(TimerHandle2);
+	Audio->AdjustVolume(4.0f, 0.0f, EAudioFaderCurve::Linear);
+
+	if (Players.Num() == 2)
+	{
+		if (Players[0]->Health > Players[1]->Health)
+		{
+			Players[0]->Score++;
+		}
+		else if (Players[0]->Health < Players[1]->Health)
+		{
+			Players[1]->Score++;
+		}
+	}
+			
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
 }

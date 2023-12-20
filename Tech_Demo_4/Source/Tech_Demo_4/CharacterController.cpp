@@ -183,7 +183,7 @@ void ACharacterController::TakeDamage(const int Damage)
 			{
 				AnimationController->bIsDead = true;
 			}
-		
+
 			StopAnimMontage();
 		}
 	}
@@ -228,6 +228,7 @@ void ACharacterController::IncrementAmmo(int IncrementAmount)
 void ACharacterController::Respawn()
 {
 	bIsDead = false;
+	AnimationController->bIsDead = false;
 	
 	SetActorTransform(Origin);
 	AimOut();
@@ -303,7 +304,7 @@ void ACharacterController::Shoot()
 	if (bIsAimedIn && !bHasShot && !bIsDead && Ammo > 0)
 	{
 		// Testing Code:
-		const int Damage = 10 * DamageMultiplier;
+		const int Damage = 50 * DamageMultiplier;
 		TakeDamage(Damage);
 		// ------------------------------------------------
 
