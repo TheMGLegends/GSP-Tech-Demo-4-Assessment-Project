@@ -8,15 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef TECH_DEMO_4_PickupController_generated_h
 #error "PickupController.generated.h already included, missing '#pragma once' in PickupController.h"
 #endif
 #define TECH_DEMO_4_PickupController_generated_h
 
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_SPARSE_DATA
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_RPC_WRAPPERS
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_RPC_WRAPPERS_NO_PURE_DECLS
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_INCLASS_NO_PURE_DECLS \
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_SPARSE_DATA
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnBeginOverlapComponentEvent);
+
+
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnBeginOverlapComponentEvent);
+
+
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPickupController(); \
 	friend struct Z_Construct_UClass_APickupController_Statics; \
@@ -25,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(APickupController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_INCLASS \
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_INCLASS \
 private: \
 	static void StaticRegisterNativesAPickupController(); \
 	friend struct Z_Construct_UClass_APickupController_Statics; \
@@ -34,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(APickupController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_STANDARD_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APickupController(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APickupController) \
@@ -47,7 +58,7 @@ private: \
 public:
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_ENHANCED_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APickupController(APickupController&&); \
@@ -58,28 +69,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APickupController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_PRIVATE_PROPERTY_OFFSET
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_18_PROLOG
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_GENERATED_BODY_LEGACY \
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_PRIVATE_PROPERTY_OFFSET
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_PROLOG
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_RPC_WRAPPERS \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_INCLASS \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_STANDARD_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_RPC_WRAPPERS \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_INCLASS \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_GENERATED_BODY \
+#define Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_INCLASS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_21_ENHANCED_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_INCLASS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_PickupController_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

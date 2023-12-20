@@ -32,6 +32,7 @@ protected:
 
 public:	
 	void TakeDamage(int Damage);
+	void Heal(int HealAmount);
 	void Respawn();
 	bool GetIsDead() const { return bIsDead; }
 	

@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PickupController.h"
-
-int APickupController::PickupsInLevel = 0;
+#include "CharacterController.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APickupController::APickupController()
@@ -10,24 +10,48 @@ APickupController::APickupController()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	GameModeBase = nullptr;
 	PickupLocationController = nullptr;
-	PickupsInLevel++;
+	BoxCollider = nullptr;
 
 	const int RandomInt = FMath::RandRange(0, 2);
 	uint8 RandomByte = static_cast<uint8>(RandomInt);
 	PickupType = static_cast<EPickups>(RandomByte);
 }
 
-APickupController::~APickupController()
+void APickupController::OnBeginOverlapComponentEvent(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	PickupsInLevel--;
+	if (Cast<ACharacterController>(OtherActor))
+	{
+		ACharacterController* CharacterController = Cast<ACharacterController>(OtherActor);
+		
+		GameModeBase->PickupsInLevel--;
+		UGameplayStatics::PlaySoundAtLocation(this, PickupSFX, GetActorLocation(), 0.5f);
+		
+		switch(PickupType)
+		{
+		case EPickups::DoubleDamage:
+			break;
+		case EPickups::Recovery:
+			CharacterController->Heal(50);
+			break;
+		case EPickups::Ammo:
+			break;
+		default:
+			break;
+		}
+		Destroy();
+	}
 }
 
 // Called when the game starts or when spawned
 void APickupController::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	BoxCollider = FindComponentByClass<UStaticMeshComponent>();
+
+	BoxCollider->OnComponentBeginOverlap.AddDynamic(this, &APickupController::OnBeginOverlapComponentEvent);
 }
 
 // Called every frame

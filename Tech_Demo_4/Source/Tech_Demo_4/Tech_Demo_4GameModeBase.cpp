@@ -25,6 +25,8 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 
 	MaxRounds = 5;
 	Round = 1;
+
+	PickupsInLevel = 0;
 	
 	WinnerVisibility = ESlateVisibility::Hidden;
 }
@@ -198,14 +200,13 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 
 void ATech_Demo_4GameModeBase::SpawnPickup()
 {
-	if (APickupController::PickupsInLevel < 3)
+	if (PickupsInLevel < 4)
 	{
 		bool bLocationChosen = false;
-		int Random = 0;
-		
+
 		while (!bLocationChosen)
 		{
-			Random = FMath::RandRange(0, PickupLocations.Num());
+			const int Random = FMath::RandRange(0, PickupLocations.Num());
 		
 			if (!PickupLocations[Random]->bIsOccupied && PickupObject != nullptr)
 			{
@@ -213,9 +214,11 @@ void ATech_Demo_4GameModeBase::SpawnPickup()
 				bLocationChosen = true;
 				PickupLocations[Random]->bIsOccupied = true;
 				APickupController* PickupInstance = GetWorld()->SpawnActor<APickupController>(PickupObject, PickupLocations[Random]->GetActorLocation(), FRotator(0), SpawnParameters);
-
+				PickupsInLevel++;
+				
 				PickupInstance->PickupLocationController = PickupLocations[Random];
 				PickupLocations[Random]->OccupyingPickup = PickupInstance;
+				PickupInstance->GameModeBase = this;
 
 				UStaticMeshComponent* Cube = PickupInstance->FindComponentByClass<UStaticMeshComponent>();
 

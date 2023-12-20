@@ -31,7 +31,7 @@ ACharacterController::ACharacterController()
 	bHasShot = false;
 	bIsShooting = false;
 	
-	ShotDuration = 1.2f;
+	ShotDuration = 0.6f;
 	CurrentShotInterval = 0.0f;
 
 	ReloadDuration = 3.3f;
@@ -168,6 +168,18 @@ void ACharacterController::TakeDamage(const int Damage)
 			StopAnimMontage();
 		}
 	}
+}
+
+void ACharacterController::Heal(const int HealAmount)
+{
+	Health += HealAmount;
+
+	if (Health > MaxHealth)
+	{
+		Health = MaxHealth;
+	}
+
+	HealthPercentage = Health / MaxHealth;
 }
 
 void ACharacterController::Respawn()

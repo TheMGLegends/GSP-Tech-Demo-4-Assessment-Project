@@ -11,6 +11,7 @@
 #include "Tech_Demo_4GameModeBase.generated.h"
 
 class UCountdownWidget;
+class APickupController;
 
 UCLASS()
 class TECH_DEMO_4_API ATech_Demo_4GameModeBase : public AGameModeBase
@@ -81,7 +82,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Spawner Category")
 	TSubclassOf<APickupController> PickupObject;
 
+	int PickupsInLevel;
+	
 private:
 	UPROPERTY(EditAnywhere, Category = "Audio")
 	UAudioComponent* Audio;
+
 };

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PickupLocationController.h"
+#include "Tech_Demo_4GameModeBase.h"
 #include "GameFramework/Actor.h"
 #include "PickupController.generated.h"
 
@@ -15,6 +16,8 @@ enum EPickups
 	Ammo
 };
 
+class ATech_Demo_4GameModeBase;
+
 UCLASS()
 class TECH_DEMO_4_API APickupController : public AActor
 {
@@ -23,21 +26,30 @@ class TECH_DEMO_4_API APickupController : public AActor
 public:	
 	// Sets default values for this actor's properties
 	APickupController();
-	virtual ~APickupController() override;
 
 protected:
+	UFUNCTION()
+	void OnBeginOverlapComponentEvent(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	static int PickupsInLevel;
 	
 	UPROPERTY(EditAnywhere, Category = "Pickup Location")
 	APickupLocationController* PickupLocationController;
+	UPROPERTY(EditAnywhere, Category = "Game Mode")
+	ATech_Demo_4GameModeBase* GameModeBase;
 
 	UPROPERTY(EditAnywhere, Category = "Pickup Type")
 	TEnumAsByte<EPickups> PickupType;
+
+	UPROPERTY(VisibleAnywhere, Category = "Collider Mesh")
+	UStaticMeshComponent* BoxCollider;
+	
+	UPROPERTY(EditAnywhere, Category = "SFX")
+    USoundBase* PickupSFX;
 };
