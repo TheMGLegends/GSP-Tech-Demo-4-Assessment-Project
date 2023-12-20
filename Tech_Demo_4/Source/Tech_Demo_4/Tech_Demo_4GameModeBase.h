@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "CharacterController.h"
+#include "PickupController.h"
+#include "PickupLocationController.h"
 #include "GameFramework/GameModeBase.h"
 #include "Materials/MaterialInstanceConstant.h"
 #include "Tech_Demo_4GameModeBase.generated.h"
@@ -19,11 +21,16 @@ protected:
 	virtual void StartPlay() override;
 	void Countdown();
 	void RespawnPlayers();
+	void SpawnPickup();
 
 	UPROPERTY()
 	TArray<ACharacterController*> Players;
 
+	UPROPERTY()
+	TArray<APickupLocationController*> PickupLocations;
+
 	FTimerHandle TimerHandle;
+	FTimerHandle TimerHandle2;
 	
 public:
 	ATech_Demo_4GameModeBase();
@@ -63,6 +70,16 @@ public:
 	
 	UPROPERTY(EditAnywhere, Category = "Music")
 	USoundBase* BattleMusic;
+
+	UPROPERTY(EditAnywhere, Category = "Pickup Colors")
+	UMaterialInstance* DoubleDamageMaterial;
+	UPROPERTY(EditAnywhere, Category = "Pickup Colors")
+	UMaterialInstance* AmmoMaterial;
+	UPROPERTY(EditAnywhere, Category = "Pickup Colors")
+	UMaterialInstance* RecoveryMaterial;
+
+	UPROPERTY(EditAnywhere, Category = "Spawner Category")
+	TSubclassOf<APickupController> PickupObject;
 
 private:
 	UPROPERTY(EditAnywhere, Category = "Audio")

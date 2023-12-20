@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Tech_Demo_4.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{52B6C653-08C5-4F17-B83B-93C07C47A46E}</UniqueIdentifier>
+      <UniqueIdentifier>{AB5C32B3-B6A7-4871-AA71-F7CD31A8BFEA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Tech_Demo_4.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{0C47F793-9C17-4D59-AD21-7C3279D1C455}</UniqueIdentifier>
+      <UniqueIdentifier>{97C00999-34F6-4360-8737-5A802227D3A1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Tech_Demo_4">
-      <UniqueIdentifier>{CA524956-C03E-4104-983F-55B0CC49CBF5}</UniqueIdentifier>
+      <UniqueIdentifier>{9CBAE0F7-907A-41E6-9BB9-2053C8A638C4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Tech_Demo_4\CharacterAnimationController.cpp">
       <Filter>Source\Tech_Demo_4</Filter>
@@ -63,6 +63,18 @@
       <Filter>Source\Tech_Demo_4</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Tech_Demo_4\MainMenu_GameModeBase.h">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tech_Demo_4\PickupController.cpp">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tech_Demo_4\PickupController.h">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Tech_Demo_4\PickupLocationController.cpp">
+      <Filter>Source\Tech_Demo_4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Tech_Demo_4\PickupLocationController.h">
       <Filter>Source\Tech_Demo_4</Filter>
     </ClInclude>
     <None Include="..\..\Source\Tech_Demo_4\Tech_Demo_4.Build.cs">

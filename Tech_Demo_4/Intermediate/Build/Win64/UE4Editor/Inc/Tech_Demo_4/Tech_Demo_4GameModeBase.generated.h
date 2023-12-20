@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TECH_DEMO_4_Tech_Demo_4GameModeBase_generated_h
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_SPARSE_DATA
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_RPC_WRAPPERS
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_INCLASS_NO_PURE_DECLS \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_SPARSE_DATA
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_RPC_WRAPPERS
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATech_Demo_4GameModeBase(); \
 	friend struct Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ATech_Demo_4GameModeBase)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_INCLASS \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesATech_Demo_4GameModeBase(); \
 	friend struct Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ATech_Demo_4GameModeBase)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_STANDARD_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATech_Demo_4GameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATech_Demo_4GameModeBase) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_ENHANCED_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATech_Demo_4GameModeBase(ATech_Demo_4GameModeBase&&); \
@@ -58,32 +58,33 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATech_Demo_4GameModeBase)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Players() { return STRUCT_OFFSET(ATech_Demo_4GameModeBase, Players); } \
+	FORCEINLINE static uint32 __PPO__PickupLocations() { return STRUCT_OFFSET(ATech_Demo_4GameModeBase, PickupLocations); } \
 	FORCEINLINE static uint32 __PPO__Audio() { return STRUCT_OFFSET(ATech_Demo_4GameModeBase, Audio); }
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_13_PROLOG
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_GENERATED_BODY_LEGACY \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_15_PROLOG
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_RPC_WRAPPERS \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_INCLASS \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_STANDARD_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_RPC_WRAPPERS \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_INCLASS \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_GENERATED_BODY \
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_INCLASS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_16_ENHANCED_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_INCLASS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
