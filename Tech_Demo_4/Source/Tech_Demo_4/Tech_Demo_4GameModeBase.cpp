@@ -194,6 +194,8 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 		}
 	}
 	
+	PickupsInLevel = 0;
+	
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
 	GetWorldTimerManager().SetTimer(TimerHandle2, this, &ATech_Demo_4GameModeBase::SpawnPickup, 15.0f, true, 0.0f);
 }
@@ -206,7 +208,7 @@ void ATech_Demo_4GameModeBase::SpawnPickup()
 
 		while (!bLocationChosen)
 		{
-			const int Random = FMath::RandRange(0, PickupLocations.Num());
+			const int Random = FMath::RandRange(0, PickupLocations.Num() - 1);
 		
 			if (!PickupLocations[Random]->bIsOccupied && PickupObject != nullptr)
 			{

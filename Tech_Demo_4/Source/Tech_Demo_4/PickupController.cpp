@@ -13,6 +13,7 @@ APickupController::APickupController()
 	GameModeBase = nullptr;
 	PickupLocationController = nullptr;
 	BoxCollider = nullptr;
+	PickupSFX = nullptr;
 
 	const int RandomInt = FMath::RandRange(0, 2);
 	uint8 RandomByte = static_cast<uint8>(RandomInt);
@@ -32,11 +33,13 @@ void APickupController::OnBeginOverlapComponentEvent(UPrimitiveComponent* Overla
 		switch(PickupType)
 		{
 		case EPickups::DoubleDamage:
+			CharacterController->ActivateDoubleDamage();
 			break;
 		case EPickups::Recovery:
 			CharacterController->Heal(50);
 			break;
 		case EPickups::Ammo:
+			CharacterController->IncrementAmmo(20);
 			break;
 		default:
 			break;

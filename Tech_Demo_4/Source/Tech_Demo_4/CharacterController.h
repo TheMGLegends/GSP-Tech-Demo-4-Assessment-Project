@@ -33,7 +33,9 @@ protected:
 public:	
 	void TakeDamage(int Damage);
 	void Heal(int HealAmount);
+	void IncrementAmmo(int IncrementAmount);
 	void Respawn();
+	void ActivateDoubleDamage();
 	bool GetIsDead() const { return bIsDead; }
 	
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
@@ -53,6 +55,8 @@ public:
 	int ClipSize;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int Ammo;
+	UPROPERTY(EditAnywhere, Category = "Ammo")
+	int MaxClips;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int Clips;
 
@@ -66,6 +70,14 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Widget")
 	UCharacterWidget* CharacterWidget;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Buffs")
+	bool bDoubleDamageActive;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Buffs")
+	ESlateVisibility DoubleDamageVisible;
+
+	UPROPERTY(EditAnywhere, Category = "Damage Multiplier")
+	int DamageMultiplier;
 
 	FTransform Origin;
 
@@ -87,6 +99,10 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Timers")
 	float ReloadDuration;
 	float CurrentReloadInterval;
+
+	UPROPERTY(EditAnywhere, Category = "Buffs")
+	float DoubleDamageDuration;
+	float CurrentDoubleDamageInterval;
 	
 	// Axis Functions:
 	void MoveForward(float Value);

@@ -31,11 +31,16 @@ ACharacterController::ACharacterController()
 	bHasShot = false;
 	bIsShooting = false;
 	
+	bDoubleDamageActive = false;
+	DoubleDamageDuration = 10.0f;
+	DoubleDamageVisible = ESlateVisibility::Hidden;
+	
 	ShotDuration = 0.6f;
 	CurrentShotInterval = 0.0f;
 
 	ReloadDuration = 3.3f;
 	CurrentReloadInterval = 0.0f;
+	DamageMultiplier = 1;
 	
 	MaxHealth = 200.0f;
 	Health = MaxHealth;
@@ -43,7 +48,9 @@ ACharacterController::ACharacterController()
 
 	ClipSize = 10;
 	Ammo = ClipSize;
-	Clips = 2;
+	
+	MaxClips = 2;
+	Clips = MaxClips;
 
 	Score = 0;
 
@@ -93,6 +100,20 @@ void ACharacterController::Tick(const float DeltaTime)
 			{
 				Shoot();
 			}
+		}
+	}
+
+	if (bDoubleDamageActive)
+	{
+		CurrentDoubleDamageInterval += DeltaTime;
+
+		if (CurrentDoubleDamageInterval > DoubleDamageDuration)
+		{
+			CurrentDoubleDamageInterval = 0.0f;
+			bDoubleDamageActive = false;
+			DoubleDamageVisible = ESlateVisibility::Hidden;
+
+			DamageMultiplier = 1;
 		}
 	}
 
@@ -182,6 +203,30 @@ void ACharacterController::Heal(const int HealAmount)
 	HealthPercentage = Health / MaxHealth;
 }
 
+void ACharacterController::IncrementAmmo(int IncrementAmount)
+{
+	if (Ammo < ClipSize)
+	{
+		const int Remainder = ClipSize - Ammo;
+
+		if (IncrementAmount >= Remainder)
+		{
+			IncrementAmount -= Remainder;
+			Ammo += Remainder;
+		}
+	}
+
+	if (Clips < MaxClips)
+	{
+		Clips += (IncrementAmount / ClipSize);
+
+		if (Clips > MaxClips)
+		{
+			Clips = MaxClips;
+		}
+	}
+}
+
 void ACharacterController::Respawn()
 {
 	bIsDead = false;
@@ -200,7 +245,14 @@ void ACharacterController::Respawn()
 	HealthPercentage = Health / MaxHealth;
 
 	Ammo = ClipSize;
-	Clips = 2;
+	Clips = MaxClips;
+}
+
+void ACharacterController::ActivateDoubleDamage()
+{
+	bDoubleDamageActive = true;
+	DoubleDamageVisible = ESlateVisibility::Visible;
+	DamageMultiplier = 2;
 }
 
 void ACharacterController::MoveForward(const float Value)
@@ -253,7 +305,8 @@ void ACharacterController::Shoot()
 	if (bIsAimedIn && !bHasShot && !bIsDead && Ammo > 0)
 	{
 		// Testing Code:
-		TakeDamage(10);
+		const int Damage = 10 * DamageMultiplier;
+		TakeDamage(Damage);
 		GLog->Logf(TEXT("Current Health: %f"), Health);
 		// ------------------------------------------------
 
