@@ -24,6 +24,7 @@ protected:
 	void RespawnPlayers();
 	void SpawnPickup();
 	void NewRound();
+	void RestartLevel();
 
 	UPROPERTY()
 	TArray<ACharacterController*> Players;

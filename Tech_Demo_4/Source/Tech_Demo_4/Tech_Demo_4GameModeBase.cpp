@@ -226,7 +226,23 @@ void ATech_Demo_4GameModeBase::SpawnPickup()
 
 void ATech_Demo_4GameModeBase::NewRound()
 {
+	GetWorldTimerManager().ClearTimer(TimerHandle);
+	GetWorldTimerManager().ClearTimer(TimerHandle2);
+	Audio->AdjustVolume(4.0f, 0.0f, EAudioFaderCurve::Linear);
+	
 	Round++;
+
+	if (Players.Num() == 2)
+	{
+		if (Players[0]->Health > Players[1]->Health)
+		{
+			Players[0]->Score++;
+		}
+		else if (Players[0]->Health < Players[1]->Health)
+		{
+			Players[1]->Score++;
+		}
+	}
 	
 	if (Round > MaxRounds)
 	{
@@ -244,23 +260,23 @@ void ATech_Demo_4GameModeBase::NewRound()
 		}
 					
 		WinnerVisibility = ESlateVisibility::Visible;
-	}
-			
-	GetWorldTimerManager().ClearTimer(TimerHandle);
-	GetWorldTimerManager().ClearTimer(TimerHandle2);
-	Audio->AdjustVolume(4.0f, 0.0f, EAudioFaderCurve::Linear);
-
-	if (Players.Num() == 2)
-	{
-		if (Players[0]->Health > Players[1]->Health)
-		{
-			Players[0]->Score++;
-		}
-		else if (Players[0]->Health < Players[1]->Health)
-		{
-			Players[1]->Score++;
-		}
+		
+		GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RestartLevel, 5.0f, false);
+		return;
 	}
 			
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::RespawnPlayers, 5.0f, false);
+}
+
+void ATech_Demo_4GameModeBase::RestartLevel()
+{
+	Round = 1;
+	WinnerVisibility = ESlateVisibility::Hidden;
+
+	for (uint8 Index = 0; Index < Players.Num(); ++Index)
+	{
+		Players[Index]->Score = 0;
+	}
+	
+	RespawnPlayers();
 }

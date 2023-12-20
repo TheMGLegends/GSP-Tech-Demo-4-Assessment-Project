@@ -304,7 +304,7 @@ void ACharacterController::Shoot()
 	if (bIsAimedIn && !bHasShot && !bIsDead && Ammo > 0)
 	{
 		// Testing Code:
-		const int Damage = 50 * DamageMultiplier;
+		const int Damage = 10 * DamageMultiplier;
 		TakeDamage(Damage);
 		// ------------------------------------------------
 
