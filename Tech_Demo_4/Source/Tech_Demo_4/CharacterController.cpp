@@ -64,9 +64,7 @@ void ACharacterController::BeginPlay()
 	Super::BeginPlay();
 
 	Origin = GetActorTransform();
-
-	UE_LOG(LogTemp, Warning, TEXT("Initial Location: %s"), *Origin.ToString());
-
+	
 	if (const USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
     {
     	if (UAnimInstance* AnimInstance = MeshComponent->GetAnimInstance())
@@ -307,7 +305,6 @@ void ACharacterController::Shoot()
 		// Testing Code:
 		const int Damage = 10 * DamageMultiplier;
 		TakeDamage(Damage);
-		GLog->Logf(TEXT("Current Health: %f"), Health);
 		// ------------------------------------------------
 
 		UGameplayStatics::PlaySoundAtLocation(this, ShotSFX, GetActorLocation(), 0.25f);

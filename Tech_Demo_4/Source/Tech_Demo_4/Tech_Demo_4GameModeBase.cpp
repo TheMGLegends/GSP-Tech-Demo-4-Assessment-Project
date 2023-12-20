@@ -79,8 +79,6 @@ void ATech_Demo_4GameModeBase::StartPlay()
 			
 			if (CharacterController->GetController())
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Found Actor"));
-				
 				if(CharacterHUDOverlayAsset)
 				{
 					CharacterHUDOverlay = CreateWidget<UUserWidget>(Cast<APlayerController>(CharacterController->GetController()), CharacterHUDOverlayAsset);
@@ -110,8 +108,6 @@ void ATech_Demo_4GameModeBase::StartPlay()
 		{
 			Cast<ACharacterController>(Players[Index])->Name = "Blue";
 		}
-
-		UE_LOG(LogTemp, Warning, TEXT("Character Name: %s"), *Cast<ACharacterController>(Players[Index])->Name);
 	}
 }
 
@@ -209,11 +205,12 @@ void ATech_Demo_4GameModeBase::SpawnPickup()
 		while (!bLocationChosen)
 		{
 			const int Random = FMath::RandRange(0, PickupLocations.Num() - 1);
-		
+			
 			if (!PickupLocations[Random]->bIsOccupied && PickupObject != nullptr)
 			{
-				const FActorSpawnParameters SpawnParameters;
 				bLocationChosen = true;
+				
+				const FActorSpawnParameters SpawnParameters;
 				PickupLocations[Random]->bIsOccupied = true;
 				APickupController* PickupInstance = GetWorld()->SpawnActor<APickupController>(PickupObject, PickupLocations[Random]->GetActorLocation(), FRotator(0), SpawnParameters);
 				PickupsInLevel++;

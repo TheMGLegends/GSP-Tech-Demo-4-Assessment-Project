@@ -28,6 +28,7 @@ void APickupController::OnBeginOverlapComponentEvent(UPrimitiveComponent* Overla
 		ACharacterController* CharacterController = Cast<ACharacterController>(OtherActor);
 		
 		GameModeBase->PickupsInLevel--;
+		PickupLocationController->bIsOccupied = false;
 		UGameplayStatics::PlaySoundAtLocation(this, PickupSFX, GetActorLocation(), 0.5f);
 		
 		switch(PickupType)
