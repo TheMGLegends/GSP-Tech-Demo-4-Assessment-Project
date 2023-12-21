@@ -6,6 +6,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 ACharacterController::ACharacterController()
@@ -97,6 +98,20 @@ void ACharacterController::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (bIsAimedIn)
+	{
+		FVector Start = Camera->GetComponentLocation();
+		const FVector ForwardVector = Camera->GetForwardVector();
+
+		Start += (ForwardVector * SpringArm->TargetArmLength);
+
+		const FVector End = Start + (ForwardVector * 10000.0f);
+
+		FCollisionQueryParams CollisionQueryParams;
+		CollisionQueryParams.AddIgnoredActor(this->GetOwner());
+		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 0, 0, 1);
+	}
+	
 	if ((bIsAimedIn || bIsDead) && bIsReloading)
 	{
 		CurrentReloadInterval = 0.0f;
@@ -328,10 +343,26 @@ void ACharacterController::Shoot()
 {
 	if (bIsAimedIn && !bHasShot && !bIsDead && Ammo > 0)
 	{
-		// Testing Code:
-		const int Damage = 10 * DamageMultiplier;
-		TakeDamage(Damage);
-		// ------------------------------------------------
+		FHitResult Hit;
+
+		FVector Start = Camera->GetComponentLocation();
+		FVector ForwardVector = Camera->GetForwardVector();
+
+		Start += (ForwardVector * SpringArm->TargetArmLength);
+
+		FVector End = Start + (ForwardVector * 10000.0f);
+
+		FCollisionQueryParams CollisionQueryParams;
+		CollisionQueryParams.AddIgnoredActor(this->GetOwner());
+		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 1);
+
+		bool bHitPlayer = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionQueryParams);
+		
+		if (bHitPlayer)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("HIT ACTOR"));
+			const int Damage = 10 * DamageMultiplier;
+		}
 
 		UGameplayStatics::PlaySoundAtLocation(this, ShotSFX, GetActorLocation(), 0.25f);
 		Ammo--;
