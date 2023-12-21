@@ -40,6 +40,7 @@ ACharacterController::ACharacterController()
 
 	ReloadDuration = 3.3f;
 	CurrentReloadInterval = 0.0f;
+	DDTimeRemaining = 0.0f;
 	DamageMultiplier = 1;
 	
 	MaxHealth = 200.0f;
@@ -48,10 +49,11 @@ ACharacterController::ACharacterController()
 
 	ClipSize = 10;
 	Ammo = ClipSize;
-	
 	MaxClips = 2;
 	Clips = MaxClips;
 
+	RemainingAmmo = 1.0f;
+	
 	Score = 0;
 
 	CrosshairVisible = ESlateVisibility::Hidden;
@@ -103,6 +105,7 @@ void ACharacterController::Tick(const float DeltaTime)
 
 	if (bDoubleDamageActive)
 	{
+		DDTimeRemaining = DoubleDamageDuration - (CurrentDoubleDamageInterval - 1);
 		CurrentDoubleDamageInterval += DeltaTime;
 
 		if (CurrentDoubleDamageInterval > DoubleDamageDuration)
@@ -124,6 +127,7 @@ void ACharacterController::Tick(const float DeltaTime)
 			CurrentReloadInterval = 0.0f;
 			
 			Ammo = ClipSize;
+			RemainingAmmo = 1.0f;
 			Clips--;
 			
 			bIsReloading = false;
@@ -211,6 +215,8 @@ void ACharacterController::IncrementAmmo(int IncrementAmount)
 		{
 			IncrementAmount -= Remainder;
 			Ammo += Remainder;
+
+			RemainingAmmo = (Ammo * 1.0) / (ClipSize * 1.0);
 		}
 	}
 
@@ -245,6 +251,7 @@ void ACharacterController::Respawn()
 
 	Ammo = ClipSize;
 	Clips = MaxClips;
+	RemainingAmmo = 1.0f;
 }
 
 void ACharacterController::ActivateDoubleDamage()
@@ -270,6 +277,7 @@ void ACharacterController::MoveRight(const float Value)
 	}
 }
 
+// ReSharper disable once CppMemberFunctionMayBeConst
 void ACharacterController::LookUp(const float Value)
 {
 	if (Value && !bIsDead)
@@ -310,6 +318,7 @@ void ACharacterController::Shoot()
 
 		UGameplayStatics::PlaySoundAtLocation(this, ShotSFX, GetActorLocation(), 0.25f);
 		Ammo--;
+		RemainingAmmo = (Ammo * 1.0) / (ClipSize * 1.0);
 		bIsShooting = true;
 		bHasShot = true;
 		PlayAnimMontage(ShootMontage);

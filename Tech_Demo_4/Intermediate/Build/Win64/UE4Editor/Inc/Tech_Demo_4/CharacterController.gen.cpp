@@ -72,6 +72,10 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Clips;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RemainingAmmo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RemainingAmmo;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Score_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Score;
@@ -103,6 +107,10 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DamageMultiplier_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_DamageMultiplier;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DDTimeRemaining_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_DDTimeRemaining;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CharMove_MetaData[];
 #endif
@@ -223,6 +231,13 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ACharacterController_Statics::NewProp_Clips = { "Clips", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacterController, Clips), METADATA_PARAMS(Z_Construct_UClass_ACharacterController_Statics::NewProp_Clips_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacterController_Statics::NewProp_Clips_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacterController_Statics::NewProp_RemainingAmmo_MetaData[] = {
+		{ "Category", "Ammo" },
+		{ "ModuleRelativePath", "CharacterController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACharacterController_Statics::NewProp_RemainingAmmo = { "RemainingAmmo", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacterController, RemainingAmmo), METADATA_PARAMS(Z_Construct_UClass_ACharacterController_Statics::NewProp_RemainingAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacterController_Statics::NewProp_RemainingAmmo_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacterController_Statics::NewProp_Score_MetaData[] = {
 		{ "Category", "Score" },
 		{ "ModuleRelativePath", "CharacterController.h" },
@@ -279,6 +294,15 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ACharacterController_Statics::NewProp_DamageMultiplier = { "DamageMultiplier", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacterController, DamageMultiplier), METADATA_PARAMS(Z_Construct_UClass_ACharacterController_Statics::NewProp_DamageMultiplier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacterController_Statics::NewProp_DamageMultiplier_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacterController_Statics::NewProp_DDTimeRemaining_MetaData[] = {
+		{ "Category", "Buffs" },
+		{ "Comment", "// ReSharper disable once CppUE4CodingStandardNamingViolationWarning\n" },
+		{ "ModuleRelativePath", "CharacterController.h" },
+		{ "ToolTip", "ReSharper disable once CppUE4CodingStandardNamingViolationWarning" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ACharacterController_Statics::NewProp_DDTimeRemaining = { "DDTimeRemaining", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacterController, DDTimeRemaining), METADATA_PARAMS(Z_Construct_UClass_ACharacterController_Statics::NewProp_DDTimeRemaining_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacterController_Statics::NewProp_DDTimeRemaining_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacterController_Statics::NewProp_CharMove_MetaData[] = {
 		{ "Comment", "// Variable:\n" },
@@ -378,6 +402,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_Ammo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_MaxClips,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_Clips,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_RemainingAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_Score,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_CrosshairVisible_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_CrosshairVisible,
@@ -388,6 +413,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_DoubleDamageVisible_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_DoubleDamageVisible,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_DamageMultiplier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_DDTimeRemaining,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_CharMove,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_ShotDuration,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_ReloadDuration,
@@ -428,7 +454,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACharacterController, 173314293);
+	IMPLEMENT_CLASS(ACharacterController, 377634981);
 	template<> TECH_DEMO_4_API UClass* StaticClass<ACharacterController>()
 	{
 		return ACharacterController::StaticClass();

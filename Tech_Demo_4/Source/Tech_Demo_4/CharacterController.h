@@ -60,6 +60,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int Clips;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
+	float RemainingAmmo;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score")
 	int Score;
 
@@ -78,6 +81,10 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Damage Multiplier")
 	int DamageMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Buffs")
+	// ReSharper disable once CppUE4CodingStandardNamingViolationWarning
+	int DDTimeRemaining;
 
 	FTransform Origin;
 
