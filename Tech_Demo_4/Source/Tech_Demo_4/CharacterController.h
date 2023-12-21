@@ -137,6 +137,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Animation Controller")
 	UCharacterAnimationController* AnimationController;
 
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+	TSubclassOf<class AWeaponController> WeaponAsset;
+
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* AimMontage;
 	UPROPERTY(EditAnywhere, Category = "Montages")

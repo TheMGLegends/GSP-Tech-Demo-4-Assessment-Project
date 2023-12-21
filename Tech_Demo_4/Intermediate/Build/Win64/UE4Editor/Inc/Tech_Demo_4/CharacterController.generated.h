@@ -66,6 +66,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACharacterController, Camera); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ACharacterController, SpringArm); } \
 	FORCEINLINE static uint32 __PPO__AnimationController() { return STRUCT_OFFSET(ACharacterController, AnimationController); } \
+	FORCEINLINE static uint32 __PPO__WeaponAsset() { return STRUCT_OFFSET(ACharacterController, WeaponAsset); } \
 	FORCEINLINE static uint32 __PPO__AimMontage() { return STRUCT_OFFSET(ACharacterController, AimMontage); } \
 	FORCEINLINE static uint32 __PPO__ReloadMontage() { return STRUCT_OFFSET(ACharacterController, ReloadMontage); } \
 	FORCEINLINE static uint32 __PPO__ShootMontage() { return STRUCT_OFFSET(ACharacterController, ShootMontage); } \

@@ -2,6 +2,7 @@
 
 #include "CharacterController.h"
 #include "CharacterWidget.h"
+#include "WeaponController.h"
 #include "Components/SlateWrapperTypes.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -20,7 +21,7 @@ ACharacterController::ACharacterController()
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 	SpringArm->TargetArmLength = 150.0f;
-	SpringArm->SetRelativeLocation(FVector(0, 25, 90));
+	SpringArm->SetRelativeLocation(FVector(0, 25, 75));
 	SpringArm->SetRelativeRotation((FRotator(0.0f, 0.0f, 0.0f)));
 
 	Camera->AttachToComponent(SpringArm, FAttachmentTransformRules::KeepRelativeTransform, USpringArmComponent::SocketName);
@@ -67,8 +68,23 @@ void ACharacterController::BeginPlay()
 
 	Origin = GetActorTransform();
 	
-	if (const USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
+	if (USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
     {
+		if (WeaponAsset)
+		{
+			FActorSpawnParameters SpawnParameters;
+			SpawnParameters.Owner = this;
+			SpawnParameters.Instigator = this;
+
+			AWeaponController* Weapon = GetWorld()->SpawnActor<AWeaponController>(WeaponAsset, FVector(0,0,0), FRotator(0), SpawnParameters);
+
+			if (Weapon)
+			{
+				Weapon->SetActorTransform(MeshComponent->GetSocketTransform(TEXT("WeaponSocket")));
+				Weapon->AttachToComponent(MeshComponent, FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("WeaponSocket"));
+			}
+		}
+		
     	if (UAnimInstance* AnimInstance = MeshComponent->GetAnimInstance())
     	{
     		AnimationController = Cast<UCharacterAnimationController>(AnimInstance);
@@ -256,6 +272,7 @@ void ACharacterController::Respawn()
 
 void ACharacterController::ActivateDoubleDamage()
 {
+	CurrentDoubleDamageInterval = 0.0f;
 	bDoubleDamageActive = true;
 	DoubleDamageVisible = ESlateVisibility::Visible;
 	DamageMultiplier = 2;
