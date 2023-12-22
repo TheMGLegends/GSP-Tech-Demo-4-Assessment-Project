@@ -115,6 +115,16 @@ C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGene
 C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Inc\Tech_Demo_4\CharacterWidget.generated.h
 B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Source\Tech_Demo_4\WeaponController.h
+C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SpotLightComponent.h
+C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/PointLightComponent.h
+C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LocalLightComponent.h
+C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LightComponent.h
+C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/LightComponentBase.h
+C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LightComponentBase.generated.h
+C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LightComponent.generated.h
+C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\LocalLightComponent.generated.h
+C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PointLightComponent.generated.h
+C:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpotLightComponent.generated.h
 B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Inc\Tech_Demo_4\WeaponController.generated.h
 C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
 C:\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h

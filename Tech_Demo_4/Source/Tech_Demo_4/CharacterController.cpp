@@ -83,6 +83,7 @@ void ACharacterController::BeginPlay()
 			{
 				Weapon->SetActorTransform(MeshComponent->GetSocketTransform(TEXT("WeaponSocket")));
 				Weapon->AttachToComponent(MeshComponent, FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("WeaponSocket"));
+				Cast<AWeaponController>(Weapon)->Player = this;
 			}
 		}
 		
@@ -97,20 +98,6 @@ void ACharacterController::BeginPlay()
 void ACharacterController::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (bIsAimedIn)
-	{
-		FVector Start = Camera->GetComponentLocation();
-		const FVector ForwardVector = Camera->GetForwardVector();
-
-		Start += (ForwardVector * SpringArm->TargetArmLength);
-
-		const FVector End = Start + (ForwardVector * 10000.0f);
-
-		FCollisionQueryParams CollisionQueryParams;
-		CollisionQueryParams.AddIgnoredActor(this->GetOwner());
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 0, 0, 1);
-	}
 	
 	if ((bIsAimedIn || bIsDead) && bIsReloading)
 	{
@@ -197,7 +184,7 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ACharacterController::Reload);
 }
 
-void ACharacterController::TakeDamage(const int Damage)
+void ACharacterController::GetDamaged(const int Damage)
 {
 	if (Health > 0)
 	{
@@ -350,18 +337,32 @@ void ACharacterController::Shoot()
 
 		Start += (ForwardVector * SpringArm->TargetArmLength);
 
-		FVector End = Start + (ForwardVector * 10000.0f);
+		FVector End = Start + (ForwardVector * 5000.0f);
 
 		FCollisionQueryParams CollisionParams;
+		CollisionParams.bTraceComplex = false;
 		CollisionParams.AddIgnoredActor(this->GetOwner());
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 1);
 
-		bool bHitPlayer = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionParams);
+		bool bHitObject = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECollisionChannel::ECC_Visibility, CollisionParams);
 		
-		if (bHitPlayer)
+		if (bHitObject && Cast<ACharacterController>(Hit.Actor) != nullptr)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("HIT ACTOR"));
-			//const int Damage = 10 * DamageMultiplier;
+			UE_LOG(LogTemp, Warning, TEXT("%s"), *Hit.BoneName.ToString());
+
+			float BaseDamage = 0;
+
+			if (Hit.BoneName == "Head")
+			{
+				BaseDamage = 50;
+			}
+			else
+			{
+				BaseDamage = 10;
+			}
+
+			float Damage = BaseDamage * DamageMultiplier;
+			
+			Cast<ACharacterController>(Hit.Actor)->GetDamaged(Damage);
 		}
 
 		UGameplayStatics::PlaySoundAtLocation(this, ShotSFX, GetActorLocation(), 0.25f);

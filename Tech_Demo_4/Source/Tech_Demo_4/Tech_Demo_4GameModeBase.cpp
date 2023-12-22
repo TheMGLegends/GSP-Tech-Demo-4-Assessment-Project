@@ -7,6 +7,7 @@
 #include "EngineUtils.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/AudioComponent.h"
+#include "GameFramework/PlayerStart.h"
 
 ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 {
@@ -112,6 +113,19 @@ void ATech_Demo_4GameModeBase::StartPlay()
 				}
 			}
 		}
+	}
+
+	TArray<APlayerStart*> PlayerStarts;
+
+	for(TActorIterator<APlayerStart> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
+	{
+		APlayerStart* PlayerStart = *ActorIterator;
+		PlayerStarts.Emplace(PlayerStart);
+	}
+
+	for (uint8 Index = 0; Index < PlayerStarts.Num(); ++Index)
+	{
+		Players[Index]->SetActorTransform(PlayerStarts[Index]->GetActorTransform());
 	}
 
 	for (uint8 Index = 0; Index != Players.Num(); ++Index)

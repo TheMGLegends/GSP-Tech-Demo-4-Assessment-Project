@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TECH_DEMO_4_WeaponController_generated_h
 
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_SPARSE_DATA
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_RPC_WRAPPERS
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_INCLASS_NO_PURE_DECLS \
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_SPARSE_DATA
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_RPC_WRAPPERS
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeaponController(); \
 	friend struct Z_Construct_UClass_AWeaponController_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AWeaponController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_INCLASS \
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAWeaponController(); \
 	friend struct Z_Construct_UClass_AWeaponController_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AWeaponController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_STANDARD_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWeaponController(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWeaponController) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_ENHANCED_CONSTRUCTORS \
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AWeaponController(AWeaponController&&); \
@@ -58,28 +58,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWeaponController)
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_PRIVATE_PROPERTY_OFFSET
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_9_PROLOG
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_GENERATED_BODY_LEGACY \
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_PRIVATE_PROPERTY_OFFSET
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_11_PROLOG
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_RPC_WRAPPERS \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_INCLASS \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_STANDARD_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_RPC_WRAPPERS \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_INCLASS \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_GENERATED_BODY \
+#define Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_PRIVATE_PROPERTY_OFFSET \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_SPARSE_DATA \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_INCLASS_NO_PURE_DECLS \
-	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_12_ENHANCED_CONSTRUCTORS \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_PRIVATE_PROPERTY_OFFSET \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_SPARSE_DATA \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_INCLASS_NO_PURE_DECLS \
+	Tech_Demo_4_Source_Tech_Demo_4_WeaponController_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

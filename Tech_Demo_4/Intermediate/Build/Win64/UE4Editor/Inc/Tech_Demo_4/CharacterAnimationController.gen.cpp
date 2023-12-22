@@ -20,22 +20,22 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 	UPackage* Z_Construct_UPackage__Script_Tech_Demo_4();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(UCharacterAnimationController::execNativeUpdateAnimation)
+	DEFINE_FUNCTION(UCharacterAnimationController::execUpdateAnimation)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->NativeUpdateAnimation();
+		P_THIS->UpdateAnimation();
 		P_NATIVE_END;
 	}
 	void UCharacterAnimationController::StaticRegisterNativesUCharacterAnimationController()
 	{
 		UClass* Class = UCharacterAnimationController::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "NativeUpdateAnimation", &UCharacterAnimationController::execNativeUpdateAnimation },
+			{ "UpdateAnimation", &UCharacterAnimationController::execUpdateAnimation },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation_Statics
+	struct Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -43,18 +43,18 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Animation" },
 		{ "ModuleRelativePath", "CharacterAnimationController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCharacterAnimationController, nullptr, "NativeUpdateAnimation", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCharacterAnimationController, nullptr, "UpdateAnimation", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -109,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Tech_Demo_4,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCharacterAnimationController_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCharacterAnimationController_NativeUpdateAnimation, "NativeUpdateAnimation" }, // 2949986494
+		{ &Z_Construct_UFunction_UCharacterAnimationController_UpdateAnimation, "UpdateAnimation" }, // 2715672065
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterAnimationController_Statics::Class_MetaDataParams[] = {
@@ -215,7 +215,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterAnimationController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterAnimationController, 364329311);
+	IMPLEMENT_CLASS(UCharacterAnimationController, 2543172338);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UCharacterAnimationController>()
 	{
 		return UCharacterAnimationController::StaticClass();

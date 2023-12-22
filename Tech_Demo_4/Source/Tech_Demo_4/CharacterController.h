@@ -31,12 +31,13 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	void TakeDamage(int Damage);
+	void GetDamaged(int Damage);
 	void Heal(int HealAmount);
 	void IncrementAmmo(int IncrementAmount);
 	void Respawn();
 	void ActivateDoubleDamage();
 	bool GetIsDead() const { return bIsDead; }
+	bool GetIsAimedIn() const { return bIsAimedIn; }
 	
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
@@ -88,6 +89,9 @@ public:
 
 	FTransform Origin;
 
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	UCameraComponent* Camera;
+
 private:
 	// Variable:
 	UPROPERTY()
@@ -130,8 +134,6 @@ private:
 	void AimOut();
 
 	// Components:
-	UPROPERTY(EditAnywhere, Category = "Camera")
-	UCameraComponent* Camera;
 	UPROPERTY(EditAnywhere, Category = "Spring Arm")
 	USpringArmComponent* SpringArm;
 	UPROPERTY(EditAnywhere, Category = "Animation Controller")

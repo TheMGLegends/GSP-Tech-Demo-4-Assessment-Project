@@ -16,12 +16,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define Tech_Demo_4_Source_Tech_Demo_4_CharacterAnimationController_h_12_SPARSE_DATA
 #define Tech_Demo_4_Source_Tech_Demo_4_CharacterAnimationController_h_12_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execNativeUpdateAnimation);
+	DECLARE_FUNCTION(execUpdateAnimation);
 
 
 #define Tech_Demo_4_Source_Tech_Demo_4_CharacterAnimationController_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execNativeUpdateAnimation);
+	DECLARE_FUNCTION(execUpdateAnimation);
 
 
 #define Tech_Demo_4_Source_Tech_Demo_4_CharacterAnimationController_h_12_INCLASS_NO_PURE_DECLS \

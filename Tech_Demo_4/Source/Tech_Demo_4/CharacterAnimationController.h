@@ -15,7 +15,7 @@ public:
 	virtual void NativeInitializeAnimation() override;
 	
 	UFUNCTION(BlueprintCallable, Category= "Animation")
-	void NativeUpdateAnimation();
+	void UpdateAnimation();
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
 	bool bIsInAir;

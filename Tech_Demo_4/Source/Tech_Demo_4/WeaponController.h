@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CharacterController.h"
+#include "Components/SpotLightComponent.h"
 #include "GameFramework/Actor.h"
 #include "WeaponController.generated.h"
 
@@ -23,4 +25,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(VisibleAnywhere, Category = "Holder")
+	ACharacterController* Player;
+
+	UPROPERTY(EditAnywhere, Category = "Laser Beam")
+	USpotLightComponent* Laser;
+
+	UPROPERTY(EditAnywhere, Category = "Laser Location")
+	UStaticMeshComponent* LaserStartingPosition;
+
+	bool bLaserBeamCreated;
 };

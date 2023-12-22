@@ -14,7 +14,7 @@ void UCharacterAnimationController::NativeInitializeAnimation()
 	bIsAiming = false;
 }
 
-void UCharacterAnimationController::NativeUpdateAnimation()
+void UCharacterAnimationController::UpdateAnimation()
 {
 	if (Pawn == nullptr)
 	{
