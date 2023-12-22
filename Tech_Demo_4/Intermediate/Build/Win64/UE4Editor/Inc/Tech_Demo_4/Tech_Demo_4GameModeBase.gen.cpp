@@ -28,8 +28,94 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	TECH_DEMO_4_API UClass* Z_Construct_UClass_APickupController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ATech_Demo_4GameModeBase::execGetSeconds)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FText*)Z_Param__Result=P_THIS->GetSeconds();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ATech_Demo_4GameModeBase::execGetMinutes)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FText*)Z_Param__Result=P_THIS->GetMinutes();
+		P_NATIVE_END;
+	}
 	void ATech_Demo_4GameModeBase::StaticRegisterNativesATech_Demo_4GameModeBase()
 	{
+		UClass* Class = ATech_Demo_4GameModeBase::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetMinutes", &ATech_Demo_4GameModeBase::execGetMinutes },
+			{ "GetSeconds", &ATech_Demo_4GameModeBase::execGetSeconds },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics
+	{
+		struct Tech_Demo_4GameModeBase_eventGetMinutes_Parms
+		{
+			FText ReturnValue;
+		};
+		static const UE4CodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Tech_Demo_4GameModeBase_eventGetMinutes_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Timer" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATech_Demo_4GameModeBase, nullptr, "GetMinutes", nullptr, nullptr, sizeof(Tech_Demo_4GameModeBase_eventGetMinutes_Parms), Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics
+	{
+		struct Tech_Demo_4GameModeBase_eventGetSeconds_Parms
+		{
+			FText ReturnValue;
+		};
+		static const UE4CodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Tech_Demo_4GameModeBase_eventGetSeconds_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Timer" },
+		{ "ModuleRelativePath", "Tech_Demo_4GameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATech_Demo_4GameModeBase, nullptr, "GetSeconds", nullptr, nullptr, sizeof(Tech_Demo_4GameModeBase_eventGetSeconds_Parms), Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ATech_Demo_4GameModeBase_NoRegister()
 	{
@@ -38,6 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	struct Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -136,6 +223,10 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 	UObject* (*const Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_Tech_Demo_4,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetMinutes, "GetMinutes" }, // 3924679370
+		{ &Z_Construct_UFunction_ATech_Demo_4GameModeBase_GetSeconds, "GetSeconds" }, // 2338556874
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::Class_MetaDataParams[] = {
@@ -332,11 +423,11 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ATech_Demo_4GameModeBase_Statics::PropPointers),
 		0,
 		0x009002ACu,
@@ -351,7 +442,7 @@ void EmptyLinkFunctionForGeneratedCodeTech_Demo_4GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 1732542504);
+	IMPLEMENT_CLASS(ATech_Demo_4GameModeBase, 2316464996);
 	template<> TECH_DEMO_4_API UClass* StaticClass<ATech_Demo_4GameModeBase>()
 	{
 		return ATech_Demo_4GameModeBase::StaticClass();

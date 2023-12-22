@@ -14,8 +14,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TECH_DEMO_4_Tech_Demo_4GameModeBase_generated_h
 
 #define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_19_SPARSE_DATA
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_19_RPC_WRAPPERS
-#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_19_RPC_WRAPPERS_NO_PURE_DECLS
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_19_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetSeconds); \
+	DECLARE_FUNCTION(execGetMinutes);
+
+
+#define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetSeconds); \
+	DECLARE_FUNCTION(execGetMinutes);
+
+
 #define Tech_Demo_4_Source_Tech_Demo_4_Tech_Demo_4GameModeBase_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATech_Demo_4GameModeBase(); \

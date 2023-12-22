@@ -31,6 +31,24 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 	WinnerVisibility = ESlateVisibility::Hidden;
 }
 
+FText ATech_Demo_4GameModeBase::GetMinutes() const
+{
+	FNumberFormattingOptions FormattingOptions;
+	FormattingOptions.MinimumIntegralDigits = 2;
+	FormattingOptions.MaximumIntegralDigits = 2;
+	
+	return FText::AsNumber(Minutes, &FormattingOptions);
+}
+
+FText ATech_Demo_4GameModeBase::GetSeconds() const
+{
+	FNumberFormattingOptions FormattingOptions;
+	FormattingOptions.MinimumIntegralDigits = 2;
+	FormattingOptions.MaximumIntegralDigits = 2;
+	
+	return FText::AsNumber(Seconds, &FormattingOptions);
+}
+
 void ATech_Demo_4GameModeBase::StartPlay()
 {
 	Super::StartPlay();
@@ -147,6 +165,7 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
 		Players[Index]->Respawn();
+		Players[Index]->CustomTimeDilation = 1.0f;
 	}
 
 	Minutes = 3;
@@ -229,6 +248,11 @@ void ATech_Demo_4GameModeBase::NewRound()
 	GetWorldTimerManager().ClearTimer(TimerHandle);
 	GetWorldTimerManager().ClearTimer(TimerHandle2);
 	Audio->AdjustVolume(4.0f, 0.0f, EAudioFaderCurve::Linear);
+
+	for (uint8 Index = 0; Index < Players.Num(); ++Index)
+	{
+		Players[Index]->CustomTimeDilation = 0.1f;
+	}
 	
 	Round++;
 
@@ -276,6 +300,7 @@ void ATech_Demo_4GameModeBase::RestartLevel()
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
 		Players[Index]->Score = 0;
+		Players[Index]->CustomTimeDilation = 1.0f;
 	}
 	
 	RespawnPlayers();

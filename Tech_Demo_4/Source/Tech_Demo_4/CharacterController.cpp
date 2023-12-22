@@ -352,16 +352,16 @@ void ACharacterController::Shoot()
 
 		FVector End = Start + (ForwardVector * 10000.0f);
 
-		FCollisionQueryParams CollisionQueryParams;
-		CollisionQueryParams.AddIgnoredActor(this->GetOwner());
+		FCollisionQueryParams CollisionParams;
+		CollisionParams.AddIgnoredActor(this->GetOwner());
 		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 1);
 
-		bool bHitPlayer = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionQueryParams);
+		bool bHitPlayer = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionParams);
 		
 		if (bHitPlayer)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("HIT ACTOR"));
-			const int Damage = 10 * DamageMultiplier;
+			//const int Damage = 10 * DamageMultiplier;
 		}
 
 		UGameplayStatics::PlaySoundAtLocation(this, ShotSFX, GetActorLocation(), 0.25f);

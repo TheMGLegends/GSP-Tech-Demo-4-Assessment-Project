@@ -85,6 +85,11 @@ public:
 	TSubclassOf<APickupController> PickupObject;
 
 	int PickupsInLevel;
+
+	UFUNCTION(BlueprintCallable, Category = "Timer")
+	FText GetMinutes() const;
+	UFUNCTION(BlueprintCallable, Category = "Timer")
+	FText GetSeconds() const;
 	
 private:
 	UPROPERTY(EditAnywhere, Category = "Audio")

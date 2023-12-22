@@ -47,7 +47,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		{ "ModuleRelativePath", "MainMenuWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMainMenuWidget_PlayGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMainMenuWidget, nullptr, "PlayGame", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMainMenuWidget_PlayGame_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMainMenuWidget_PlayGame_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMainMenuWidget_PlayGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMainMenuWidget, nullptr, "PlayGame", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMainMenuWidget_PlayGame_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMainMenuWidget_PlayGame_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UMainMenuWidget_PlayGame()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -81,7 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Tech_Demo_4,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMainMenuWidget_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMainMenuWidget_PlayGame, "PlayGame" }, // 4154594015
+		{ &Z_Construct_UFunction_UMainMenuWidget_PlayGame, "PlayGame" }, // 1958974354
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMainMenuWidget_Statics::Class_MetaDataParams[] = {
@@ -126,7 +126,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMainMenuWidget, 1314666573);
+	IMPLEMENT_CLASS(UMainMenuWidget, 2950565906);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UMainMenuWidget>()
 	{
 		return UMainMenuWidget::StaticClass();

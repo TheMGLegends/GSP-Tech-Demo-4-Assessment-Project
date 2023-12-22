@@ -5,7 +5,7 @@
 
 #include "Kismet/GameplayStatics.h"
 
-void UMainMenuWidget::PlayGame()
+void UMainMenuWidget::PlayGame() const
 {
 	UGameplayStatics::OpenLevel(GetWorld(), "TechDemo4_Map");
 }

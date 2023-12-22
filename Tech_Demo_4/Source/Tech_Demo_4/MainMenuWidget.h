@@ -17,5 +17,5 @@ public:
 	AMainMenu_GameModeBase* GameModeBase;
 
 	UFUNCTION(BlueprintCallable, Category = "Play Button Method")
-	void PlayGame();
+	void PlayGame() const;
 };

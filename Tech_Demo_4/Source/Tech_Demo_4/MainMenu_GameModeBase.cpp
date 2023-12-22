@@ -13,8 +13,6 @@ void AMainMenu_GameModeBase::StartPlay()
 
 	APlayerController* Controller = Cast<APlayerController>(UGameplayStatics::GetPlayerController(this, 0));
 	Controller->bShowMouseCursor = true;
-	//Controller->bEnableClickEvents = true;
-	//Controller->bEnableMouseOverEvents = true;
 
 	if (MainMenuHUDOverlayAsset)
 	{
