@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "WeaponController.h"
-#include "DrawDebugHelpers.h"
+#include "Components/ArrowComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystemComponent.h"
 
 // Sets default values
 AWeaponController::AWeaponController()
@@ -9,10 +11,12 @@ AWeaponController::AWeaponController()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bLaserCreated = false;
+	
 	Player = nullptr;
-	bLaserBeamCreated = false;
+	LaserAsset = nullptr;
+	Arrow = nullptr;
 	Laser = nullptr;
-	LaserStartingPosition = nullptr;
 }
 
 // Called when the game starts or when spawned
@@ -20,19 +24,9 @@ void AWeaponController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (USpotLightComponent* SpotLight = FindComponentByClass<USpotLightComponent>())
+	if (UArrowComponent* ArrowComponent = FindComponentByClass<UArrowComponent>())
 	{
-		Laser = SpotLight;
-	}
-
-	if (UStaticMeshComponent* SMComp = FindComponentByClass<UStaticMeshComponent>())
-	{
-		LaserStartingPosition = SMComp;
-	}
-
-	if (Player)
-	{
-		Laser->SetWorldRotation(Player->GetControlRotation());
+		Arrow = ArrowComponent;
 	}
 }
 
@@ -40,36 +34,47 @@ void AWeaponController::BeginPlay()
 void AWeaponController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (Laser->IsVisible() && !Player->GetIsAimedIn())
+	
+	if (!bLaserCreated)
 	{
-		Laser->SetVisibility(false);
+		Laser = UGameplayStatics::SpawnEmitterAttached(LaserAsset, Arrow);
+		bLaserCreated = true;
 	}
-	else if (!Laser->IsVisible() && Player->GetIsAimedIn())
+	else
+	{
+		FVector Start = Arrow->GetComponentLocation();
+		FVector ForwardVector = Player->Camera->GetForwardVector();
+		FVector End = Start + (ForwardVector * 10000.0f);
+
+		Laser->SetBeamSourcePoint(0, Start, 0);
+
+		FHitResult Hit;
+		FCollisionQueryParams CollisionParams;
+		CollisionParams.AddIgnoredActor(this->GetOwner());
+		if (Player)
+		{
+			CollisionParams.AddIgnoredActor(Player->GetOwner());
+		}
+
+		bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionParams);
+    
+		if (bHit)
+		{
+			Laser->SetBeamTargetPoint(0, Hit.Location, 0);
+		}
+		else
+		{
+			Laser->SetBeamTargetPoint(0, Hit.TraceEnd, 0);
+		}
+	}
+
+	if (Player->GetIsAimedIn())	
 	{
 		Laser->SetVisibility(true);
 	}
-
-	if (Player->GetIsAimedIn())
+	else
 	{
-		FHitResult Hit;
-		FCollisionQueryParams CollisionParams;
-		CollisionParams.AddIgnoredActor(this);
-		CollisionParams.AddIgnoredActor(Player);
-		
-		FVector Start = LaserStartingPosition->GetComponentLocation();
-		FVector ForwardVector = Player->Camera->GetForwardVector();
-		FVector End = Start + (ForwardVector * 2000.0f);
-
-		bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionParams);
-
-		DrawDebugLine(GetWorld(), Start, bHit ? Hit.ImpactPoint : End, FColor::Green, false, 0, 0, 2);
-
-		if (bHit)
-		{
-			DrawDebugPoint(GetWorld(), Hit.ImpactPoint, 5.0f, FColor::Green, false, 0, 0);
-		}
-		
+		Laser->SetVisibility(false);
 	}
 }
 

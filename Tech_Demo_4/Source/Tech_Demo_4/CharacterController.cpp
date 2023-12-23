@@ -181,7 +181,8 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ACharacterController::Shoot);
 	PlayerInputComponent->BindAction("Shoot", IE_Released, this, &ACharacterController::StopShoot);
 	
-	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::Aim);
+	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::AimIn);
+	PlayerInputComponent->BindAction("Aim", IE_Released, this, &ACharacterController::AimOut);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ACharacterController::Reload);
 }
 
@@ -281,6 +282,11 @@ void ACharacterController::ActivateDoubleDamage()
 	DamageMultiplier = 2;
 }
 
+bool ACharacterController::GetIsAimedIn() const
+{
+	return bIsAimedIn;
+}
+
 void ACharacterController::MoveForward(const float Value)
 {
 	if (Value && !bIsDead)
@@ -378,18 +384,6 @@ void ACharacterController::StopShoot()
 	bIsShooting = false;
 }
 
-void ACharacterController::Aim()
-{
-	if (!bIsAimedIn && !bIsDead)
-	{
-		AimIn();
-	}
-	else if (bIsAimedIn && !bIsDead)
-	{
-		AimOut();
-	}
-}
-
 void ACharacterController::Reload()
 {
 	if (!bIsDead && Clips > 0 && Ammo < ClipSize)
@@ -403,43 +397,49 @@ void ACharacterController::Reload()
 
 void ACharacterController::AimIn()
 {
-	SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -70.0f, SkeletalMesh->GetComponentRotation().Roll));
+	if (!bIsDead)
+	{
+		bIsAimedIn = true;
+		SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -70.0f, SkeletalMesh->GetComponentRotation().Roll));
 	
-	if (CharMove != nullptr)
-	{
-		CharMove->MaxWalkSpeed = 300.0f;
+		if (CharMove != nullptr)
+		{
+			CharMove->MaxWalkSpeed = 300.0f;
+		}
+		SpringArm->TargetArmLength = 75.0f;
+
+		if (AnimationController != nullptr)
+		{
+			AnimationController->bIsAiming = bIsAimedIn;
+		}
+
+		CrosshairVisible = ESlateVisibility::Visible;
+
+		PlayAnimMontage(AimMontage);
 	}
-	SpringArm->TargetArmLength = 75.0f;
-	bIsAimedIn = true;
-
-	if (AnimationController != nullptr)
-	{
-		AnimationController->bIsAiming = bIsAimedIn;
-	}
-
-	CrosshairVisible = ESlateVisibility::Visible;
-
-	PlayAnimMontage(AimMontage);
 }
 
 void ACharacterController::AimOut()
 {
-	SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -90.0f, SkeletalMesh->GetComponentRotation().Roll));
+	if (!bIsDead)
+	{
+		bIsAimedIn = false;
+		SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -90.0f, SkeletalMesh->GetComponentRotation().Roll));
 	
-	if (CharMove != nullptr)
-	{
-		CharMove->MaxWalkSpeed = 600.0f;
+		if (CharMove != nullptr)
+		{
+			CharMove->MaxWalkSpeed = 600.0f;
+		}
+		SpringArm->TargetArmLength = 150.0f;
+
+		if (AnimationController != nullptr)
+		{
+			AnimationController->bIsAiming = bIsAimedIn;
+		}
+
+		CrosshairVisible = ESlateVisibility::Hidden;
+
+		StopAnimMontage();
 	}
-	SpringArm->TargetArmLength = 150.0f;
-	bIsAimedIn = false;
-
-	if (AnimationController != nullptr)
-	{
-		AnimationController->bIsAiming = bIsAimedIn;
-	}
-
-	CrosshairVisible = ESlateVisibility::Hidden;
-
-	StopAnimMontage();
 }
 

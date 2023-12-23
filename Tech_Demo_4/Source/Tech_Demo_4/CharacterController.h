@@ -37,7 +37,7 @@ public:
 	void Respawn();
 	void ActivateDoubleDamage();
 	bool GetIsDead() const { return bIsDead; }
-	bool GetIsAimedIn() const { return bIsAimedIn; }
+	bool GetIsAimedIn() const;
 	
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
@@ -126,7 +126,6 @@ private:
 	virtual void Jump() override;
 	void Shoot();
 	void StopShoot();
-	void Aim();
 	void Reload();
 
 	// Helper Functions:
