@@ -138,6 +138,8 @@ private:
 	USpringArmComponent* SpringArm;
 	UPROPERTY(EditAnywhere, Category = "Animation Controller")
 	UCharacterAnimationController* AnimationController;
+	UPROPERTY(EditAnywhere, Category = "Skeletal Mesh")
+	USkeletalMeshComponent* SkeletalMesh;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 	TSubclassOf<class AWeaponController> WeaponAsset;

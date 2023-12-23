@@ -6,7 +6,6 @@
 #include "Components/SlateWrapperTypes.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
-#include "DrawDebugHelpers.h"
 
 // Sets default values
 ACharacterController::ACharacterController()
@@ -71,6 +70,8 @@ void ACharacterController::BeginPlay()
 	
 	if (USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
     {
+		SkeletalMesh = MeshComponent;
+		
 		if (WeaponAsset)
 		{
 			FActorSpawnParameters SpawnParameters;
@@ -347,8 +348,6 @@ void ACharacterController::Shoot()
 		
 		if (bHitObject && Cast<ACharacterController>(Hit.Actor) != nullptr)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("%s"), *Hit.BoneName.ToString());
-
 			float BaseDamage = 0;
 
 			if (Hit.BoneName == "Head")
@@ -404,6 +403,8 @@ void ACharacterController::Reload()
 
 void ACharacterController::AimIn()
 {
+	SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -70.0f, SkeletalMesh->GetComponentRotation().Roll));
+	
 	if (CharMove != nullptr)
 	{
 		CharMove->MaxWalkSpeed = 300.0f;
@@ -423,6 +424,8 @@ void ACharacterController::AimIn()
 
 void ACharacterController::AimOut()
 {
+	SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -90.0f, SkeletalMesh->GetComponentRotation().Roll));
+	
 	if (CharMove != nullptr)
 	{
 		CharMove->MaxWalkSpeed = 600.0f;
