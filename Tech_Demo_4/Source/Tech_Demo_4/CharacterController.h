@@ -92,6 +92,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	UCameraComponent* Camera;
 
+	UPROPERTY(EditAnywhere, Category = "Grenade")
+	TSubclassOf<class AGrenadeController> GrenadeAsset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grenade")
+	int GrenadesRemaining;
+
 private:
 	// Variable:
 	UPROPERTY()
@@ -127,6 +132,8 @@ private:
 	void Shoot();
 	void StopShoot();
 	void Reload();
+	void ThrowGrenade();
+	void Aim();
 
 	// Helper Functions:
 	void AimIn();

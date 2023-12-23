@@ -2,6 +2,7 @@
 
 #include "CharacterController.h"
 #include "CharacterWidget.h"
+#include "GrenadeController.h"
 #include "WeaponController.h"
 #include "Components/SlateWrapperTypes.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -59,6 +60,8 @@ ACharacterController::ACharacterController()
 
 	CrosshairVisible = ESlateVisibility::Hidden;
 	ReloadVisible = ESlateVisibility::Hidden;
+
+	GrenadesRemaining = 3;
 }
 
 // Called when the game starts or when spawned
@@ -181,9 +184,9 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ACharacterController::Shoot);
 	PlayerInputComponent->BindAction("Shoot", IE_Released, this, &ACharacterController::StopShoot);
 	
-	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::AimIn);
-	PlayerInputComponent->BindAction("Aim", IE_Released, this, &ACharacterController::AimOut);
+	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ACharacterController::Aim);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ACharacterController::Reload);
+	PlayerInputComponent->BindAction("ThrowGrenade", IE_Pressed, this, &ACharacterController::ThrowGrenade);
 }
 
 void ACharacterController::GetDamaged(const int Damage)
@@ -272,6 +275,8 @@ void ACharacterController::Respawn()
 	Ammo = ClipSize;
 	Clips = MaxClips;
 	RemainingAmmo = 1.0f;
+
+	GrenadesRemaining = 3;
 }
 
 void ACharacterController::ActivateDoubleDamage()
@@ -395,51 +400,76 @@ void ACharacterController::Reload()
 	}
 }
 
+void ACharacterController::ThrowGrenade()
+{
+	if (GrenadesRemaining > 0)
+	{
+		FActorSpawnParameters SpawnParameters;
+		SpawnParameters.Owner = this;
+		SpawnParameters.Instigator = this;
+
+		const AGrenadeController* Grenade = GetWorld()->SpawnActor<AGrenadeController>(GrenadeAsset, GetActorLocation(), Camera->GetComponentRotation(), SpawnParameters);
+		const FVector ThrowStrength = Camera->GetForwardVector() * 1000;
+
+		if (UStaticMeshComponent* MeshComponent = Grenade->FindComponentByClass<UStaticMeshComponent>())
+		{
+			MeshComponent->SetPhysicsLinearVelocity(ThrowStrength);
+		}
+		GrenadesRemaining--;
+	}
+}
+
+void ACharacterController::Aim()
+{
+	if (!bIsAimedIn && !bIsDead)
+	{
+		AimIn();
+	}
+	else if (bIsAimedIn && !bIsDead)
+	{
+		AimOut();
+	}
+}
+
 void ACharacterController::AimIn()
 {
-	if (!bIsDead)
+	bIsAimedIn = true;
+	SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -70.0f, SkeletalMesh->GetComponentRotation().Roll));
+
+	if (CharMove != nullptr)
 	{
-		bIsAimedIn = true;
-		SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -70.0f, SkeletalMesh->GetComponentRotation().Roll));
-	
-		if (CharMove != nullptr)
-		{
-			CharMove->MaxWalkSpeed = 300.0f;
-		}
-		SpringArm->TargetArmLength = 75.0f;
-
-		if (AnimationController != nullptr)
-		{
-			AnimationController->bIsAiming = bIsAimedIn;
-		}
-
-		CrosshairVisible = ESlateVisibility::Visible;
-
-		PlayAnimMontage(AimMontage);
+		CharMove->MaxWalkSpeed = 300.0f;
 	}
+	SpringArm->TargetArmLength = 75.0f;
+
+	if (AnimationController != nullptr)
+	{
+		AnimationController->bIsAiming = bIsAimedIn;
+	}
+
+	CrosshairVisible = ESlateVisibility::Visible;
+
+	PlayAnimMontage(AimMontage);
 }
 
 void ACharacterController::AimOut()
 {
-	if (!bIsDead)
+	bIsAimedIn = false;
+	SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -90.0f, SkeletalMesh->GetComponentRotation().Roll));
+
+	if (CharMove != nullptr)
 	{
-		bIsAimedIn = false;
-		SkeletalMesh->SetRelativeRotation(FRotator(SkeletalMesh->GetComponentRotation().Pitch, -90.0f, SkeletalMesh->GetComponentRotation().Roll));
-	
-		if (CharMove != nullptr)
-		{
-			CharMove->MaxWalkSpeed = 600.0f;
-		}
-		SpringArm->TargetArmLength = 150.0f;
-
-		if (AnimationController != nullptr)
-		{
-			AnimationController->bIsAiming = bIsAimedIn;
-		}
-
-		CrosshairVisible = ESlateVisibility::Hidden;
-
-		StopAnimMontage();
+		CharMove->MaxWalkSpeed = 600.0f;
 	}
+	SpringArm->TargetArmLength = 150.0f;
+
+	if (AnimationController != nullptr)
+	{
+		AnimationController->bIsAiming = bIsAimedIn;
+	}
+
+	CrosshairVisible = ESlateVisibility::Hidden;
+
+	StopAnimMontage();
 }
 
