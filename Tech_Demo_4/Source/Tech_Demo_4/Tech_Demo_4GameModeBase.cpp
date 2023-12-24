@@ -5,6 +5,7 @@
 #include "CharacterWidget.h"
 #include "CountdownWidget.h"
 #include "EngineUtils.h"
+#include "GrenadeController.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/AudioComponent.h"
 #include "GameFramework/PlayerStart.h"
@@ -187,7 +188,13 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 {
 	GetWorldTimerManager().ClearTimer(TimerHandle);
 	Audio->Play();
-	
+
+	for (TActorIterator<AGrenadeController> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
+    {
+    	AGrenadeController* Grenade = *ActorIterator;
+    	Grenade->Destroy();
+    }
+
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
 		Players[Index]->Respawn();
@@ -212,7 +219,7 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 	RoundOverVisibility = ESlateVisibility::Hidden;
 	
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
-	GetWorldTimerManager().SetTimer(TimerHandle2, this, &ATech_Demo_4GameModeBase::SpawnPickup, 15.0f, true, 0.0f);
+	GetWorldTimerManager().SetTimer(TimerHandle2, this, &ATech_Demo_4GameModeBase::SpawnPickup, 15.0f, true, 1.0f);
 }
 
 void ATech_Demo_4GameModeBase::SpawnPickup()
@@ -338,6 +345,12 @@ void ATech_Demo_4GameModeBase::RestartLevel()
 	{
 		Players[Index]->Score = 0;
 		Players[Index]->CustomTimeDilation = 1.0f;
+	}
+
+	for (TActorIterator<AGrenadeController> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
+	{
+		AGrenadeController* Grenade = *ActorIterator;
+		Grenade->Destroy();
 	}
 	
 	RespawnPlayers();

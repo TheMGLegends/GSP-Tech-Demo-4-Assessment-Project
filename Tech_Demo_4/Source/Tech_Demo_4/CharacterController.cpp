@@ -281,6 +281,11 @@ void ACharacterController::Respawn()
 
 	bHasShot = false;
 	bIsShooting = false;
+
+	CurrentDoubleDamageInterval = 0.0f;
+	bDoubleDamageActive = false;
+	DoubleDamageVisible = ESlateVisibility::Hidden;
+	DamageMultiplier = 1;
 	
 	Health = MaxHealth;
 	HealthPercentage = Health / MaxHealth;
