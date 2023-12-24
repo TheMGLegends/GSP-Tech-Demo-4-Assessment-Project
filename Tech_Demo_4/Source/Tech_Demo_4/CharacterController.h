@@ -97,6 +97,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Grenade")
 	int GrenadesRemaining;
 
+	UPROPERTY(VisibleAnywhere, Category = "Can Be Damaged")
+	bool bCanGetDamaged;
+
 private:
 	// Variable:
 	UPROPERTY()

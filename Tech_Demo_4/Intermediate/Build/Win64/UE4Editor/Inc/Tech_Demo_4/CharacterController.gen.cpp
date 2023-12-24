@@ -128,6 +128,11 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_GrenadesRemaining;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCanGetDamaged_MetaData[];
+#endif
+		static void NewProp_bCanGetDamaged_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCanGetDamaged;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CharMove_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CharMove;
@@ -346,6 +351,17 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ACharacterController_Statics::NewProp_GrenadesRemaining = { "GrenadesRemaining", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacterController, GrenadesRemaining), METADATA_PARAMS(Z_Construct_UClass_ACharacterController_Statics::NewProp_GrenadesRemaining_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacterController_Statics::NewProp_GrenadesRemaining_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged_MetaData[] = {
+		{ "Category", "Can Be Damaged" },
+		{ "ModuleRelativePath", "CharacterController.h" },
+	};
+#endif
+	void Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged_SetBit(void* Obj)
+	{
+		((ACharacterController*)Obj)->bCanGetDamaged = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged = { "bCanGetDamaged", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ACharacterController), &Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacterController_Statics::NewProp_CharMove_MetaData[] = {
 		{ "Comment", "// Variable:\n" },
 		{ "EditInline", "true" },
@@ -466,6 +482,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_GrenadeAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_GrenadesRemaining,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_bCanGetDamaged,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_CharMove,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_ShotDuration,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacterController_Statics::NewProp_ReloadDuration,
@@ -507,7 +524,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACharacterController, 2911097305);
+	IMPLEMENT_CLASS(ACharacterController, 382680774);
 	template<> TECH_DEMO_4_API UClass* StaticClass<ACharacterController>()
 	{
 		return ACharacterController::StaticClass();

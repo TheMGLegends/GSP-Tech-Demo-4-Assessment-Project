@@ -21,8 +21,8 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 
 	Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
 	
-	Minutes = 3;
-	Seconds = 0;
+	Minutes = 0;
+	Seconds = 10;
 
 	MaxRounds = 5;
 	Round = 1;
@@ -282,6 +282,7 @@ void ATech_Demo_4GameModeBase::NewRound()
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
 		Players[Index]->CustomTimeDilation = 0.1f;
+		Players[Index]->bCanGetDamaged = false;
 	}
 	
 	Round++;

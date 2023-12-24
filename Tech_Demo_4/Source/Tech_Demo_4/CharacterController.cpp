@@ -32,6 +32,7 @@ ACharacterController::ACharacterController()
 	bIsDead = false;
 	bHasShot = false;
 	bIsShooting = false;
+	bCanGetDamaged = true;
 	
 	bDoubleDamageActive = false;
 	DoubleDamageDuration = 10.0f;
@@ -197,7 +198,7 @@ void ACharacterController::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 void ACharacterController::GetDamaged(const int Damage)
 {
-	if (Health > 0)
+	if (Health > 0 && bCanGetDamaged)
 	{
 		// INFO: Plays blood splatter animation
 		if (CharacterWidget != nullptr)
@@ -268,6 +269,7 @@ void ACharacterController::Respawn()
 {
 	// INFO: Resets all values back to their default starting values in-preparation for the new round
 	bIsDead = false;
+	bCanGetDamaged = true;
 	AnimationController->bIsDead = false;
 	
 	SetActorTransform(Origin);
