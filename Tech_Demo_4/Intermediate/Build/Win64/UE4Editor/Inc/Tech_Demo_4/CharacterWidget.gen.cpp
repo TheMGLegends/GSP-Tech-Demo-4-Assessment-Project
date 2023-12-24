@@ -105,14 +105,14 @@ void EmptyLinkFunctionForGeneratedCodeCharacterWidget() {}
 		{ "ModuleRelativePath", "CharacterWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn = { "CharacterPawn", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterWidget, CharacterPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn = { "CharacterPawn", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterWidget, CharacterPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController_MetaData[] = {
 		{ "Category", "Character Controller" },
 		{ "ModuleRelativePath", "CharacterWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController = { "CharacterController", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterWidget, CharacterController), Z_Construct_UClass_ACharacterController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController = { "CharacterController", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterWidget, CharacterController), Z_Construct_UClass_ACharacterController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect_MetaData[] = {
 		{ "BindWidgetAnim", "" },
@@ -120,7 +120,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterWidget() {}
 		{ "ModuleRelativePath", "CharacterWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect = { "FadeEffect", nullptr, (EPropertyFlags)0x0010000000002005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterWidget, FadeEffect), Z_Construct_UClass_UWidgetAnimation_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect = { "FadeEffect", nullptr, (EPropertyFlags)0x0010000000022005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterWidget, FadeEffect), Z_Construct_UClass_UWidgetAnimation_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterWidget_Statics::NewProp_FadeEffect_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCharacterWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterPawn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterWidget_Statics::NewProp_CharacterController,
@@ -153,7 +153,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterWidget, 3881179882);
+	IMPLEMENT_CLASS(UCharacterWidget, 3682199981);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UCharacterWidget>()
 	{
 		return UCharacterWidget::StaticClass();

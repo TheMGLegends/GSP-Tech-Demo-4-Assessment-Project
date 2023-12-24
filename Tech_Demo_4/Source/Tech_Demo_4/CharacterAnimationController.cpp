@@ -20,6 +20,8 @@ void UCharacterAnimationController::UpdateAnimation()
 	{
 		Pawn = TryGetPawnOwner();
 	}
+
+	// INFO: Gets all values needed for deciding which animation the character should play
 	if (Pawn)
 	{
 		const FVector Speed = Pawn->GetVelocity();

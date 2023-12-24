@@ -13,6 +13,6 @@ class TECH_DEMO_4_API UCountdownWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gamemode Base")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Gamemode Base")
 	ATech_Demo_4GameModeBase* GameModeBase;
 };

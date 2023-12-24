@@ -86,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponController() {}
 		{ "ModuleRelativePath", "WeaponController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponController_Statics::NewProp_Arrow = { "Arrow", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponController, Arrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponController_Statics::NewProp_Arrow_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponController_Statics::NewProp_Arrow_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponController_Statics::NewProp_Arrow = { "Arrow", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponController, Arrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponController_Statics::NewProp_Arrow_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponController_Statics::NewProp_Arrow_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser_MetaData[] = {
 		{ "Category", "Laser" },
@@ -94,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponController() {}
 		{ "ModuleRelativePath", "WeaponController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser = { "Laser", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponController, Laser), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser = { "Laser", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeaponController, Laser), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponController_Statics::NewProp_Laser_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeaponController_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponController_Statics::NewProp_Player,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponController_Statics::NewProp_LaserAsset,
@@ -128,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeaponController, 858576774);
+	IMPLEMENT_CLASS(AWeaponController, 1409229638);
 	template<> TECH_DEMO_4_API UClass* StaticClass<AWeaponController>()
 	{
 		return AWeaponController::StaticClass();

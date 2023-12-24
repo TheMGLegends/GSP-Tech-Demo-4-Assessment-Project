@@ -42,42 +42,42 @@ public:
 	UAnimMontage* GetAimMontage() const { return AimMontage; }
 	UAnimMontage* GetShootMontage() const { return ShootMontage; }
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Name")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Name")
 	FString Name;
 
 	UPROPERTY(EditAnywhere, Category = "Health")
 	float MaxHealth;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
 	float Health;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
 	float HealthPercentage;
 
 	UPROPERTY(EditAnywhere, Category = "Ammo")
 	int ClipSize;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int Ammo;
 	UPROPERTY(EditAnywhere, Category = "Ammo")
 	int MaxClips;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Ammo")
 	int Clips;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Ammo")
 	float RemainingAmmo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score")
 	int Score;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Aiming")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Aiming")
 	ESlateVisibility CrosshairVisible;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Reloading")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Reloading")
 	ESlateVisibility ReloadVisible;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Widget")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Widget")
 	UCharacterWidget* CharacterWidget;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Buffs")
 	bool bDoubleDamageActive;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Buffs")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Buffs")
 	ESlateVisibility DoubleDamageVisible;
 
 	UPROPERTY(EditAnywhere, Category = "Damage Multiplier")

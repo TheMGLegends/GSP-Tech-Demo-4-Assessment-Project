@@ -14,7 +14,8 @@ APickupController::APickupController()
 	PickupLocationController = nullptr;
 	BoxCollider = nullptr;
 	PickupSFX = nullptr;
-
+		
+	// INFO: Chooses a random pickup type upon construction
 	const int RandomInt = FMath::RandRange(0, 2);
 	uint8 RandomByte = static_cast<uint8>(RandomInt);
 	PickupType = static_cast<EPickups>(RandomByte);
@@ -30,7 +31,8 @@ void APickupController::OnBeginOverlapComponentEvent(UPrimitiveComponent* Overla
 		GameModeBase->PickupsInLevel--;
 		PickupLocationController->bIsOccupied = false;
 		UGameplayStatics::PlaySoundAtLocation(this, PickupSFX, GetActorLocation(), 0.5f);
-		
+
+		// INFO: Performs different things on the overlapping actor (player) based on the type of pickup
 		switch(PickupType)
 		{
 		case EPickups::DoubleDamage:

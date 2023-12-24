@@ -70,7 +70,8 @@ void ACharacterController::BeginPlay()
 	Super::BeginPlay();
 
 	Origin = GetActorTransform();
-	
+
+	// INFO: Spawns a weapon and attaches it to the corresponding player
 	if (USkeletalMeshComponent* MeshComponent = FindComponentByClass<USkeletalMeshComponent>())
     {
 		SkeletalMesh = MeshComponent;
@@ -90,7 +91,8 @@ void ACharacterController::BeginPlay()
 				Cast<AWeaponController>(Weapon)->Player = this;
 			}
 		}
-		
+
+		// INFO: Gets a reference to the animation controller for later use
     	if (UAnimInstance* AnimInstance = MeshComponent->GetAnimInstance())
     	{
     		AnimationController = Cast<UCharacterAnimationController>(AnimInstance);
@@ -102,13 +104,15 @@ void ACharacterController::BeginPlay()
 void ACharacterController::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
+	// INFO: Resets reloading timer
 	if ((bIsAimedIn || bIsDead) && bIsReloading)
 	{
 		CurrentReloadInterval = 0.0f;
 		bIsReloading = false;
 	}
 
+	// INFO: Delay between shots taken
 	if (bIsShooting || bHasShot)
 	{
 		CurrentShotInterval += DeltaTime;
@@ -125,6 +129,7 @@ void ACharacterController::Tick(const float DeltaTime)
 		}
 	}
 
+	// INFO: Duration that the double damage is active for, resets after timer runs out
 	if (bDoubleDamageActive)
 	{
 		DDTimeRemaining = DoubleDamageDuration - (CurrentDoubleDamageInterval - 1);
@@ -140,6 +145,7 @@ void ACharacterController::Tick(const float DeltaTime)
 		}
 	}
 
+	// INFO: Reloading duration
 	if (bIsReloading)
 	{
 		CurrentReloadInterval += DeltaTime;
@@ -193,13 +199,15 @@ void ACharacterController::GetDamaged(const int Damage)
 {
 	if (Health > 0)
 	{
+		// INFO: Plays blood splatter animation
 		if (CharacterWidget != nullptr)
 		{
 			CharacterWidget->Fade();
 		}
 		Health -= Damage;
 		HealthPercentage = Health / MaxHealth;
-		
+
+		// INFO: If the character dies
 		if (Health <= 0)
 		{
 			bIsDead = true;
@@ -230,6 +238,7 @@ void ACharacterController::Heal(const int HealAmount)
 
 void ACharacterController::IncrementAmmo(int IncrementAmount)
 {
+	// INFO: Reloads any ammo that is missing first
 	if (Ammo < ClipSize)
 	{
 		const int Remainder = ClipSize - Ammo;
@@ -243,6 +252,7 @@ void ACharacterController::IncrementAmmo(int IncrementAmount)
 		}
 	}
 
+	// INFO: Reloads any clips that are missing using the IncrementAmount remaining after reloading ammo counter
 	if (Clips < MaxClips)
 	{
 		Clips += (IncrementAmount / ClipSize);
@@ -256,6 +266,7 @@ void ACharacterController::IncrementAmmo(int IncrementAmount)
 
 void ACharacterController::Respawn()
 {
+	// INFO: Resets all values back to their default starting values in-preparation for the new round
 	bIsDead = false;
 	AnimationController->bIsDead = false;
 	
@@ -356,7 +367,8 @@ void ACharacterController::Shoot()
 		CollisionParams.AddIgnoredActor(this->GetOwner());
 
 		bool bHitObject = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECollisionChannel::ECC_Visibility, CollisionParams);
-		
+
+		// INFO: Damage System used to define different damage values based on where the line-trace lands on the hit actor
 		if (bHitObject && Cast<ACharacterController>(Hit.Actor) != nullptr)
 		{
 			float BaseDamage = 0;
@@ -408,6 +420,7 @@ void ACharacterController::ThrowGrenade()
 		SpawnParameters.Owner = this;
 		SpawnParameters.Instigator = this;
 
+		// INFO: Instantiates a grenade and launches it in the direction the player is facing at a given velocity
 		const AGrenadeController* Grenade = GetWorld()->SpawnActor<AGrenadeController>(GrenadeAsset, GetActorLocation(), Camera->GetComponentRotation(), SpawnParameters);
 		const FVector ThrowStrength = Camera->GetForwardVector() * 1000;
 

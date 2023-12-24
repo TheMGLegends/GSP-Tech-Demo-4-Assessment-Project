@@ -30,10 +30,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Laser")
 	UParticleSystem* LaserAsset;
 
-	UPROPERTY(EditAnywhere, Category = "Laser")
+	UPROPERTY(VisibleAnywhere, Category = "Laser")
 	UArrowComponent* Arrow;
 
-	UPROPERTY(EditAnywhere, Category = "Laser")
+	UPROPERTY(VisibleAnywhere, Category = "Laser")
 	UParticleSystemComponent* Laser;
 	
 

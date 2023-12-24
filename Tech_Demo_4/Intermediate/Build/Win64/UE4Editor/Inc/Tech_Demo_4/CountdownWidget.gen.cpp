@@ -56,7 +56,7 @@ void EmptyLinkFunctionForGeneratedCodeCountdownWidget() {}
 		{ "ModuleRelativePath", "CountdownWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase = { "GameModeBase", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCountdownWidget, GameModeBase), Z_Construct_UClass_ATech_Demo_4GameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase = { "GameModeBase", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCountdownWidget, GameModeBase), Z_Construct_UClass_ATech_Demo_4GameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCountdownWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCountdownWidget_Statics::NewProp_GameModeBase,
 	};
@@ -87,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeCountdownWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCountdownWidget, 2397241260);
+	IMPLEMENT_CLASS(UCountdownWidget, 3585254909);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UCountdownWidget>()
 	{
 		return UCountdownWidget::StaticClass();

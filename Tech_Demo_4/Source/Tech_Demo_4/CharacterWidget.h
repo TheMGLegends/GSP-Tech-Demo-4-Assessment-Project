@@ -15,13 +15,13 @@ class TECH_DEMO_4_API UCharacterWidget : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Object")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Object")
 	APawn* CharacterPawn;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Controller")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Controller")
 	ACharacterController* CharacterController;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta = (BindWidgetAnim))
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Transient, meta = (BindWidgetAnim))
 	UWidgetAnimation* FadeEffect;
 
 	UFUNCTION(BlueprintCallable, Category = "Fade")

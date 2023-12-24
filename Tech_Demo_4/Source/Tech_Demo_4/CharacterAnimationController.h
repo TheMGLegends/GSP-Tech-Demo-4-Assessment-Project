@@ -17,24 +17,24 @@ public:
 	UFUNCTION(BlueprintCallable, Category= "Animation")
 	void UpdateAnimation();
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	bool bIsInAir;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	bool bIsDead;
 	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	bool bIsAiming;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	float MoveSpeed;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	float Direction;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	float Pitch;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Animation")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Animation")
 	class APawn* Pawn;
 };

@@ -95,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		{ "ModuleRelativePath", "MainMenuWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase = { "GameModeBase", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, GameModeBase), Z_Construct_UClass_AMainMenu_GameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase = { "GameModeBase", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, GameModeBase), Z_Construct_UClass_AMainMenu_GameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMainMenuWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_GameModeBase,
 	};
@@ -126,7 +126,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMainMenuWidget, 2950565906);
+	IMPLEMENT_CLASS(UMainMenuWidget, 86911449);
 	template<> TECH_DEMO_4_API UClass* StaticClass<UMainMenuWidget>()
 	{
 		return UMainMenuWidget::StaticClass();

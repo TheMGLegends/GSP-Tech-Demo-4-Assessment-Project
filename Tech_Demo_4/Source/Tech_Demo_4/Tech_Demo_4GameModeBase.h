@@ -20,6 +20,8 @@ class TECH_DEMO_4_API ATech_Demo_4GameModeBase : public AGameModeBase
 	
 protected:
 	virtual void StartPlay() override;
+	
+private:
 	void Countdown();
 	void RespawnPlayers();
 	void SpawnPickup();
@@ -48,27 +50,27 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	TSubclassOf<class UUserWidget> CharacterHUDOverlayAsset;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Widgets")
 	UUserWidget* CharacterHUDOverlay;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	TSubclassOf<class UUserWidget> CountdownTimerHUDOverlayAsset;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Widgets")
 	UUserWidget* CountdownTimerHUDOverlay;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timer")
 	int Minutes;
-	UPROPERTY(BlueprintReadWrite, Category = "Timer");
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timer");
 	int Seconds;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rounds")
 	int MaxRounds;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rounds")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Rounds")
 	int Round;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Winner")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Winner")
 	FString WinnerName;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Winner")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Winner")
 	ESlateVisibility WinnerVisibility;
 	
 	UPROPERTY(EditAnywhere, Category = "Music")
@@ -83,16 +85,19 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Spawner Category")
 	TSubclassOf<APickupController> PickupObject;
-
-	int PickupsInLevel;
-
+	
 	UFUNCTION(BlueprintCallable, Category = "Timer")
 	FText GetMinutes() const;
 	UFUNCTION(BlueprintCallable, Category = "Timer")
 	FText GetSeconds() const;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Round Over")
+	ESlateVisibility RoundOverVisibility;
+	
+	int PickupsInLevel;
 	
 private:
-	UPROPERTY(EditAnywhere, Category = "Audio")
+	UPROPERTY(VisibleAnywhere, Category = "Audio")
 	UAudioComponent* Audio;
 
 };

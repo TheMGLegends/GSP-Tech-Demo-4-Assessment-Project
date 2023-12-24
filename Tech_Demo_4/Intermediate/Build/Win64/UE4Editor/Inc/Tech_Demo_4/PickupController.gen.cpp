@@ -237,21 +237,21 @@ void EmptyLinkFunctionForGeneratedCodePickupController() {}
 		{ "ModuleRelativePath", "PickupController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupController_Statics::NewProp_PickupLocationController = { "PickupLocationController", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickupController, PickupLocationController), Z_Construct_UClass_APickupLocationController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APickupController_Statics::NewProp_PickupLocationController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APickupController_Statics::NewProp_PickupLocationController_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupController_Statics::NewProp_PickupLocationController = { "PickupLocationController", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickupController, PickupLocationController), Z_Construct_UClass_APickupLocationController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APickupController_Statics::NewProp_PickupLocationController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APickupController_Statics::NewProp_PickupLocationController_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase_MetaData[] = {
 		{ "Category", "Game Mode" },
 		{ "ModuleRelativePath", "PickupController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase = { "GameModeBase", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickupController, GameModeBase), Z_Construct_UClass_ATech_Demo_4GameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase = { "GameModeBase", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickupController, GameModeBase), Z_Construct_UClass_ATech_Demo_4GameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APickupController_Statics::NewProp_GameModeBase_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupController_Statics::NewProp_PickupType_MetaData[] = {
 		{ "Category", "Pickup Type" },
 		{ "ModuleRelativePath", "PickupController.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_APickupController_Statics::NewProp_PickupType = { "PickupType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickupController, PickupType), Z_Construct_UEnum_Tech_Demo_4_EPickups, METADATA_PARAMS(Z_Construct_UClass_APickupController_Statics::NewProp_PickupType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APickupController_Statics::NewProp_PickupType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_APickupController_Statics::NewProp_PickupType = { "PickupType", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APickupController, PickupType), Z_Construct_UEnum_Tech_Demo_4_EPickups, METADATA_PARAMS(Z_Construct_UClass_APickupController_Statics::NewProp_PickupType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APickupController_Statics::NewProp_PickupType_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APickupController_Statics::NewProp_BoxCollider_MetaData[] = {
 		{ "Category", "Collider Mesh" },
@@ -301,7 +301,7 @@ void EmptyLinkFunctionForGeneratedCodePickupController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APickupController, 3828585103);
+	IMPLEMENT_CLASS(APickupController, 3590014855);
 	template<> TECH_DEMO_4_API UClass* StaticClass<APickupController>()
 	{
 		return APickupController::StaticClass();

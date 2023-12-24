@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenu_GameModeBase() {}
 		{ "ModuleRelativePath", "MainMenu_GameModeBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay = { "MainMenuHUDOverlay", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainMenu_GameModeBase, MainMenuHUDOverlay), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay = { "MainMenuHUDOverlay", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainMenu_GameModeBase, MainMenuHUDOverlay), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMainMenu_GameModeBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlayAsset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenu_GameModeBase_Statics::NewProp_MainMenuHUDOverlay,
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenu_GameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMainMenu_GameModeBase, 2430145163);
+	IMPLEMENT_CLASS(AMainMenu_GameModeBase, 2381669007);
 	template<> TECH_DEMO_4_API UClass* StaticClass<AMainMenu_GameModeBase>()
 	{
 		return AMainMenu_GameModeBase::StaticClass();

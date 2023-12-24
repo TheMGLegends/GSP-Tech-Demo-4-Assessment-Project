@@ -30,6 +30,7 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 	PickupsInLevel = 0;
 	
 	WinnerVisibility = ESlateVisibility::Hidden;
+	RoundOverVisibility = ESlateVisibility::Hidden;
 }
 
 FText ATech_Demo_4GameModeBase::GetMinutes() const
@@ -62,10 +63,12 @@ void ATech_Demo_4GameModeBase::StartPlay()
 	}
 
 	Audio->Play();
-	
+
+	// INFO: Set the timers for counting down and spawning pickups
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
 	GetWorldTimerManager().SetTimer(TimerHandle2, this, &ATech_Demo_4GameModeBase::SpawnPickup, 15.0f, true, 0.0f);
 
+	// INFO: Countdown HUD Widget Creation (Single HUD)
 	if (CountdownTimerHUDOverlayAsset)
 	{
 		CountdownTimerHUDOverlay = CreateWidget<UUserWidget>(GetWorld(), CountdownTimerHUDOverlayAsset);
@@ -78,6 +81,7 @@ void ATech_Demo_4GameModeBase::StartPlay()
 		Cast<UCountdownWidget>(CountdownTimerHUDOverlay)->GameModeBase = this;
 	}
 
+	// INFO: Stores all Actors of specified type in PickupLocations TArray so they can be accessed later
 	for (TActorIterator<APickupLocationController> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
 	{
 		APickupLocationController* PickupLocationController = *ActorIterator;
@@ -87,7 +91,10 @@ void ATech_Demo_4GameModeBase::StartPlay()
 			PickupLocations.Emplace(PickupLocationController);
 		}
 	}
-	
+
+	// INFO: Finds all Actors of specified type and saves them in the Players TArray for later use
+	// also creates character HUD overlays for each instance and displays it on their respective sections
+	// of the screen
 	for(TActorIterator<ACharacterController> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
 	{
 		ACharacterController* CharacterController = *ActorIterator;
@@ -115,6 +122,7 @@ void ATech_Demo_4GameModeBase::StartPlay()
 		}
 	}
 
+	// INFO: Gets all APlayerStart Actors and then spawns the players based on the player start actor positions
 	TArray<APlayerStart*> PlayerStarts;
 
 	for(TActorIterator<APlayerStart> ActorIterator(GetWorld()); ActorIterator; ++ActorIterator)
@@ -128,6 +136,8 @@ void ATech_Demo_4GameModeBase::StartPlay()
 		Players[Index]->SetActorTransform(PlayerStarts[Index]->GetActorTransform());
 	}
 
+	// INFO: Dynamically sets the materials of the players at run-time as well as the players identifier based on the
+	// material they received
 	for (uint8 Index = 0; Index != Players.Num(); ++Index)
 	{
 		Players[Index]->FindComponentByClass<USkeletalMeshComponent>()->SetMaterial(1, Materials[Index]);
@@ -145,6 +155,8 @@ void ATech_Demo_4GameModeBase::StartPlay()
 
 void ATech_Demo_4GameModeBase::Countdown()
 {
+	// INFO: Before anything else, checks whether any players are dead so that the round can be stopped prematurely
+	// before the timer runs out
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
 		if (Players[Index]->GetIsDead())
@@ -175,7 +187,7 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 {
 	GetWorldTimerManager().ClearTimer(TimerHandle);
 	Audio->Play();
-
+	
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
 		Players[Index]->Respawn();
@@ -185,6 +197,7 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 	Minutes = 3;
 	Seconds = 0;
 
+	// INFO: Resets all pickup locations and destroys any pickups that they may contain in-preparation for the next round
 	for (uint8 Index = 0; Index < PickupLocations.Num(); ++Index)
 	{
 		if (PickupLocations[Index]->bIsOccupied)
@@ -196,6 +209,7 @@ void ATech_Demo_4GameModeBase::RespawnPlayers()
 	}
 	
 	PickupsInLevel = 0;
+	RoundOverVisibility = ESlateVisibility::Hidden;
 	
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ATech_Demo_4GameModeBase::Countdown, 1.0f, true, 0.0f);
 	GetWorldTimerManager().SetTimer(TimerHandle2, this, &ATech_Demo_4GameModeBase::SpawnPickup, 15.0f, true, 0.0f);
@@ -226,6 +240,8 @@ void ATech_Demo_4GameModeBase::SpawnPickup()
 
 				UStaticMeshComponent* Cube = PickupInstance->FindComponentByClass<UStaticMeshComponent>();
 
+				// INFO: Changes material based on the type of pickup that has been spawned, this pickup type is
+				// randomized
 				switch (FMath::RandRange(0, 2))
 				{
 				case 0:
@@ -281,8 +297,13 @@ void ATech_Demo_4GameModeBase::NewRound()
 			Players[1]->Score++;
 		}
 	}
-	
-	if (Round > MaxRounds)
+
+	if (Round <= MaxRounds)
+	{
+		RoundOverVisibility = ESlateVisibility::Visible;
+	}
+	// INFO: Displays winner text after the final round has ended
+	else if (Round > MaxRounds)
 	{
 		if (Players[0]->Score > Players[1]->Score)
 		{
@@ -308,6 +329,7 @@ void ATech_Demo_4GameModeBase::NewRound()
 
 void ATech_Demo_4GameModeBase::RestartLevel()
 {
+	// INFO: Restarts the entire game
 	Round = 1;
 	WinnerVisibility = ESlateVisibility::Hidden;
 

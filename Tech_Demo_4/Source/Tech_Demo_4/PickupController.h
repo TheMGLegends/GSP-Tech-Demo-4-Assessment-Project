@@ -39,12 +39,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	
-	UPROPERTY(EditAnywhere, Category = "Pickup Location")
+	UPROPERTY(VisibleAnywhere, Category = "Pickup Location")
 	APickupLocationController* PickupLocationController;
-	UPROPERTY(EditAnywhere, Category = "Game Mode")
+	UPROPERTY(VisibleAnywhere, Category = "Game Mode")
 	ATech_Demo_4GameModeBase* GameModeBase;
 
-	UPROPERTY(EditAnywhere, Category = "Pickup Type")
+	UPROPERTY(VisibleAnywhere, Category = "Pickup Type")
 	TEnumAsByte<EPickups> PickupType;
 
 	UPROPERTY(VisibleAnywhere, Category = "Collider Mesh")

@@ -4,18 +4,18 @@
 #include "GrenadeController.h"
 
 #include "CharacterController.h"
-#include "DrawDebugHelpers.h"
 #include "ExplosionController.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AGrenadeController::AGrenadeController()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	TimeUntilDetonation = 5.0f;
 	bHasBlownUp = false;
+	ExplosionSFX = nullptr;
 }
 
 // Called when the game starts or when spawned
@@ -37,7 +37,10 @@ void AGrenadeController::Tick(float DeltaTime)
 		TArray<FHitResult> HitResults;
 		FVector StartLocation = GetActorLocation();
 		FVector EndLocation = StartLocation;
-		
+
+		// INFO: Does a multi hit sphere trace of a given radius and checks to see if any of the hit actors can be cast to the character controller
+		// if they can then that must mean they are the player so they are damaged, once damaged that specific actor is marked as damaged so that
+		// they aren't damaged multiple times by the grenade only once
 		FCollisionShape CollisionShape;
 		CollisionShape.ShapeType = ECollisionShape::Sphere;
 		CollisionShape.SetSphere(500);
@@ -68,6 +71,7 @@ void AGrenadeController::Tick(float DeltaTime)
 			}
 		}
 
+		// INFO: Instantiates an explosion VFX as well as an SFX
 		AExplosionController* Explosion = GetWorld()->SpawnActor<AExplosionController>(ExplosionAsset, GetActorLocation(), FRotator(0));
 		Explosion->SetLifeSpan(2);
 

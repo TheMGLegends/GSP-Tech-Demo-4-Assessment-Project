@@ -13,7 +13,7 @@ class TECH_DEMO_4_API UMainMenuWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gamemode Base")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Gamemode Base")
 	AMainMenu_GameModeBase* GameModeBase;
 
 	UFUNCTION(BlueprintCallable, Category = "Play Button Method")

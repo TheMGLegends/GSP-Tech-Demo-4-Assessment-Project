@@ -40,6 +40,7 @@ void AWeaponController::Tick(float DeltaTime)
 		Laser = UGameplayStatics::SpawnEmitterAttached(LaserAsset, Arrow);
 		bLaserCreated = true;
 	}
+	// INFO: Updates the lasers transform each tick to match the players movements and where they are looking
 	else
 	{
 		FVector Start = Arrow->GetComponentLocation();
@@ -57,7 +58,8 @@ void AWeaponController::Tick(float DeltaTime)
 		}
 
 		bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, CollisionParams);
-    
+
+		// INFO: If it hits something the laser won't go through that object
 		if (bHit)
 		{
 			Laser->SetBeamTargetPoint(0, Hit.Location, 0);
@@ -68,6 +70,7 @@ void AWeaponController::Tick(float DeltaTime)
 		}
 	}
 
+	// INFO: Only shows the laser when the player is aiming in
 	if (Player->GetIsAimedIn())	
 	{
 		Laser->SetVisibility(true);
