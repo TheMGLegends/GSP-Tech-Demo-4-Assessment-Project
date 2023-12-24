@@ -281,7 +281,7 @@ void ATech_Demo_4GameModeBase::NewRound()
 
 	for (uint8 Index = 0; Index < Players.Num(); ++Index)
 	{
-		Players[Index]->CustomTimeDilation = 0.1f;
+		Players[Index]->CustomTimeDilation = 0.25f;
 		Players[Index]->bCanGetDamaged = false;
 	}
 	
