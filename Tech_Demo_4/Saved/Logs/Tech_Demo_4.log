@@ -1600,3 +1600,94 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2023.12.24-15.12.46:505][876]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2023.12.24-15.12.46:515][876]LogUObjectHash: Compacting FUObjectHashTables data took   3.41ms
 [2023.12.24-15.12.46:534][877]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2023.12.24-15.14.47:584][300]LogTemp: Repeating last play command: Selected Viewport
+[2023.12.24-15.14.47:592][300]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.12.24-15.14.47:593][300]PIE: New page: PIE session: MainMenu_Map (24 Dec 2023, 15:14:47)
+[2023.12.24-15.14.47:593][300]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_MainMenu_Map
+[2023.12.24-15.14.47:594][300]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000916s)
+[2023.12.24-15.14.47:595][300]LogAIModule: Creating AISystem for world MainMenu_Map
+[2023.12.24-15.14.47:595][300]LogPlayLevel: PIE: World Init took: (0.001332s)
+[2023.12.24-15.14.47:595][300]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/MainMenu_Map.MainMenu_Map to /Game/Maps/UEDPIE_0_MainMenu_Map.MainMenu_Map (0.002413s)
+[2023.12.24-15.14.47:631][300]LogUObjectHash: Compacting FUObjectHashTables data took   3.05ms
+[2023.12.24-15.14.47:632][300]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2023.12.24-15.14.47:632][300]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.12.24-15.14.47:632][300]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.12.24-15.14.47:633][300]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.12.24-15.14.47:633][300]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.12.24-15.14.47:633][300]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.12.24-15.14.47:633][300]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.12.24-15.14.47:633][300]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.12.24-15.14.47:633][300]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.12.24-15.14.47:633][300]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.12.24-15.14.47:633][300]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.12.24-15.14.47:633][300]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.12.24-15.14.47:633][300]LogAudioMixer: Display: Initializing audio mixer.
+[2023.12.24-15.14.47:638][300]LogAudioMixer: Display: 0: FrontLeft
+[2023.12.24-15.14.47:638][300]LogAudioMixer: Display: 1: FrontRight
+[2023.12.24-15.14.47:646][300]LogAudioMixer: Display: Using Audio Device Speakers (Realtek High Definition Audio)
+[2023.12.24-15.14.47:647][300]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.12.24-15.14.47:647][300]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.12.24-15.14.47:647][300]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.12.24-15.14.47:648][300]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.12.24-15.14.47:648][300]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.12.24-15.14.47:648][300]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.12.24-15.14.47:649][300]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.12.24-15.14.47:649][300]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.12.24-15.14.47:649][300]LogInit: FAudioDevice initialized.
+[2023.12.24-15.14.47:649][300]LogAudio: Display: Audio Device (ID: 10) registered with world 'MainMenu_Map'.
+[2023.12.24-15.14.47:658][300]LogLoad: Game class is 'BP_MainMenu_GameMode_C'
+[2023.12.24-15.14.47:660][300]LogWorld: Bringing World /Game/Maps/UEDPIE_0_MainMenu_Map.MainMenu_Map up for play (max tick rate 0) at 2023.12.24-15.14.47
+[2023.12.24-15.14.47:660][300]LogWorld: Bringing up level for play took: 0.000428
+[2023.12.24-15.14.47:660][300]LogOnline: OSS: Creating online subsystem instance for: :Context_12
+[2023.12.24-15.14.47:663][300]PIE: Server logged in
+[2023.12.24-15.14.47:664][300]PIE: Play in editor total start time 0.073 seconds.
+[2023.12.24-15.14.48:479][390]LogNet: Browse: /Game/Maps/TechDemo4_Map
+[2023.12.24-15.14.48:479][390]LogLoad: LoadMap: /Game/Maps/TechDemo4_Map
+[2023.12.24-15.14.48:479][390]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_MainMenu_Map
+[2023.12.24-15.14.48:480][390]LogWorld: UWorld::CleanupWorld for MainMenu_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.24-15.14.48:480][390]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.24-15.14.48:538][390]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.12.24-15.14.48:542][390]LogUObjectHash: Compacting FUObjectHashTables data took   3.02ms
+[2023.12.24-15.14.48:657][390]LogAudio: Display: Audio Device (ID: 10) registered with world 'TechDemo4_Map'.
+[2023.12.24-15.14.48:658][390]LogAIModule: Creating AISystem for world TechDemo4_Map
+[2023.12.24-15.14.48:659][390]LogLoad: Game class is 'BP_ThirdPerson_GameMode_C'
+[2023.12.24-15.14.48:659][390]LogActor: Warning: BP_ThirdPerson_GameMode_C /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map:PersistentLevel.BP_ThirdPerson_GameMode_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2023.12.24-15.14.48:686][390]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TechDemo4_Map.TechDemo4_Map up for play (max tick rate 0) at 2023.12.24-15.14.48
+[2023.12.24-15.14.48:687][390]LogWorld: Bringing up level for play took: 0.026933
+[2023.12.24-15.14.48:695][390]LogLoad: Took 0.215025 seconds to LoadMap(/Game/Maps/TechDemo4_Map)
+[2023.12.24-15.15.00:429][411]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.24-15.15.00:429][411]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_TechDemo4_Map
+[2023.12.24-15.15.00:430][411]LogWorld: UWorld::CleanupWorld for TechDemo4_Map, bSessionEnded=true, bCleanupResources=true
+[2023.12.24-15.15.00:435][411]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.24-15.15.00:448][411]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.12.24-15.15.00:454][411]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.24-15.15.00:487][411]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.12.24-15.15.00:488][411]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.24-15.15.00:489][411]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.12.24-15.15.00:499][411]LogUObjectHash: Compacting FUObjectHashTables data took   3.55ms
+[2023.12.24-15.15.00:521][412]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2023.12.24-15.15.07:700][486]Candidate modules for hot reload:
+[2023.12.24-15.15.07:700][486]  Tech_Demo_4
+[2023.12.24-15.15.07:701][486]Launching UnrealBuildTool... [C:/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Tech_Demo_4,2739 Tech_Demo_4Editor Win64 Development -Project="B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject" "B:/University Projects/GSP-Tech-Demo-4-Assessment-Project/Tech_Demo_4/Tech_Demo_4.uproject"  -IgnoreJunk]
+[2023.12.24-15.15.07:704][486]Warning: Starting HotReload took  0.0s.
+[2023.12.24-15.15.15:730][511]CompilerResultsLog: New page: Compilation - 24 Dec 2023, 15:15:15
+[2023.12.24-15.15.15:730][511]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (B:\University Projects\GSP-Tech-Demo-4-Assessment-Project).
+[2023.12.24-15.15.15:730][511]CompilerResultsLog: Building Tech_Demo_4Editor...
+[2023.12.24-15.15.15:730][511]CompilerResultsLog: Using Visual Studio 2022 14.38.33130 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.12.24-15.15.15:731][511]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.12.24-15.15.15:731][511]CompilerResultsLog:   [1/4] Tech_Demo_4GameModeBase.cpp
+[2023.12.24-15.15.15:731][511]CompilerResultsLog:   [2/4] UE4Editor-Tech_Demo_4-2739.lib
+[2023.12.24-15.15.15:731][511]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-2739.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-2739.exp
+[2023.12.24-15.15.15:731][511]CompilerResultsLog:   [3/4] UE4Editor-Tech_Demo_4-2739.dll
+[2023.12.24-15.15.15:731][511]CompilerResultsLog:      Creating library B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-2739.suppressed.lib and object B:\University Projects\GSP-Tech-Demo-4-Assessment-Project\Tech_Demo_4\Intermediate\Build\Win64\UE4Editor\Development\Tech_Demo_4\UE4Editor-Tech_Demo_4-2739.suppressed.exp
+[2023.12.24-15.15.15:732][511]CompilerResultsLog:   [4/4] Tech_Demo_4Editor.target
+[2023.12.24-15.15.15:732][511]CompilerResultsLog: Total time in Parallel executor: 6.30 seconds
+[2023.12.24-15.15.15:732][511]CompilerResultsLog: Total execution time: 7.58 seconds
+[2023.12.24-15.15.15:732][511]LogMainFrame: MainFrame: Module compiling took 8.037 seconds
+[2023.12.24-15.15.15:767][511]LogClass: EPickups HotReload.
+[2023.12.24-15.15.15:775][511]LogHotReload: Re-instancing Tech_Demo_4GameModeBase after hot-reload.
+[2023.12.24-15.15.15:783][511]LogActor: Warning: BP_ThirdPerson_GameMode_C /Engine/Transient.World_2:PersistentLevel.BP_ThirdPerson_GameMode_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2023.12.24-15.15.15:834][511]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Tech_Demo_4' in 0.0003 seconds. Added 12 classes and 2 folders.
+[2023.12.24-15.15.15:843][511]Display: HotReload successful (6 functions remapped  0 scriptstructs remapped)
+[2023.12.24-15.15.15:996][511]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0110 seconds. Added 3726 classes and 870 folders.
+[2023.12.24-15.15.15:996][511]Display: HotReload took  8.3s.

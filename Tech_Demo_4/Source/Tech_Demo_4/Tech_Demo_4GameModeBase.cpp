@@ -21,8 +21,8 @@ ATech_Demo_4GameModeBase::ATech_Demo_4GameModeBase()
 
 	Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
 	
-	Minutes = 0;
-	Seconds = 10;
+	Minutes = 3;
+	Seconds = 0;
 
 	MaxRounds = 5;
 	Round = 1;
