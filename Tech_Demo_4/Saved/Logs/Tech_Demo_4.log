@@ -1939,3 +1939,7 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2023.12.24-15.17.35:309][261]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2023.12.24-15.17.35:320][261]LogUObjectHash: Compacting FUObjectHashTables data took   3.34ms
 [2023.12.24-15.17.35:342][262]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2023.12.24-15.18.52:538][653]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2023.12.24-15.18.52:538][653]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.12.24-15.18.54:012][794]LogUObjectHash: Compacting FUObjectHashTables data took   3.50ms
+[2023.12.24-15.18.56:576][ 54]LogUObjectHash: Compacting FUObjectHashTables data took   4.41ms
