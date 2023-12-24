@@ -371,7 +371,7 @@ void ACharacterController::Shoot()
 
 		FCollisionQueryParams CollisionParams;
 		CollisionParams.bTraceComplex = false;
-		CollisionParams.AddIgnoredActor(this->GetOwner());
+		CollisionParams.AddIgnoredActor(this);
 
 		bool bHitObject = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECollisionChannel::ECC_Visibility, CollisionParams);
 
